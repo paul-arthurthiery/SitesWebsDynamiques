@@ -1,61 +1,129 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 header {
-  height: 60px;
-  background-color: #14597f;
-  z-index: 0;
+    height: 60px;
+    background-color: #14597f;
+    z-index: 0;
 }
 
 header, main {
-  padding: 20px;
+    padding: 20px;
 }
 
 header > a {
-  left: 0px;
-  height: inherit;
+    left: 0px;
+    height: inherit;
 }
 
 header > a > img {
-  height: inherit;
+    height: inherit;
 }
 
 header > nav a {
-  right: 0px;
-  color: #fff;
-  height: inherit;
-  display: inline-block;
-  text-align: right;
-  text-decoration: none;
+    right: 0px;
+    color: #fff;
+    height: inherit;
+    display: inline-block;
+    text-align: right;
+    text-decoration: none;
 }
 
 header > nav {
-  height: inherit;
-  display: inline-block;
-  text-align: right;
+    height: inherit;
+    display: inline-block;
+    text-align: right;
 }
 
-header > nav a:active{
-  background-color: #1fb5e9;
-  border-radius: 4px;
+header > nav a:active {
+    background-color: #1fb5e9;
+    border-radius: 4px;
 }
 
 main {
-  max-width: 1200px;
+    max-width: 1200px;
+    padding-bottom: 70px;
+    min-height: 74.3%;
+}
+
+main.products-main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+}
+
+main.products-main > aside > section > button {
+    border: 1px solid #999999;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -ms-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    display: block;
+
+}
+
+main.products-main > aside > section > button:hover {
+    border: 1px solid #999999;
+    border-radius: 4px;
+    background-color: #f3f3f3;
+
+}
+
+main.products-main > aside > section > button.selected {
+
+    background-color: #f3f3f3;
+
+}
+
+main.products-main > aside > section {
+    padding: 10%;
+
+}
+
+main.products-main > section > span {
+    float: right;
+}
+main.products-main > section > a {
+    width: 33%;
+}
+main.products-main > section > a * {
+    width: inherit;
+}
+main.products-main > aside {
+    grid-column: 1;
+
+}
+
+main.products-main > section {
+    grid-column: 2;
+
 }
 
 footer {
-  height: 70px;
+    text-align: center;
+    height: 70px;
+    margin-top: -70px;
+    width: 100%;
+    background-color: #eeeeee;
+    border-top: 1px solid #cccccc;
+
 }
 
 .fa-shopping-cart {
-  color: #14597f;
+    color: #14597f;
 }
 
-.fa-stack{
-  z-index: 0;
+.fa-stack {
+    z-index: 0;
 }
 
 .count {
-  background-color: #d9534f;
-  bottom: 0px;
-  right: 0px;
-  z-index: 1;
+    background-color: #d9534f;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
 }
