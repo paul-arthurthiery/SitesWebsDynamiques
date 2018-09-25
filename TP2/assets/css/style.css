@@ -1,0 +1,61 @@
+header {
+  height: 60px;
+  background-color: #14597f;
+  z-index: 0;
+}
+
+header, main {
+  padding: 20px;
+}
+
+header > a {
+  left: 0px;
+  height: inherit;
+}
+
+header > a > img {
+  height: inherit;
+}
+
+header > nav a {
+  right: 0px;
+  color: #fff;
+  height: inherit;
+  display: inline-block;
+  text-align: right;
+  text-decoration: none;
+}
+
+header > nav {
+  height: inherit;
+  display: inline-block;
+  text-align: right;
+}
+
+header > nav a:active{
+  background-color: #1fb5e9;
+  border-radius: 4px;
+}
+
+main {
+  max-width: 1200px;
+}
+
+footer {
+  height: 70px;
+}
+
+.fa-shopping-cart {
+  color: #14597f;
+}
+
+.fa-stack{
+  z-index: 0;
+}
+
+.count {
+  background-color: #d9534f;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+}
