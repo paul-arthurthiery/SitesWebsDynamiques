@@ -81,14 +81,23 @@ main.products-main > aside > section > button.selected {
 
 main.products-main > aside > section {
     padding: 10%;
-
+    display: inline-block;
 }
-
+main.products-main > aside > section.products-list {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+}
 main.products-main > section > span {
     float: right;
 }
 main.products-main > section > a {
     width: 33%;
+}
+main.products-main > section section {
+    width: 33%;
+    border: 1px solid #999999;
+
 }
 main.products-main > section > a * {
     width: inherit;
