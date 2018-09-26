@@ -12,7 +12,7 @@
     <nav>
         <a href="index.html">Accueil</a>
         <a href="products.html">Produits</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
         <a class="shopping-cart" href="./shopping-cart.html" title="Panier">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
@@ -22,11 +22,23 @@
         </a>
     </nav>
 </header>
-<main>
-    <h1>Contact</h1>
-    <a href="mailto:poly@shop.com">Contactez nous par mail</a>
-    <a href="tel:555-555-5555">Appellez nous au 555-555-5555</a>
-    <address>2900 Boulevard Edouard-Montpetit, Montréal, QC H3T 1J4</address>
+<main class="contact">
+  <h1 class="contact-title">Contact</h1>
+  <section class="contact-columns form-control">
+    <section class="mail">
+      <i class="fas fa-envelope fa-5x"></i>
+      <a href="mailto:poly@shop.com">Contactez nous par mail</a>
+    </section>
+    <section class="phone">
+      <i class="fas fa-mobile-alt fa-5x"></i>
+      <a href="tel:555-555-5555">Appellez nous au 555-555-5555</a>
+    </section>
+    <section class="address">
+      <i class="fas fa-map-marker-alt fa-5x"></i>
+      <address>2900 Boulevard Edouard-Montpetit, Montréal, QC H3T 1J4</address>
+    </section>
+  </section>
+
 </main>
 <footer>
     <ul>

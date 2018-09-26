@@ -190,3 +190,52 @@ footer {
   border: 1px solid #999999;
   border-radius: 4px;
 }
+
+main .contact-title {
+  grid-row: 1;
+  grid-column: 1 / span 3;
+}
+
+main .contact-columns {
+  grid-row: 2;
+  grid-column: 1 / span 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-columns .phone {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.contact-columns .address {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.contact-columns .mail {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.contact {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.contact section section {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.contact section section i {
+  margin: auto;
+  grid-row: 1;
+  margin-bottom: 1%;
+}
+
+.contact section section a, .contact section section address {
+  margin: auto;
+  margin-top: 1%;
+  grid-row: 2;
+}
