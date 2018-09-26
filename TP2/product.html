@@ -13,7 +13,7 @@
     <a href="index.html"><img src="assets/img/logo.svg" alt="just a logo"></a>
     <nav>
         <a href="index.html">Accueil</a>
-        <a href="products.html">Produits</a>
+        <a href="products.html" class="active">Produits</a>
         <a href="contact.html">Contact</a>
         <a class="shopping-cart" href="./shopping-cart.html" title="Panier">
           <span class="fa-stack fa-lg">
@@ -24,10 +24,10 @@
         </a>
     </nav>
 </header>
-<main>
+<main class="product-main">
     <h1>Apple TV</h1>
     <img src="assets/img/apple-tv.png" alt="An Apple TV">
-    <p>L'Apple TV est un appareil conçu par Apple qui permet la communication sans fil entre un ordinateur et un
+    <p class="right-column">L'Apple TV est un appareil conçu par Apple qui permet la communication sans fil entre un ordinateur et un
         téléviseur. Il est disponible depuis fin mars 2007 dans sa première version.L'appareil ressemble alors par sa
         forme à un Mac mini, bien
         qu'il ne fasse que la moitié de sa hauteur. Il communique par réseau sans fil ou Ethernet, avec un appareil iOS
@@ -37,20 +37,20 @@
                 href='https://fr.wikipedia.org/wiki/Apple_TV' target='_blank'>Wikipédia</a>)
     </p>
 
-    <h2>Caractéristiques</h2>
-    <ul>
+    <h2 class="right-column">Caractéristiques</h2>
+    <ul class="right-column">
         <li>"Processeur Apple A8"</li>
         <li>"Mémoire vide de 2Go"</li>
         <li>"Stockage de 32 ou 64 Go en mémoire flash"</li>
         <li>"Connectivités: USB Type-C, HDMI, récepteur infrarouge"</li>
         <li>"Réseau: Wi-Fi (802.11a/b/g/n/ac), 10/100 Ethernet, Bluetooth, AirPlay"</li>
     </ul>
-    <span>Prix : 249.99</span>
+    <span class="right-column">Prix : 249.99</span>
 
-    <form action="addToCart">
+    <form action="addToCart" class="right-column">
         <label for="amount">Add to cart :</label>
-        <input type="text" id="amount" value="1" pattern="[1-9]*">
-        <input type="submit" value="Ajouter">
+        <input class="form-control" type="text" id="amount" value="1" pattern="[1-9]*">
+        <input class="btn" type="submit" value="Ajouter">
 
     </form>
 

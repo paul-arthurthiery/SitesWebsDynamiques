@@ -1,7 +1,13 @@
+html {
+  font-family: arial;
+}
+
 header {
   height: 60px;
   background-color: #14597f;
-  z-index: 0;
+  display: grid;
+  grid-template-columns: 1fr 2.2fr 1fr;
+  border-bottom: 1px solid #0b2d3d;
 }
 
 header, main {
@@ -9,12 +15,17 @@ header, main {
 }
 
 header > a {
-  left: 0px;
+  grid-column: 1;
   height: inherit;
 }
 
 header > a > img {
   height: inherit;
+}
+
+header > nav {
+  height: inherit;
+  grid-column: 3;
 }
 
 header > nav a {
@@ -24,17 +35,17 @@ header > nav a {
   display: inline-block;
   text-align: right;
   text-decoration: none;
+  height: 35%;
+  padding: 6px;
+  border-radius: 4px
 }
 
-header > nav {
-  height: inherit;
-  display: inline-block;
-  text-align: right;
-}
-
-header > nav a:active{
+header > nav a.active{
   background-color: #1fb5e9;
-  border-radius: 4px;
+}
+
+.shopping-cart:active {
+  background-color: inherit;
 }
 
 main {
@@ -49,13 +60,56 @@ footer {
   color: #14597f;
 }
 
-.fa-stack{
+.fa-stack {
   z-index: 0;
+  position: relative;
 }
 
 .count {
   background-color: #d9534f;
-  bottom: 0px;
-  right: 0px;
+  top: 10px;
+  right: 12px;
   z-index: 1;
+  position: relative;
+}
+
+.landing-image {
+  float: right;
+}
+
+.btn {
+  background-color: #14597f;
+  border: 1px solid #0b2d3d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 1%;
+  transition: 0.2s ease-out;
+}
+
+.btn:hover {
+  background-color: #1fb5e9;
+
+}
+
+.product-main {
+  display: grid;
+  grid-template-columns: repeat(1fr, 2);
+}
+
+.product-main > img {
+  grid-column: 1;
+}
+
+.product-main .right-column {
+  grid-column: 2;
+}
+
+.product-main > form {
+  padding-left: 40%;
+}
+
+.form-control {
+  border: 1px solid #999999;
+  border-radius: 4px;
 }
