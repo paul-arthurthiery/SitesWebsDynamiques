@@ -65,6 +65,14 @@ main.products-main {
 
 }
 
+
+main#shopping {
+    min-height: 78.2%;
+
+}
+
+
+
 main.products-main > aside > section > button {
     border: 1px solid #999999;
     border-radius: 4px;
@@ -74,6 +82,7 @@ main.products-main > aside > section > button {
     -o-transition-duration: 0.2s;
     transition: ease-out 0.2s;
     display: block;
+    width: 100%;
 
 }
 
@@ -95,6 +104,9 @@ main.products-main > aside > section {
     padding: 10%;
     display: inline-block;
 }
+main.products-main > div > p {
+    text-align: right;
+}
 main.products-main > div > section#products-list {
     display: flex;
     flex-wrap: wrap;
@@ -106,6 +118,8 @@ main.products-main > div >  section p {
 main.products-main > div > section > a {
     width: 30%;
     margin-bottom: 2%;
+    text-decoration: none;
+    color: black;
 }
 main.products-main > div > section section:hover {
     background-color: #f3f3f3;
