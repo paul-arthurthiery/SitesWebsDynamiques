@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <title>OnlineShop - Panier</title>
-    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <title>OnlineShop - Panier</title>
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
+
 <body>
 
-<header>
+  <header>
     <a href="index.html"><img src="assets/img/logo.svg" alt="just a logo"></a>
     <nav>
-        <a href="index.html">Accueil</a>
-        <a href="products.html">Produits</a>
-        <a href="contact.html">Contact</a>
-        <a class="shopping-cart" href="./shopping-cart.html" title="Panier">
+      <a href="index.html">Accueil</a>
+      <a href="products.html">Produits</a>
+      <a href="contact.html">Contact</a>
+      <a class="shopping-cart" href="./shopping-cart.html" title="Panier">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
             <i class="fa fa-shopping-cart fa-stack-1x"></i>
@@ -22,68 +24,71 @@
           <span class="count">3</span>
         </a>
     </nav>
-</header>
-<main id="shopping">
-<h1>Panier</h1>
-<table>
-    <tr>
-        <td></td>
-        <td>Nom</td>
-        <td>Prix Unitaire</td>
-        <td>Quantité</td>
-        <td>Prix</td>
-    </tr>
-    <tr>
-        <td>
-            <button>X</button>
+  </header>
+  <main id="shopping">
+    <h1>Panier</h1>
+    <table>
+      <tr class="border-under">
+        <td class="first-col"></td>
+        <th>Nom</th>
+        <th>Prix Unitaire</th>
+        <th>Quantité</th>
+        <th class="last-col">Prix</th>
+      </tr>
+      <tr>
+        <td class="first-col">
+          <button><i class="fas fa-times"></i></button>
         </td>
         <td><a href="product.html">Produit 1 </a></td>
         <td>2.00 $</td>
         <td>
-            <button>-</button>
-            1
-            <button>+</button>
+          <button><i class="fas fa-minus"></i></button>
+          1
+          <button><i class="fas fa-plus"></i></button>
         </td>
-        <td>2.00 $</td>
-    </tr>
-    <tr>
-        <td>
-            <button>X</button>
+        <td class="last-col">2.00 $</td>
+      </tr>
+      <tr>
+        <td class="first-col">
+          <button><i class="fas fa-times"></i></button>
         </td>
         <td><a href="product.html"> Produit 2 </a></td>
         <td>
-            4.00 $
+          4.00 $
         </td>
         <td>
-            <button>-</button>
-            2
-            <button>+</button>
+          <button><i class="fas fa-minus"></i></button>
+          2
+          <button><i class="fas fa-plus"></i></button>
         </td>
-        <td>8.00 $</td>
-    </tr>
-    <tr>
-        <td>
-            <button>X</button>
+        <td class="last-col">8.00 $</td>
+      </tr>
+      <tr class="border-under">
+        <td class="first-col">
+          <button><i class="fas fa-times"></i></button>
         </td>
         <td><a href="product.html">Produit 3 </a></td>
         <td>5.00 $</td>
         <td>
-            <button>-</button>
-            2
-            <button>+</button>
+          <button><i class="fas fa-minus"></i></button>
+          2
+          <button><i class="fas fa-plus"></i></button>
         </td>
-        <td>10.00 $</td>
-    </tr>
-</table>
-<span>Total: 20.00 $</span>
-<button>vider le panier</button>
-<a href="order.html">Commander</a>
-</main>
-<footer>
+        <td class="last-col">10.00 $</td>
+      </tr>
+    </table>
+    <section class="last-line">
+      <p>Total: 20.00 $</p>
+      <button>vider le panier</button>
+      <a href="order.html">Commander</a>
+    </section>
+  </main>
+  <footer>
     <p>
-        Paul-Arthur Thiéry 1969108  |  Louis-efflam Le Vély 1969154
+      Paul-Arthur Thiéry 1969108 | Louis-efflam Le Vély 1969154
     </p>
-</footer>
-<!-- TODO -->
+  </footer>
+  <!-- TODO -->
 </body>
+
 </html>

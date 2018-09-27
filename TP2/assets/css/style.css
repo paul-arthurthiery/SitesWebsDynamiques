@@ -289,3 +289,41 @@ main .contact-columns {
   margin-top: 1%;
   grid-row: 2;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td a {
+  text-decoration: none;
+}
+
+.border-under td, th{
+  border-bottom: 1px solid #000;
+}
+
+.first-col {
+  max-width: 30px;
+}
+
+.last-col {
+  text-align: right;
+}
+
+td button {
+  border-radius: 50%;
+  background-color: #dddddd;
+}
+
+td button:hover {
+  background-color: #bbbbbb;
+}
+
+.last-line p {
+  text-align: right
+}
+
+.last-line a {
+  margin-left: 81.5%;
+}
