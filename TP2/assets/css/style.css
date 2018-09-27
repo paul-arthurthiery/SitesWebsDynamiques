@@ -6,7 +6,10 @@ html, body {
     height: 100%;
     margin: 0;
 }
-
+div.sticky{
+    min-height: 100%;
+    margin-bottom: -70px;
+}
 header {
   height: 60px;
   background-color: #14597f;
@@ -52,13 +55,34 @@ header > nav a.active{
 .shopping-cart:active {
   background-color: inherit;
 }
+div.push{
+    height: 70px;
+}
 
 main {
     max-width: 1200px;
-    padding-bottom: 70px;
-    min-height: 74.3%;
+
 }
 
+div.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.first{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.second{
+    grid-column: 2;
+    grid-row: 2;
+
+}
+div.Paiement{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 main.products-main {
     display: grid;
     grid-template-columns: 1fr 3fr;
