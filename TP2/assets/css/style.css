@@ -72,7 +72,7 @@ main.products-main > aside > section > button {
     -moz-transition-duration: 0.2s;
     -ms-transition-duration: 0.2s;
     -o-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+    transition: ease-out 0.2s;
     display: block;
 
 }
@@ -81,6 +81,7 @@ main.products-main > aside > section > button:hover {
     border: 1px solid #999999;
     border-radius: 4px;
     background-color: #f3f3f3;
+
 
 }
 
@@ -94,24 +95,35 @@ main.products-main > aside > section {
     padding: 10%;
     display: inline-block;
 }
-main.products-main > aside > section.products-list {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-gap: 10px;
+main.products-main > div > section#products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-main.products-main > section > span {
-    float: right;
+main.products-main > div >  section p {
+    text-align: right;
 }
-main.products-main > section > a {
-    width: 33%;
+main.products-main > div > section > a {
+    width: 30%;
+    margin-bottom: 2%;
 }
-main.products-main > section section {
-    width: 33%;
+main.products-main > div > section section:hover {
+    background-color: #f3f3f3;
+}
+main.products-main > div > section section {
+    width: 100%;
     border: 1px solid #999999;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -ms-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition: ease-out 0.2s;
+
 
 }
-main.products-main > section > a * {
-    width: inherit;
+main.products-main > div > section > a * {
+    width: 100%;
 }
 main.products-main > aside {
     grid-column: 1;
