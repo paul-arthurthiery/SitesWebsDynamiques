@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<div class="sticky">
 <header>
     <a href="index.html"><img src="assets/img/logo.svg" alt="just a logo"></a>
     <nav>
@@ -27,25 +28,29 @@
 <main>
     <h1>Commander</h1>
     <form action="confirmation.html" method="post">
+        <div class="contact">
         <h2>Contact</h2>
-        <label for="first-name">Prénom</label>
-        <input type="text" id="first-name" required>
-        <label for="last-name">Nom</label>
-        <input type="text" id="last-name" required>
-        <label for="email">E-mail</label>
-        <input type="text" id="email" required>
-        <label for="phone">Phone</label>
-        <input type="text" id="phone" required>
-
+        <label for="first-name" class="first">Prénom</label>
+        <input type="text" id="first-name" class="first" required>
+        <label for="last-name" class="second">Nom</label>
+        <input type="text" id="last-name" class="second" required>
+        <label for="email" class="first">E-mail</label>
+        <input type="text" id="email" class="first" required>
+        <label for="phone" class="second">Phone</label>
+        <input type="text" id="phone" class="second" required>
+        </div>
+        <div class="Paiement">
         <h2>Paiement</h2>
-        <label for="credit-card">Numéro de carte de crédit</label>
-        <input type="text" id="credit-card" required>
-        <label for="credit-card-expiry">Date d'expiration de la carte</label>
-        <input type="text" id="credit-card-expiry" required>
-        <input type="submit" value="Payer">
-
+        <label for="credit-card" class="first">Numéro de carte de crédit</label>
+        <input type="text" id="credit-card" class="first" required>
+        <label for="credit-card-expiry" class="second">Date d'expiration de la carte</label>
+        <input type="text" id="credit-card-expiry" class="second" required>
+        <input type="submit" class="second" value="Payer">
+        </div>
     </form>
 </main>
+<div class="push"></div>
+</div>
 <footer>
     <ul>
         <li>Paul-Arthur Thiéry 1969108
