@@ -28,15 +28,19 @@
 <main class="product-main">
     <h1>Apple TV</h1>
     <img src="assets/img/apple-tv.png" alt="An Apple TV">
-    <p class="right-column">L'Apple TV est un appareil conçu par Apple qui permet la communication sans fil entre un ordinateur et un
-        téléviseur. Il est disponible depuis fin mars 2007 dans sa première version.L'appareil ressemble alors par sa
-        forme à un Mac mini, bien
-        qu'il ne fasse que la moitié de sa hauteur. Il communique par réseau sans fil ou Ethernet, avec un appareil iOS
-        ou avec un ordinateur (sous Mac OS X ou sous Windows) par le biais du logiciel iTunes, permettant ainsi de
-        diffuser le contenu
-        vidéo et audio sur le téléviseur, via éventuellement un amplificateur audio-vidéo. (<a
-                href='https://fr.wikipedia.org/wiki/Apple_TV' target='_blank'>Wikipédia</a>)
-    </p>
+    <div class="right-column">
+      <h2>Description</h2>
+      <p >L'Apple TV est un appareil conçu par Apple qui permet la communication sans fil entre un ordinateur et un
+          téléviseur. Il est disponible depuis fin mars 2007 dans sa première version.L'appareil ressemble alors par sa
+          forme à un Mac mini, bien
+          qu'il ne fasse que la moitié de sa hauteur. Il communique par réseau sans fil ou Ethernet, avec un appareil iOS
+          ou avec un ordinateur (sous Mac OS X ou sous Windows) par le biais du logiciel iTunes, permettant ainsi de
+          diffuser le contenu
+          vidéo et audio sur le téléviseur, via éventuellement un amplificateur audio-vidéo. (<a
+                  href='https://fr.wikipedia.org/wiki/Apple_TV' target='_blank'>Wikipédia</a>)
+      </p>
+    </div>
+
 
     <h2 class="right-column">Caractéristiques</h2>
     <ul class="right-column">
@@ -46,10 +50,13 @@
         <li>"Connectivités: USB Type-C, HDMI, récepteur infrarouge"</li>
         <li>"Réseau: Wi-Fi (802.11a/b/g/n/ac), 10/100 Ethernet, Bluetooth, AirPlay"</li>
     </ul>
-    <span class="right-column">Prix : 249.99</span>
+
+    <hr class="right-column"/>
+
+    <span class="right-column">Prix : <span class="bold">249.99</span></span>
 
     <form action="addToCart" class="right-column">
-        <label for="amount">Add to cart :</label>
+        <label for="amount">Quantité :</label>
         <input class="form-control" type="text" id="amount" value="1" pattern="[1-9]*">
         <input class="btn" type="submit" value="Ajouter">
 
