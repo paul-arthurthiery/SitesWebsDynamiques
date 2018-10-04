@@ -1,0 +1,30 @@
+[
+  {
+    "id": 13,
+    "name": "Manette Xbox 360",
+    "price": 29.99,
+    "image": "xbox-controller.png",
+    "category": "consoles"
+  },
+  {
+    "id": 11,
+    "name": "Console Wii",
+    "price": 199.99,
+    "image": "wii.png",
+    "category": "consoles"
+  },
+  {
+    "id": 9,
+    "name": "Console PS3",
+    "price": 349.99,
+    "image": "ps3.png",
+    "category": "consoles"
+  },
+  {
+    "id": 12,
+    "name": "Console Xbox One",
+    "price": 399.99,
+    "image": "xbox.png",
+    "category": "consoles"
+  }
+]

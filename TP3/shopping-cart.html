@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>OnlineShop - Panier</title>
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="./index.html">
+          <img alt="logo" src="./assets/img/logo.svg" title="Accueil">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Accueil</a></li>
+          <li><a href="./products.html">Produits</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li>
+            <a class="shopping-cart" href="./shopping-cart.html" title="Panier">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-shopping-cart fa-stack-1x"></i>
+              </span>
+              <span class="count">3</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article>
+      <h1>Panier</h1>
+      <table class="table shopping-cart-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Produit</th>
+            <th>Prix unitaire</th>
+            <th>Quantité</th>
+            <th>Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><button title="Supprimer"><i class="fa fa-times"></i></button></td>
+            <td><a href="./product.html">Console Wii</a></td>
+            <td>199,99&thinsp;$</td>
+            <td>
+              <div class="row">
+                <div class="col">
+                  <button title="Retirer" disabled=""><i class="fa fa-minus"></i></button>
+                </div>
+                <div class="col">1</div>
+                <div class="col">
+                  <button title="Ajouter"><i class="fa fa-plus"></i></button>
+                </div>
+              </div>
+            </td>
+            <td>199,99&thinsp;$</td>
+          </tr>
+          <tr>
+            <td><button title="Supprimer"><i class="fa fa-times"></i></button></td>
+            <td><a href="./product.html">Manette Xbox 360</a></td>
+            <td>29,99&thinsp;$</td>
+            <td>
+              <div class="row">
+                <div class="col">
+                  <button title="Retirer" disabled=""><i class="fa fa-minus"></i></button>
+                </div>
+                <div class="col">1</div>
+                <div class="col">
+                  <button title="Ajouter"><i class="fa fa-plus"></i></button>
+                </div>
+              </div>
+            </td>
+            <td>59,98&thinsp;$</td>
+          </tr>
+          <tr>
+            <td><button title="Supprimer"><i class="fa fa-times"></i></button></td>
+            <td><a href="./product.html">Moniteur 19"</a></td>
+            <td>149,99&thinsp;$</td>
+            <td>
+              <div class="row">
+                <div class="col">
+                  <button title="Retirer" disabled=""><i class="fa fa-minus"></i></button>
+                </div>
+                <div class="col">1</div>
+                <div class="col">
+                  <button title="Ajouter"><i class="fa fa-plus"></i></button>
+                </div>
+              </div>
+            </td>
+            <td>449,97&thinsp;$</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="shopping-cart-total">Total: <strong>704,94&thinsp;$</strong></p>
+      <a class="btn pull-right" href="./order.html">Commander <i class="fa fa-angle-double-right"></i></a>
+      <button class="btn"><i class="fa fa-trash-o"></i>&nbsp; Vider le panier</button>
+    </article>
+  </main>
+  <footer>
+    <p>Par Antoine Béland et Konstantinos Lambrou-Latreille</p>
+  </footer>
+</body>
+</html>

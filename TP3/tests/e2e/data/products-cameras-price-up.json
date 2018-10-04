@@ -1,0 +1,23 @@
+[
+  {
+    "id": 4,
+    "name": "Canon PowerShot SD1300",
+    "price": 299.99,
+    "image": "camera-3.png",
+    "category": "cameras"
+  },
+  {
+    "id": 3,
+    "name": "Nikon D7000",
+    "price": 549.99,
+    "image": "camera-2.png",
+    "category": "cameras"
+  },
+  {
+    "id": 2,
+    "name": "Canon EOS 5D Mark II",
+    "price": 2999.99,
+    "image": "camera-1.png",
+    "category": "cameras"
+  }
+]

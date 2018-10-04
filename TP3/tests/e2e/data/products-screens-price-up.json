@@ -1,0 +1,16 @@
+[
+  {
+    "id": 8,
+    "name": "Moniteur 19\"",
+    "price": 149.99,
+    "image": "monitor.png",
+    "category": "screens"
+  },
+  {
+    "id": 10,
+    "name": "Téléviseur 50\"",
+    "price": 899.99,
+    "image": "tv.png",
+    "category": "screens"
+  }
+]

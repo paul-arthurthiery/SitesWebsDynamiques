@@ -1,0 +1,59 @@
+{
+  "confirmation": {
+    "url": "confirmation.html",
+    "elements": {
+      "confirmationNumber": "#confirmation-number",
+      "name": "#name"
+    }
+  },
+  "product": {
+    "url": "product.html?id=",
+    "elements": {
+      "name": "#product-name",
+      "image": "#product-image",
+      "description": "#product-desc",
+      "features": "#product-features",
+      "price": "#product-price",
+      "quantityAdded": "#shopping-cart-quantity",
+      "form": "#add-to-cart-form",
+      "input": "#add-to-cart-form input",
+      "dialog": "#dialog"
+    }
+  },
+  "products": {
+    "url": "products.html",
+    "elements": {
+      "list": "#products-list",
+      "categories": "#product-categories",
+      "criteria": "#product-criteria",
+      "count": "#products-count",
+      "productsAddedCount": ".products-added-count"
+    }
+  },
+  "shoppingCart": {
+    "url": "shopping-cart.html",
+    "elements": {
+      "count": ".shopping-cart > .count",
+      "totalAmount": "#total-amount",
+      "price": ".price",
+      "quantity": ".quantity",
+      "removeItemButton": ".remove-item-button",
+      "removeQuantityButton": ".remove-quantity-button",
+      "addQuantityButton": ".add-quantity-button",
+      "removeAllItemsButton": "#remove-all-items-button"
+    }
+  },
+  "order": {
+    "url": "order.html",
+    "elements": {
+      "totalAmount": "#total-amount",
+      "form": "#order-form",
+      "firstName": "#first-name",
+      "lastName": "#last-name",
+      "email": "#email",
+      "phone": "#phone",
+      "creditCard": "#credit-card",
+      "creditCardExpiry": "#credit-card-expiry"
+    }
+  }
+}

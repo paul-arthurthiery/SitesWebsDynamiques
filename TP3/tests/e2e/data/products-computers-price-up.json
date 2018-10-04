@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Apple TV",
+    "price": 249.99,
+    "image": "apple-tv.png",
+    "category": "computers"
+  },
+  {
+    "id": 6,
+    "name": "Portable professionnel",
+    "price": 599.99,
+    "image": "laptop-2.png",
+    "category": "computers"
+  },
+  {
+    "id": 5,
+    "name": "Portable",
+    "price": 699.99,
+    "image": "laptop-1.png",
+    "category": "computers"
+  },
+  {
+    "id": 7,
+    "name": "iMac 27\"",
+    "price": 2299.99,
+    "image": "mac.png",
+    "category": "computers"
+  }
+]

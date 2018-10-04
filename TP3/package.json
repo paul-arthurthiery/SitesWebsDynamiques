@@ -1,0 +1,20 @@
+{
+  "name": "log4420-a18",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp",
+    "e2e": "nightwatch --config ./tests/nightwatch.json"
+  },
+  "author": "Antoine Béland, Konstantinos Lambrou-Latreille",
+  "license": "",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "nightwatch": "^0.9.16",
+    "nightwatch-custom-commands-assertions": "^1.1.0"
+  },
+  "dependencies": {}
+}

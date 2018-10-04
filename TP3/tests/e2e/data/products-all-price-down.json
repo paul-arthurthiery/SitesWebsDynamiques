@@ -1,0 +1,93 @@
+[
+  {
+    "id": 2,
+    "name": "Canon EOS 5D Mark II",
+    "price": 2999.99,
+    "image": "camera-1.png",
+    "category": "cameras"
+  },
+  {
+    "id": 7,
+    "name": "iMac 27\"",
+    "price": 2299.99,
+    "image": "mac.png",
+    "category": "computers"
+  },
+  {
+    "id": 10,
+    "name": "Téléviseur 50\"",
+    "price": 899.99,
+    "image": "tv.png",
+    "category": "screens"
+  },
+  {
+    "id": 5,
+    "name": "Portable",
+    "price": 699.99,
+    "image": "laptop-1.png",
+    "category": "computers"
+  },
+  {
+    "id": 6,
+    "name": "Portable professionnel",
+    "price": 599.99,
+    "image": "laptop-2.png",
+    "category": "computers"
+  },
+  {
+    "id": 3,
+    "name": "Nikon D7000",
+    "price": 549.99,
+    "image": "camera-2.png",
+    "category": "cameras"
+  },
+  {
+    "id": 12,
+    "name": "Console Xbox One",
+    "price": 399.99,
+    "image": "xbox.png",
+    "category": "consoles"
+  },
+  {
+    "id": 9,
+    "name": "Console PS3",
+    "price": 349.99,
+    "image": "ps3.png",
+    "category": "consoles"
+  },
+  {
+    "id": 4,
+    "name": "Canon PowerShot SD1300",
+    "price": 299.99,
+    "image": "camera-3.png",
+    "category": "cameras"
+  },
+  {
+    "id": 1,
+    "name": "Apple TV",
+    "price": 249.99,
+    "image": "apple-tv.png",
+    "category": "computers"
+  },
+  {
+    "id": 11,
+    "name": "Console Wii",
+    "price": 199.99,
+    "image": "wii.png",
+    "category": "consoles"
+  },
+  {
+    "id": 8,
+    "name": "Moniteur 19\"",
+    "price": 149.99,
+    "image": "monitor.png",
+    "category": "screens"
+  },
+  {
+    "id": 13,
+    "name": "Manette Xbox 360",
+    "price": 29.99,
+    "image": "xbox-controller.png",
+    "category": "consoles"
+  }
+]
