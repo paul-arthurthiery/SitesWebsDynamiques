@@ -1,24 +1,24 @@
-'use strict';
 
-var gulp = require('gulp');
-var connect = require("gulp-connect");
+
+const gulp = require('gulp');
+const connect = require('gulp-connect');
 
 /**
  * Web Server Task
  * --------------
  * Starts a web server to host the files.
  */
-gulp.task('web-server', function() {
+gulp.task('web-server', () => {
   connect.server({
     port: 8000,
-    middleware: function() {
+    middleware() {
       return [
-        function(req, res, next){
+        (req, res, next) => {
           req.method = 'GET';
           return next();
-        }
+        },
       ];
-    }
+    },
   });
 });
 

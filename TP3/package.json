@@ -13,7 +13,7 @@
     "assert": "^1.4.1",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
-    "nightwatch": "^0.9.16",
+    "nightwatch": "^0.9.21",
     "nightwatch-custom-commands-assertions": "^1.1.0"
   },
   "dependencies": {}

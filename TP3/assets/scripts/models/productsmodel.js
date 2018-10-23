@@ -1,10 +1,3 @@
-
-
-export let getProducts = () => {
-
-    $.getJSON( "../../data/products.json", function( data ) {
-        return JSON.parse(data);
-    });
+const getProducts = () => {
+  $.getJSON('../../data/products.json', data => data);
 };
-
-
