@@ -1,3 +1,1 @@
-const getProducts = () => {
-  $.getJSON('../../data/products.json', data => data);
-};
+const getProducts = () => $.getJSON('../../data/products.json', data => data);
