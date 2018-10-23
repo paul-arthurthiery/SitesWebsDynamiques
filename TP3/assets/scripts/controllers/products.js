@@ -32,4 +32,7 @@ let productsByCategory = (category) => {
 $('#product-categories').children().click(e => {
     let category = $(e.target).data("category");
     productsByCategory(category)
+    var selected = $('#product-categories').children()
+    selected.removeClass("selected")
+    $(e.target).addClass("selected")
 });
