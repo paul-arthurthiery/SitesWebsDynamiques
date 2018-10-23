@@ -7,3 +7,9 @@ getProducts().then((products) => {
     </a>
   </div>`));
 });
+
+$('#product-categories').children().on('click', () => {
+    console.log('test');
+    alert("bouton cliqué");
+
+});
