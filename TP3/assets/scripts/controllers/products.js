@@ -1,4 +1,6 @@
-getProducts().then((products) => {
+let products;
+getProducts().then((productsJson) => {
+  products = productsJson;
   products.forEach(product => $('#products-list').append(`<div class="product">
     <a href="./product.html" title="En savoir plus...">
       <h2>${product.name}</h2>
@@ -9,7 +11,5 @@ getProducts().then((products) => {
 });
 
 $('#product-categories').children().on('click', () => {
-    console.log('test');
-    alert("bouton cliqué");
-
+  console.log(products);
 });
