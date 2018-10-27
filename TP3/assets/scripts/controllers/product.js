@@ -40,7 +40,7 @@ let pageBuilder = (id) => {
           <form id="formadd" class="pull-right">
             <label for="product-quantity">Quantité:</label>
             <input class="form-control" data-id="${product.id}" id="product-quantity" type="number" value="1" min="1">
-            <button class="btn" title="Ajouter au panier" type="submit">
+            <button id="submitproduct" class="btn" title="Ajouter au panier" type="submit">
               <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
             </button>
           </form>
@@ -73,13 +73,23 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 
 
-$( "#formadd" ).submit(function( event ) {
-    var panier = JSON.parse(localStorage.getItem("panier"));
+$('#submitproduct').click((e) => {
+    console.log('test')
+    panier = JSON.parse(localStorage.getItem("panier"));
     var quantity = $('#product-quantity').value();
-    for (var i=0; i<quantity;i++ ){
-        panier.append($("#product-quantity").data('id'))
+    if (!panier || panier.length === 0) {
+        panier = [] ;
+        for (var i=0; i<quantity;i++ ){
+            panier.append($("#product-quantity").data('id'))
+        }
+        localStorage.setItem("panier",JSON.stringify(panier));
+    }else {
+        for (var i=0; i<quantity;i++ ){
+            panier.append($("#product-quantity").data('id'))
+        }
+        localStorage.setItem("panier",JSON.stringify(panier));
     }
-    localStorage.setItem("panier",JSON.stringify(panier));
+
 });
 
 $(document).ready(function () {
