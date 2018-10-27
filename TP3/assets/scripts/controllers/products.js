@@ -70,10 +70,12 @@ const refreshProducts = () => {
 
 const productsByCategory = (category) => {
   $('#products-list').empty();
+  let productCounter = 0;
   products.forEach((product) => {
     if (category === 'all') {
       // mettre ici la fonction build all products
     } else if (product.category === category) {
+      productCounter += 1;
       $('#products-list').append(`<div class="product">
         <a href="./product.html?id=${product.id}" title="En savoir plus...">
             <h2>${product.name}</h2>
@@ -83,6 +85,7 @@ const productsByCategory = (category) => {
         </div>`);
     }
   });
+  $('#products-count').text(`${productCounter} produits`);
 };
 
 $('#product-categories').children().click((e) => {
