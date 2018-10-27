@@ -1,24 +1,24 @@
-
-
-
 let products;
 
-let featureBuilder = (product) =>{
-    let listli= ''
-    product.features.forEach(feature =>{
-    listli = listli + '<li>'+feature+'</li>'
-        });
-    console.log(listli)
+let featureBuilder = (product) => {
+    let listli = ''
+    product.features.forEach(feature => {
+        listli = listli + '<li>' + feature + '</li>'
+    });
     return listli;
 };
 
 
 let pageBuilder = (id) => {
-getProducts().then((productsJson) => {
-    products = productsJson;
-    products.forEach(product => {
-    if (product.id === id) {
-        $("main").append(`
+    $("main").empty();
+    getProducts().then((productsJson) => {
+
+        products = productsJson;
+        let i = 0;
+        products.forEach(product => {
+            if (product.id === parseInt(id)) {
+                i = i + 1
+                $("main").append(`
         <article>
       <h1>${product.name}</h1>
       <div class="row">
@@ -37,9 +37,9 @@ getProducts().then((productsJson) => {
             </ul>
           </section>
           <hr>
-          <form class="pull-right">
+          <form id="formadd" class="pull-right">
             <label for="product-quantity">Quantité:</label>
-            <input class="form-control" id="product-quantity" type="number" value="1" min="1">
+            <input class="form-control" data-id="${product.id}" id="product-quantity" type="number" value="1" min="1">
             <button class="btn" title="Ajouter au panier" type="submit">
               <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
             </button>
@@ -47,10 +47,14 @@ getProducts().then((productsJson) => {
           <p>Prix: <strong>${product.price}&thinsp;$</strong></p>
         </div>
       </div>
-    </article>
-        `);
-    } } )
-});}
+    </article>`);
+            }
+        })
+        if (i === 0) {
+            $("main").append(' <article> <h1>Page non trouvée !</h1> </article>');
+        }
+    });
+}
 
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -69,8 +73,16 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 
 
-$( document ).ready(function() {
+$( "#formadd" ).submit(function( event ) {
+    var panier = JSON.parse(localStorage.getItem("panier"));
+    var quantity = $('#product-quantity').value();
+    for (var i=0; i<quantity;i++ ){
+        panier.append($("#product-quantity").data('id'))
+    }
+    localStorage.setItem("panier",JSON.stringify(panier));
+});
+
+$(document).ready(function () {
     var id = getUrlParameter('id');
-    console.log(id);
     pageBuilder(id);
 });
