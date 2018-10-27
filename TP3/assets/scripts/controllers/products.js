@@ -2,36 +2,25 @@
 
 
 let products;
+let firstLoad = true;
 
-
-const refreshProducts = () => {
-  getProducts().then((productsJson) => {
-    products = productsJson;
-    products.forEach(product => $('#products-list').append(`<div class="product">
-    <a href="./product.html?id=${product.id}" title="En savoir plus...">
-      <h2>${product.name}</h2>
-      <img alt="${product.name}" src="./assets/img/${product.image}">
-      <p class="price"><small>Prix</small> <span class="raw-price">${product.price}</span>&thinsp;$</p>
-    </a>
-  </div>`));
-  });
-};
-
-refreshProducts();
 
 const sortWithCriteria = (criteria) => {
   let sortKey;
   let reverseSort = false;
+  let priceSort = false;
   switch (true) {
     case (criteria === 'price'):
-      sortKey = 'raw-price';
+      sortKey = '.raw-price';
+      priceSort = true;
       break;
     case (criteria === 'name'):
       sortKey = 'h2';
       break;
     case (criteria === 'reversePrice'):
-      sortKey = 'raw-price';
+      sortKey = '.raw-price';
       reverseSort = true;
+      priceSort = true;
       break;
     case (criteria === 'reverseName'):
       sortKey = 'h2';
@@ -41,8 +30,15 @@ const sortWithCriteria = (criteria) => {
       return false;
   }
   const items = $('.products').children().sort((a, b) => {
-    const aValue = $(sortKey, a).text();
-    const bValue = $(sortKey, b).text();
+    let aValue = $(sortKey, a).text();
+    let bValue = $(sortKey, b).text();
+    if (priceSort) {
+      aValue = parseInt(aValue, 10);
+      bValue = parseInt(bValue, 10);
+    } else {
+      aValue = aValue.toUpperCase();
+      bValue = bValue.toUpperCase();
+    }
     if (!reverseSort) {
       if (aValue < bValue) return -1;
       return aValue > bValue ? 1 : 0;
@@ -54,6 +50,23 @@ const sortWithCriteria = (criteria) => {
   return true;
 };
 
+const refreshProducts = () => {
+  getProducts().then((productsJson) => {
+    products = productsJson;
+    products.forEach(product => $('#products-list').append(`
+    <div class="product">
+      <a href="./product.html?id=${product.id}" title="En savoir plus...">
+        <h2>${product.name}</h2>
+        <img alt="${product.name}" src="./assets/img/${product.image}">
+        <p class="price"><small>Prix</small> <span class="raw-price">${product.price}</span>&thinsp;$</p>
+      </a>
+    </div>`));
+    if (firstLoad) {
+      firstLoad = false;
+      sortWithCriteria('price');
+    }
+  });
+};
 
 const productsByCategory = (category) => {
   $('#products-list').empty();
@@ -72,7 +85,6 @@ const productsByCategory = (category) => {
   });
 };
 
-
 $('#product-categories').children().click((e) => {
   const category = $(e.target).data('category');
   productsByCategory(category);
@@ -83,4 +95,9 @@ $('#product-categories').children().click((e) => {
 
 $('#product-criteria').children().click((e) => {
   sortWithCriteria($(e.target).data('criteria'));
+  const selected = $('#product-criteria').children();
+  selected.removeClass('selected');
+  $(e.target).addClass('selected');
 });
+
+refreshProducts();
