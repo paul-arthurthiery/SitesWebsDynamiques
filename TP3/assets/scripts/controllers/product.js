@@ -1,24 +1,24 @@
+/* global getProducts $ window localStorage document */
 let products;
 
-let featureBuilder = (product) => {
-    let listli = ''
-    product.features.forEach(feature => {
-        listli = listli + '<li>' + feature + '</li>'
-    });
-    return listli;
+const featureBuilder = (product) => {
+  let listli = '';
+  product.features.forEach((feature) => {
+    listli = `${listli}<li>${feature}</li>`;
+  });
+  return listli;
 };
 
 
-let pageBuilder = (id) => {
-    $("main").empty();
-    getProducts().then((productsJson) => {
-
-        products = productsJson;
-        let i = 0;
-        products.forEach(product => {
-            if (product.id === parseInt(id)) {
-                i = i + 1
-                $("main").append(`
+const pageBuilder = async (id) => {
+  $('main').empty();
+  await getProducts().then((productsJson) => {
+    products = productsJson;
+    let i = 0;
+    products.forEach((product) => {
+      if (product.id === parseInt(id, 10)) {
+        i += 1;
+        $('main').append(`
         <article>
       <h1>${product.name}</h1>
       <div class="row">
@@ -37,7 +37,7 @@ let pageBuilder = (id) => {
             </ul>
           </section>
           <hr>
-          <form id="formadd" class="pull-right">
+          <form id="formadd" class="pull-right" action="">
             <label for="product-quantity">Quantité:</label>
             <input class="form-control" data-id="${product.id}" id="product-quantity" type="number" value="1" min="1">
             <button id="submitproduct" class="btn" title="Ajouter au panier" type="submit">
@@ -48,51 +48,52 @@ let pageBuilder = (id) => {
         </div>
       </div>
     </article>`);
-            }
-        })
-        if (i === 0) {
-            $("main").append(' <article> <h1>Page non trouvée !</h1> </article>');
-        }
+      }
     });
-}
-
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
+    if (i === 0) {
+      $('main').append('<article> <h1>Page non trouvée !</h1> </article>');
     }
+  });
+  $('#formadd').submit((e) => {
+    e.preventDefault();
+    $('main').append(`<span id="global">Added ${$('h1').text()} to cart</span>`);
+  });
 };
 
+const getUrlParameter = (sParam) => {
+  const sPageURL = decodeURIComponent(window.location.search.substring(1));
+  const sURLVariables = sPageURL.split('&');
+  let sParameterName;
 
+  for (let i = 0; i < sURLVariables.length; i += 1) {
+    sParameterName = sURLVariables[i].split('=');
+
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : sParameterName[1];
+    }
+  }
+  return true;
+};
 
 $('#submitproduct').click((e) => {
-    console.log('test')
-    panier = JSON.parse(localStorage.getItem("panier"));
-    var quantity = $('#product-quantity').value();
-    if (!panier || panier.length === 0) {
-        panier = [] ;
-        for (var i=0; i<quantity;i++ ){
-            panier.append($("#product-quantity").data('id'))
-        }
-        localStorage.setItem("panier",JSON.stringify(panier));
-    }else {
-        for (var i=0; i<quantity;i++ ){
-            panier.append($("#product-quantity").data('id'))
-        }
-        localStorage.setItem("panier",JSON.stringify(panier));
+  console.log('test');
+  let panier = JSON.parse(localStorage.getItem('panier'));
+  const quantity = $('#product-quantity').value();
+  if (!panier || panier.length === 0) {
+    panier = [];
+    for (let i = 0; i < quantity; i += 1) {
+      panier.append($('#product-quantity').data('id'));
     }
-
+    localStorage.setItem('panier', JSON.stringify(panier));
+  } else {
+    for (let i = 0; i < quantity; i += 1) {
+      panier.append($('#product-quantity').data('id'));
+    }
+    localStorage.setItem('panier', JSON.stringify(panier));
+  }
 });
 
-$(document).ready(function () {
-    var id = getUrlParameter('id');
-    pageBuilder(id);
+$(document).ready(() => {
+  const id = getUrlParameter('id');
+  pageBuilder(id);
 });
