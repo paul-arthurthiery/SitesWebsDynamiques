@@ -1,5 +1,3 @@
-
-
 const createShoppingCart = () => {
     getProducts().then((productsJson) => {
         $('#table-body').empty();
@@ -14,7 +12,7 @@ const createShoppingCart = () => {
                 var numoccur = $.grep(idarray, function (elem) {
                     return elem === id;
                 }).length;
-                if(numoccur === 0){
+                if (numoccur === 0) {
                     idarray.push(id)
 
                     var numOccurences = $.grep(panier, function (elem) {
@@ -22,8 +20,8 @@ const createShoppingCart = () => {
                     }).length;
                     products.forEach(product => {
 
-                        if (product.id === id ) {
-                            console.log(numOccurences*parseFloat(product.price))
+                        if (product.id === id) {
+                            console.log(numOccurences * parseFloat(product.price))
                             $('#table-body').append(`
     <tr>
             <td><button title="Supprimer"><i class="fa fa-times"></i></button></td>
@@ -40,7 +38,7 @@ const createShoppingCart = () => {
                 </div>
               </div>
             </td>
-            <td>${Math.round(numOccurences*parseFloat(product.price)*100)/100}&thinsp;$</td>
+            <td>${Math.round(numOccurences * parseFloat(product.price) * 100) / 100}&thinsp;$</td>
           </tr>`)
 
                         }
@@ -50,7 +48,7 @@ const createShoppingCart = () => {
 
                 }
 
-        })
+            })
             ;
         }
 

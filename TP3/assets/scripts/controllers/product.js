@@ -2,23 +2,23 @@
 let products;
 
 const featureBuilder = (product) => {
-  let listli = '';
-  product.features.forEach((feature) => {
-    listli = `${listli}<li>${feature}</li>`;
-  });
-  return listli;
+    let listli = '';
+    product.features.forEach((feature) => {
+        listli = `${listli}<li>${feature}</li>`;
+    });
+    return listli;
 };
 
 
 const pageBuilder = async (id) => {
-  $('main').empty();
-  await getProducts().then((productsJson) => {
-    products = productsJson;
-    let i = 0;
-    products.forEach((product) => {
-      if (product.id === parseInt(id, 10)) {
-        i += 1;
-        $('main').append(`
+    $('main').empty();
+    await getProducts().then((productsJson) => {
+        products = productsJson;
+        let i = 0;
+        products.forEach((product) => {
+            if (product.id === parseInt(id, 10)) {
+                i += 1;
+                $('main').append(`
         <article>
       <h1>${product.name}</h1>
       <div class="row">
@@ -83,23 +83,22 @@ const pageBuilder = async (id) => {
 };
 
 const getUrlParameter = (sParam) => {
-  const sPageURL = decodeURIComponent(window.location.search.substring(1));
-  const sURLVariables = sPageURL.split('&');
-  let sParameterName;
+    const sPageURL = decodeURIComponent(window.location.search.substring(1));
+    const sURLVariables = sPageURL.split('&');
+    let sParameterName;
 
-  for (let i = 0; i < sURLVariables.length; i += 1) {
-    sParameterName = sURLVariables[i].split('=');
+    for (let i = 0; i < sURLVariables.length; i += 1) {
+        sParameterName = sURLVariables[i].split('=');
 
-    if (sParameterName[0] === sParam) {
-      return sParameterName[1] === undefined ? true : sParameterName[1];
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
     }
-  }
-  return true;
+    return true;
 };
 
 
-
 $(document).ready(() => {
-  const id = getUrlParameter('id');
-  pageBuilder(id);
+    const id = getUrlParameter('id');
+    pageBuilder(id);
 });
