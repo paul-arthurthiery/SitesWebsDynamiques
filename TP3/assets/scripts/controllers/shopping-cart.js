@@ -16,15 +16,18 @@ const createShoppingCart = () => {
                 }).length;
                 if(numoccur === 0){
                     idarray.push(id)
+
                     var numOccurences = $.grep(panier, function (elem) {
                         return elem === id;
                     }).length;
                     products.forEach(product => {
+
                         if (product.id === id ) {
+                            console.log(numOccurences*parseFloat(product.price))
                             $('#table-body').append(`
     <tr>
             <td><button title="Supprimer"><i class="fa fa-times"></i></button></td>
-            <td><a href="./product.html">${product.name}</a></td>
+            <td><a href="./product.html?id=${id}">${product.name}</a></td>
             <td>${product.price}&thinsp;$</td>
             <td>
               <div class="row">
@@ -37,7 +40,7 @@ const createShoppingCart = () => {
                 </div>
               </div>
             </td>
-            <td>199,99&thinsp;$</td>
+            <td>${Math.round(numOccurences*parseFloat(product.price)*100)/100}&thinsp;$</td>
           </tr>`)
 
                         }
