@@ -56,28 +56,17 @@ const pageBuilder = async (id) => {
   });
   $('#formadd').submit((e) => {
     e.preventDefault();
-    console.log('test');
     let panier = JSON.parse(localStorage.getItem('panier'));
-    const quantity = parseInt($('#product-quantity').val());
+    const quantity = parseInt($('#product-quantity').val(), 10);
     if (!panier || panier.length === 0) {
       panier = [];
-      for (let i = 0; i < quantity; i += 1) {
-        panier.push(toString($('#product-quantity').data('id')));
-      }
-      localStorage.setItem('panier', JSON.stringify(panier));
-    } else {
-      for (let i = 0; i < quantity; i += 1) {
-        panier.push(toString($('#product-quantity').data('id')));
-      }
-      localStorage.setItem('panier', JSON.stringify(panier));
     }
-    console.log('submitted');
-    $('main').append(`<span>Added ${$('h1').text()} to cart</span>`);
-    panier = JSON.parse(localStorage.getItem('panier'));
+    for (let i = 0; i < quantity; i += 1) panier.push(toString($('#product-quantity').data('id')));
+    localStorage.setItem('panier', JSON.stringify(panier));
     $('span.count').css('display', 'block');
     $('span.count').text(panier.length);
-    e.preventDefault();
-    $('main').append(`<span id="global">Added ${$('h1').text()} to cart</span>`);
+    $(`<span id="dialog">Added ${$('h1').text()} to cart</span>`).insertAfter('article');
+    setTimeout(() => $('#dialog').remove(), 5000);
   });
 };
 
