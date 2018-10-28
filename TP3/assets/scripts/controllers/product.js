@@ -55,8 +55,27 @@ const pageBuilder = async (id) => {
     }
   });
   $('#formadd').submit((e) => {
+      e.preventDefault()
+      console.log('test');
+      let panier = JSON.parse(localStorage.getItem('panier'));
+      const quantity = parseInt($('#product-quantity').val());
+      if (!panier || panier.length === 0) {
+          panier = [];
+          for (let i = 0; i < quantity; i += 1) {
+              panier.push(toString($('#product-quantity').data('id')));
+          }
+          localStorage.setItem('panier', JSON.stringify(panier));
+      } else {
+          for (let i = 0; i < quantity; i += 1) {
+              panier.push(toString($('#product-quantity').data('id')));
+          }
+          localStorage.setItem('panier', JSON.stringify(panier));
+      }
     console.log('submitted');
     $('main').append(`<span>Added ${$('h1').text()} to cart</span>`);
+      panier = JSON.parse(localStorage.getItem('panier'));
+      $("span.count").css("display", "block");
+      $("span.count").text(panier.length);
     e.preventDefault();
   });
 };
@@ -76,23 +95,7 @@ const getUrlParameter = (sParam) => {
   return true;
 };
 
-$('#submitproduct').click((e) => {
-  console.log('test');
-  let panier = JSON.parse(localStorage.getItem('panier'));
-  const quantity = $('#product-quantity').value();
-  if (!panier || panier.length === 0) {
-    panier = [];
-    for (let i = 0; i < quantity; i += 1) {
-      panier.append($('#product-quantity').data('id'));
-    }
-    localStorage.setItem('panier', JSON.stringify(panier));
-  } else {
-    for (let i = 0; i < quantity; i += 1) {
-      panier.append($('#product-quantity').data('id'));
-    }
-    localStorage.setItem('panier', JSON.stringify(panier));
-  }
-});
+
 
 $(document).ready(() => {
   const id = getUrlParameter('id');

@@ -52,6 +52,7 @@ const sortWithCriteria = (criteria) => {
 
 const refreshProducts = () => {
   getProducts().then((productsJson) => {
+    $('#products-list').empty();
     products = productsJson;
     products.forEach(product => $('#products-list').append(`
     <div class="product">
@@ -73,8 +74,8 @@ const productsByCategory = (category) => {
   let productCounter = 0;
   products.forEach((product) => {
     if (category === 'all') {
-      // mettre ici la fonction build all products
-    } else if (product.category === category) {
+         refreshProducts()
+        } else if (product.category === category) {
       productCounter += 1;
       $('#products-list').append(`<div class="product">
         <a href="./product.html?id=${product.id}" title="En savoir plus...">
