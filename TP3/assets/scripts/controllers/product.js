@@ -2,23 +2,23 @@
 let products;
 
 const featureBuilder = (product) => {
-  let listli = '';
-  product.features.forEach((feature) => {
-    listli = `${listli}<li>${feature}</li>`;
-  });
-  return listli;
+    let listli = '';
+    product.features.forEach((feature) => {
+        listli = `${listli}<li>${feature}</li>`;
+    });
+    return listli;
 };
 
 
 const pageBuilder = async (id) => {
-  $('main').empty();
-  await getProducts().then((productsJson) => {
-    products = productsJson;
-    let i = 0;
-    products.forEach((product) => {
-      if (product.id === parseInt(id, 10)) {
-        i += 1;
-        $('main').append(`
+    $('main').empty();
+    await getProducts().then((productsJson) => {
+        products = productsJson;
+        let i = 0;
+        products.forEach((product) => {
+            if (product.id === parseInt(id, 10)) {
+                i += 1;
+                $('main').append(`
         <article>
       <h1>${product.name}</h1>
       <div class="row">
@@ -48,36 +48,38 @@ const pageBuilder = async (id) => {
         </div>
       </div>
     </article>`);
-      }
+            }
+        });
+        if (i === 0) {
+            $('main').append(' <article> <h1>Page non trouvée !</h1> </article>');
+        }
     });
-    if (i === 0) {
-      $('main').append(' <article> <h1>Page non trouvée !</h1> </article>');
-    }
-  });
-  $('#formadd').submit((e) => {
-      e.preventDefault()
-      console.log('test');
-      let panier = JSON.parse(localStorage.getItem('panier'));
-      const quantity = parseInt($('#product-quantity').val());
-      if (!panier || panier.length === 0) {
-          panier = [];
-          for (let i = 0; i < quantity; i += 1) {
-              panier.push(toString($('#product-quantity').data('id')));
-          }
-          localStorage.setItem('panier', JSON.stringify(panier));
-      } else {
-          for (let i = 0; i < quantity; i += 1) {
-              panier.push(toString($('#product-quantity').data('id')));
-          }
-          localStorage.setItem('panier', JSON.stringify(panier));
-      }
-    console.log('submitted');
-    $('main').append(`<span>Added ${$('h1').text()} to cart</span>`);
-      panier = JSON.parse(localStorage.getItem('panier'));
-      $("span.count").css("display", "block");
-      $("span.count").text(panier.length);
-    e.preventDefault();
-  });
+    $('#formadd').submit((e) => {
+        e.preventDefault()
+        panier = JSON.parse(localStorage.getItem('panier'));
+        const quantity = parseInt($('#product-quantity').val());
+        let id = $('#product-quantity').data('id');
+        if (!panier || panier.length === 0) {
+            panier = [];
+            for (let i = 0; i < quantity; i += 1) {
+                console.log(id)
+                panier.push(id);
+            }
+            console.log(panier)
+            localStorage.setItem('panier', JSON.stringify(panier));
+        } else {
+            for (let i = 0; i < quantity; i += 1) {
+                panier.push(id);
+            }
+            localStorage.setItem('panier', JSON.stringify(panier));
+        }
+        console.log('submitted');
+        $('main').append(`<span>Added ${$('h1').text()} to cart</span>`);
+        panier = JSON.parse(localStorage.getItem('panier'));
+        $("span.count").css("display", "block");
+        $("span.count").text(panier.length);
+        e.preventDefault();
+    });
 };
 
 const getUrlParameter = (sParam) => {
