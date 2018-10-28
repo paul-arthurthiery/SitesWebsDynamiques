@@ -2,23 +2,23 @@
 let products;
 
 const featureBuilder = (product) => {
-    let listli = '';
-    product.features.forEach((feature) => {
-        listli = `${listli}<li>${feature}</li>`;
-    });
-    return listli;
+  let listli = '';
+  product.features.forEach((feature) => {
+    listli = `${listli}<li>${feature}</li>`;
+  });
+  return listli;
 };
 
 
 const pageBuilder = async (id) => {
-    $('main').empty();
-    await getProducts().then((productsJson) => {
-        products = productsJson;
-        let i = 0;
-        products.forEach((product) => {
-            if (product.id === parseInt(id, 10)) {
-                i += 1;
-                $('main').append(`
+  $('main').empty();
+  await getProducts().then((productsJson) => {
+    products = productsJson;
+    let i = 0;
+    products.forEach((product) => {
+      if (product.id === parseInt(id, 10)) {
+        i += 1;
+        $('main').append(`
         <article>
       <h1>${product.name}</h1>
       <div class="row">
