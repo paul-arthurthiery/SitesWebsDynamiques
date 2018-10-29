@@ -68,7 +68,7 @@ const createShoppingCart = async () => {
     return aValue > bValue ? 1 : 0;
   });
   $('#table-body').append(sortedTable);
-  $('#total-amount').html(`Total: <strong>${Math.round(price * 100) / 100}$</strong>`);
+  $('#total-amount').html(`Total: <strong>${(Math.round(price * 100) / 100).toString().replace('.', ',')}$</strong>`);
   return true;
 };
 
@@ -76,9 +76,10 @@ createShoppingCart();
 
 const refreshPrice = (product, amountOfProduct, previousAmount) => {
   if ($(`#${product.id}`)) {
-    $(`#${product.id} td:nth-child(5)`).html(`${Math.round(amountOfProduct * parseFloat(product.price) * 100) / 100}&thinsp;$`);
+    $(`#${product.id} td:nth-child(5)`).html(`${(Math.round(amountOfProduct * parseFloat(product.price) * 100) / 100).toString().replace('.', ',')}&thinsp;$`);
   }
-  $('.shopping-cart-total').html(`Total: <strong>${Math.round((parseFloat($('.shopping-cart-total strong').text()) + (amountOfProduct - previousAmount) * product.price) * 100) / 100}$</strong>`);
+  const cleanedPriceTotal = (Math.round((parseFloat($('.shopping-cart-total strong').text()) + (amountOfProduct - previousAmount) * product.price) * 100) / 100).toString().replace('.', ',');
+  $('.shopping-cart-total').html(`Total: <strong>${cleanedPriceTotal}$</strong>`);
 };
 
 const removeProduct = (productId) => {
