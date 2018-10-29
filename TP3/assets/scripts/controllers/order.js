@@ -6,6 +6,14 @@ jQuery.validator.addMethod("expicb", function(value, element) {
 
 
 $('#orderform').validate({
+    submitHandler: function(form) {
+        localStorage.removeItem('panier');
+        localStorage.setItem("firstname", $('#first-name').val())
+        localStorage.setItem("lastname", $('#last-name').val())
+        localStorage.setItem("ordernum", "1")
+
+        form.submit();
+    },
     rules: {
         firstname:{
             required: true,
@@ -33,10 +41,6 @@ $('#orderform').validate({
         },
         messages:{
 
-
-        },
-        submitHandler: function(form) {
-            alert("Submitted!");
 
         }
     }
