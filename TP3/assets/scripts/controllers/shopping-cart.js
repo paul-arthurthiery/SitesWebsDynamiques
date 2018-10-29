@@ -76,9 +76,10 @@ createShoppingCart();
 
 const refreshPrice = (product, amountOfProduct, previousAmount) => {
   if ($(`#${product.id}`)) {
-    $(`#${product.id} td:nth-child(5)`).html(`${(Math.round(amountOfProduct * parseFloat(product.price) * 100) / 100).toString().replace('.', ',')}&thinsp;$`);
+    $(`#${product.id} td:nth-child(5)`).html(`${(Math.round(amountOfProduct * parseFloat(product.price) * 100) / 100).toString().replace('.', ',')}$`);
   }
   const cleanedPriceTotal = (Math.round((parseFloat($('.shopping-cart-total strong').text()) + (amountOfProduct - previousAmount) * product.price) * 100) / 100).toString().replace('.', ',');
+  console.log(cleanedPriceTotal);
   $('.shopping-cart-total').html(`Total: <strong>${cleanedPriceTotal}$</strong>`);
 };
 
@@ -89,7 +90,7 @@ const removeProduct = (productId) => {
   if (productIndex !== -1) {
     cart.splice(productIndex, 1);
     localStorage.setItem('panier', JSON.stringify(cart));
-    $('.quantity').text(currentAmount - 1);
+    $(`#${productId} .quantity`).text(currentAmount - 1);
     if (currentAmount - 1 === 1) $(`#${productId} button:eq(1)`).attr('disabled', true);
     $('.count').text(cart.length);
     if (cart.length === 0) $('.count').css('display', 'none');
@@ -104,7 +105,7 @@ const addProduct = (productId) => {
   const cart = JSON.parse(localStorage.getItem('panier'));
   cart.push(`${productId}`);
   localStorage.setItem('panier', JSON.stringify(cart));
-  $('.quantity').text(currentAmount + 1);
+  $(`#${productId} .quantity`).text(currentAmount + 1);
   if (currentAmount + 1 > 1) $(`#${productId} button:eq(1)`).removeAttr('disabled');
   $('.count').text(parseInt($('.count').text(), 10) + 1);
   const productToAdd = products.filter(product => product.id === productId)[0];
