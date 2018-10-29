@@ -2,7 +2,7 @@
 jQuery.validator.addMethod('expicb', (value) => {
   const filter = new RegExp('(0[123456789]|10|11|12)([/])([1-2][0-9][0-9][0-9])');
   return filter.test(value);
-}, 'La date d’expiration de votre carte de crédit est invalide.');
+}, "La date d'expiration de votre carte de crédit est invalide.");
 
 
 $('#order-form').validate({
@@ -11,7 +11,6 @@ $('#order-form').validate({
     localStorage.setItem('firstname', $('#first-name').val());
     localStorage.setItem('lastname', $('#last-name').val());
     localStorage.setItem('ordernum', '1');
-
     form.submit();
   },
   rules: {
@@ -31,11 +30,11 @@ $('#order-form').validate({
       required: true,
       phoneUS: true,
     },
-    credit_card: {
+    creditcard: {
       required: true,
       creditcard: true,
     },
-    credit_card_expiry: {
+    creditcardexpiry: {
       required: true,
       expicb: true,
     },
