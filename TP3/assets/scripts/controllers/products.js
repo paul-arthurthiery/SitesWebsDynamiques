@@ -11,14 +11,14 @@ const sortWithCriteria = (criteria) => {
   let priceSort = false;
   switch (true) {
     case (criteria === 'price'):
-      sortKey = '.raw-price';
+      sortKey = '.price';
       priceSort = true;
       break;
     case (criteria === 'name'):
       sortKey = 'h2';
       break;
     case (criteria === 'reversePrice'):
-      sortKey = '.raw-price';
+      sortKey = '.price';
       reverseSort = true;
       priceSort = true;
       break;
@@ -33,8 +33,8 @@ const sortWithCriteria = (criteria) => {
     let aValue = $(sortKey, a).text();
     let bValue = $(sortKey, b).text();
     if (priceSort) {
-      aValue = parseInt(aValue, 10);
-      bValue = parseInt(bValue, 10);
+      aValue = parseInt(aValue.slice(4, aValue.length), 10);
+      bValue = parseInt(bValue.slice(4, aValue.length), 10);
     } else {
       aValue = aValue.toUpperCase();
       bValue = bValue.toUpperCase();
@@ -57,12 +57,13 @@ const refreshProducts = () => {
     let productCounter = 0;
     products.forEach((product) => {
       productCounter += 1;
+      const cleanedPrice = product.price.toString().replace('.', ',');
       $('#products-list').append(`
         <div class="product">
           <a href="./product.html?id=${product.id}" title="En savoir plus...">
             <h2>${product.name}</h2>
             <img alt="${product.name}" src="./assets/img/${product.image}">
-            <p class="price"><small>Prix</small> <span class="raw-price">${product.price}</span>&thinsp;$</p>
+            <p class="price"><small>Prix</small>${cleanedPrice}&thinsp;$</p>
           </a>
         </div>`);
     });
@@ -81,11 +82,12 @@ const productsByCategory = (category) => {
   products.forEach((product) => {
     if (product.category === category) {
       productCounter += 1;
+      const cleanedPrice = product.price.toString().replace('.', ',');
       $('#products-list').append(`<div class="product">
         <a href="./product.html?id=${product.id}" title="En savoir plus...">
             <h2>${product.name}</h2>
             <img alt="${product.name}" src="./assets/img/${product.image}">
-            <p class="raw-price"><small>Prix</small> ${product.price}&thinsp;$</p>
+            <p class="price"><small>Prix</small>${cleanedPrice}&thinsp;$</p>
         </a>
         </div>`);
     }

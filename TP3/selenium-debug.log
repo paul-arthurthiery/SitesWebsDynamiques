@@ -1,0 +1,616 @@
+15:30:13.978 INFO - Selenium build info: version: '3.4.0', revision: 'unknown'
+15:30:13.980 INFO - Launching a standalone Selenium Server
+2018-10-29 15:30:14.055:INFO::main: Logging initialized @846ms to org.seleniumhq.jetty9.util.log.StdErrLog
+15:30:14.226 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+ registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+15:30:14.227 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+15:30:14.227 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+15:30:14.227 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+15:30:14.227 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+15:30:14.228 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+2018-10-29 15:30:14.375:INFO:osjs.Server:main: jetty-9.4.3.v20170317
+2018-10-29 15:30:14.466:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@59fa1d9b{/,null,AVAILABLE}
+2018-10-29 15:30:14.548:INFO:osjs.AbstractConnector:main: Started ServerConnector@7eb45d4{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2018-10-29 15:30:14.549:INFO:osjs.Server:main: Started @1340ms
+15:30:14.549 INFO - Selenium Server is up and running
+15:30:15.217 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+15:30:15.292 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=1 Products, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+15:30:15.357 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=1 Products, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052) on port 33636
+Only local connections are allowed.
+15:30:18.347 INFO - Detected dialect: OSS
+15:30:18.379 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=1 Products, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+15:30:18.408 INFO - Executing: [get: http://localhost:8000/products.html])
+15:30:19.306 INFO - Done: [get: http://localhost:8000/products.html]
+15:30:19.320 INFO - Executing: [find elements: By.cssSelector: #products-list])
+15:30:19.402 INFO - Done: [find elements: By.cssSelector: #products-list]
+15:30:19.575 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:19.591 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:19.596 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:19.624 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:19.629 INFO - Executing: [find elements: By.cssSelector: #products-list > *])
+15:30:19.650 INFO - Done: [find elements: By.cssSelector: #products-list > *]
+15:30:19.656 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-list > *]])
+15:30:19.678 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-list > *]]
+15:30:19.683 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-list > *]])
+15:30:19.707 INFO - Done: [get text: 2 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-list > *]]
+15:30:19.719 INFO - Executing: [find elements: By.cssSelector: #product-categories])
+15:30:19.735 INFO - Done: [find elements: By.cssSelector: #product-categories]
+15:30:19.739 INFO - Executing: [find elements: By.cssSelector: #product-categories > button])
+15:30:19.757 INFO - Done: [find elements: By.cssSelector: #product-categories > button]
+15:30:19.765 INFO - Executing: [get text: 16 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-categories > button]])
+15:30:19.783 INFO - Done: [get text: 16 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-categories > button]]
+15:30:19.789 INFO - Executing: [click: 16 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-categories > button]])
+15:30:19.843 INFO - Done: [click: 16 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-categories > button]]
+15:30:20.004 INFO - Executing: [get value of css property: 16 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-categories > button], selected])
+15:30:20.021 INFO - Done: [get value of css property: 16 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-categories > button], selected]
+15:30:20.026 INFO - Executing: [find elements: By.cssSelector: #product-categories > button:not(.selected)])
+15:30:20.047 INFO - Done: [find elements: By.cssSelector: #product-categories > button:not(.selected)]
+15:30:20.057 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:20.071 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:20.075 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:20.089 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:20.095 INFO - Executing: [find elements: By.cssSelector: #products-list > *])
+15:30:20.106 INFO - Done: [find elements: By.cssSelector: #products-list > *]
+15:30:20.110 INFO - Executing: [is displayed: 21 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-list > *]])
+15:30:20.126 INFO - Done: [is displayed: 21 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-list > *]]
+15:30:20.131 INFO - Executing: [get text: 21 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-list > *]])
+15:30:20.155 INFO - Done: [get text: 21 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-list > *]]
+15:30:20.162 INFO - Executing: [find elements: By.cssSelector: #product-criteria])
+15:30:20.177 INFO - Done: [find elements: By.cssSelector: #product-criteria]
+15:30:20.181 INFO - Executing: [find elements: By.cssSelector: #product-criteria > button])
+15:30:20.199 INFO - Done: [find elements: By.cssSelector: #product-criteria > button]
+15:30:20.208 INFO - Executing: [get text: 25 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-criteria > button]])
+15:30:20.229 INFO - Done: [get text: 25 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-criteria > button]]
+15:30:20.233 INFO - Executing: [click: 25 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-criteria > button]])
+15:30:20.277 INFO - Done: [click: 25 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-criteria > button]]
+15:30:20.437 INFO - Executing: [get value of css property: 25 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-criteria > button], selected])
+15:30:20.450 INFO - Done: [get value of css property: 25 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #product-criteria > button], selected]
+15:30:20.454 INFO - Executing: [find elements: By.cssSelector: #product-criteria > button:not(.selected)])
+15:30:20.470 INFO - Done: [find elements: By.cssSelector: #product-criteria > button:not(.selected)]
+15:30:20.476 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:20.490 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:20.496 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:20.507 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:20.616 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:20.627 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:20.631 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:20.641 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:20.751 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:20.762 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:20.765 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:20.775 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:20.894 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:20.905 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:20.909 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:20.920 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:21.026 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:21.042 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:21.047 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:21.058 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:21.168 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:21.179 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:21.182 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:21.193 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:21.303 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:21.313 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:21.316 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:21.327 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:21.434 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:21.444 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:21.448 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:21.458 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:21.567 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:21.578 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:21.581 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:21.592 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:21.697 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:21.707 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:21.710 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:21.720 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:21.828 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:21.838 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:21.841 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:21.852 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:21.962 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:21.972 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:21.975 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:21.986 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:22.098 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:22.108 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:22.112 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:22.122 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:22.229 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:22.240 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:22.243 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:22.253 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:22.359 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:22.369 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:22.372 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:22.382 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:22.489 INFO - Executing: [find element: By.cssSelector: #products-count])
+15:30:22.499 INFO - Done: [find element: By.cssSelector: #products-count]
+15:30:22.505 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]])
+15:30:22.518 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (a6e766efde0e82dcd9232cad3388d509)] -> css selector: #products-count]]
+15:30:22.536 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=2 Product, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+15:30:22.537 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=2 Product, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052) on port 21820
+Only local connections are allowed.
+15:30:23.998 INFO - Detected dialect: OSS
+15:30:24.001 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=2 Product, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+15:30:24.008 INFO - Executing: [get: http://localhost:8000/product.html?id=12])
+15:30:24.582 INFO - Done: [get: http://localhost:8000/product.html?id=12]
+15:30:24.742 INFO - Executing: [find element: By.cssSelector: #product-name])
+15:30:24.759 INFO - Done: [find element: By.cssSelector: #product-name]
+15:30:24.762 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #product-name]])
+15:30:24.781 INFO - Done: [get text: 0 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #product-name]]
+15:30:24.785 INFO - Executing: [find element: By.cssSelector: #product-image])
+15:30:24.800 INFO - Done: [find element: By.cssSelector: #product-image]
+15:30:24.804 INFO - Executing: [get element attribute: 1 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #product-image], src])
+15:30:24.816 INFO - Done: [get element attribute: 1 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #product-image], src]
+15:30:24.822 INFO - Executing: [find element: By.cssSelector: #product-desc])
+15:30:25.761 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#product-desc"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.14.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Macintosh.local', ip: 'fe80:0:0:0:14b6:d263:f9ba:ef3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64085}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052), userDataDir=/var/folders/y3/42mtwhpn4z1brvzj0yk8lnhw0000gn/T/.org.chromium.Chromium.mY3VI6}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7b70f6d9ac9c2a4f14cab2ee897417c3
+*** Element info: {Using=css selector, value=#product-desc}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:501)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+15:30:25.765 WARN - Exception: no such element: Unable to locate element: {"method":"css selector","selector":"#product-desc"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.14.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Macintosh.local', ip: 'fe80:0:0:0:14b6:d263:f9ba:ef3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64085}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052), userDataDir=/var/folders/y3/42mtwhpn4z1brvzj0yk8lnhw0000gn/T/.org.chromium.Chromium.mY3VI6}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7b70f6d9ac9c2a4f14cab2ee897417c3
+*** Element info: {Using=css selector, value=#product-desc}
+15:30:25.826 INFO - Executing: [get: http://localhost:8000/product.html?id=424])
+15:30:25.953 INFO - Done: [get: http://localhost:8000/product.html?id=424]
+15:30:26.114 INFO - Executing: [find element: By.cssSelector: h1])
+15:30:26.130 INFO - Done: [find element: By.cssSelector: h1]
+15:30:26.133 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: h1]])
+15:30:26.157 INFO - Done: [get text: 2 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: h1]]
+15:30:26.161 INFO - Executing: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function() {
+        return document.querySelector("h1").parentNode.children.length;
+      }.apply(window, passedArgs);, []])
+15:30:26.171 INFO - Done: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function() {
+        return document.querySelector("h1").parentNode.children.length;
+      }.apply(window, passedArgs);, []]
+15:30:26.176 INFO - Executing: [get: http://localhost:8000/product.html?id=7])
+15:30:26.263 INFO - Done: [get: http://localhost:8000/product.html?id=7]
+15:30:26.424 INFO - Executing: [find element: By.cssSelector: .shopping-cart > .count])
+15:30:26.441 INFO - Done: [find element: By.cssSelector: .shopping-cart > .count]
+15:30:26.444 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: .shopping-cart > .count]])
+15:30:26.459 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: .shopping-cart > .count]]
+15:30:26.463 INFO - Executing: [find element: By.cssSelector: #dialog])
+15:30:26.479 INFO - Done: [find element: By.cssSelector: #dialog]
+15:30:26.483 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:26.498 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:26.502 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+15:30:26.517 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+15:30:26.521 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form input])
+15:30:26.537 INFO - Done: [find element: By.cssSelector: #add-to-cart-form input]
+15:30:26.540 INFO - Executing: [clear: 6 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #add-to-cart-form input]])
+15:30:26.586 INFO - Done: [clear: 6 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #add-to-cart-form input]]
+15:30:26.592 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form input])
+15:30:26.604 INFO - Done: [find element: By.cssSelector: #add-to-cart-form input]
+15:30:26.612 INFO - Executing: [send keys: 6 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #add-to-cart-form input], [9]])
+15:30:26.694 INFO - Done: [send keys: 6 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #add-to-cart-form input], [9]]
+15:30:26.699 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form])
+15:30:26.716 INFO - Done: [find element: By.cssSelector: #add-to-cart-form]
+15:30:26.719 INFO - Executing: [submit: 5 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #add-to-cart-form]])
+15:30:26.737 INFO - Done: [submit: 5 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #add-to-cart-form]]
+15:30:26.896 INFO - Executing: [find element: By.cssSelector: .shopping-cart > .count])
+15:30:26.908 INFO - Done: [find element: By.cssSelector: .shopping-cart > .count]
+15:30:26.911 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: .shopping-cart > .count]])
+15:30:26.922 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: .shopping-cart > .count]]
+15:30:26.926 INFO - Executing: [find element: By.cssSelector: .shopping-cart > .count])
+15:30:26.935 INFO - Done: [find element: By.cssSelector: .shopping-cart > .count]
+15:30:26.939 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: .shopping-cart > .count]])
+15:30:26.958 INFO - Done: [get text: 3 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: .shopping-cart > .count]]
+15:30:26.964 INFO - Executing: [find element: By.cssSelector: #dialog])
+15:30:26.975 INFO - Done: [find element: By.cssSelector: #dialog]
+15:30:26.979 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:26.991 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:26.996 INFO - Executing: [find elements: By.cssSelector: #dialog])
+15:30:27.013 INFO - Done: [find elements: By.cssSelector: #dialog]
+15:30:27.017 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:27.029 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:27.033 INFO - Executing: [find elements: By.cssSelector: #dialog])
+15:30:27.043 INFO - Done: [find elements: By.cssSelector: #dialog]
+15:30:27.047 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:27.057 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:27.561 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:27.572 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:28.081 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:28.091 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:28.595 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:28.606 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:29.113 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:29.123 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:29.631 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:29.640 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:30.147 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:30.157 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:30.666 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:30.676 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:31.184 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:31.195 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:31.702 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:31.712 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:32.221 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]])
+15:30:32.231 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (7b70f6d9ac9c2a4f14cab2ee897417c3)] -> css selector: #dialog]]
+15:30:32.235 INFO - Executing: [delete session: 2b3e20f6-5f40-468d-bcf1-e0c0c6af61e5])
+15:30:32.335 INFO - Done: [delete session: 2b3e20f6-5f40-468d-bcf1-e0c0c6af61e5]
+15:30:32.350 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=3 Shopping Cart, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+15:30:32.351 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=3 Shopping Cart, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052) on port 18575
+Only local connections are allowed.
+15:30:33.522 INFO - Detected dialect: OSS
+15:30:33.527 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=3 Shopping Cart, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+15:30:33.543 INFO - Executing: [get: http://localhost:8000/shopping-cart.html])
+15:30:34.197 INFO - Done: [get: http://localhost:8000/shopping-cart.html]
+15:30:34.359 INFO - Executing: [find element: By.cssSelector: h1])
+15:30:34.379 INFO - Done: [find element: By.cssSelector: h1]
+15:30:34.382 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: h1]])
+15:30:34.401 INFO - Done: [get text: 0 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: h1]]
+15:30:34.405 INFO - Executing: [find element: By.cssSelector: h1 + *])
+15:30:34.420 INFO - Done: [find element: By.cssSelector: h1 + *]
+15:30:34.423 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: h1 + *]])
+15:30:34.441 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: h1 + *]]
+15:30:34.445 INFO - Executing: [find element: By.cssSelector: .shopping-cart > .count])
+15:30:34.463 INFO - Done: [find element: By.cssSelector: .shopping-cart > .count]
+15:30:34.466 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: .shopping-cart > .count]])
+15:30:34.481 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: .shopping-cart > .count]]
+15:30:34.491 INFO - Executing: [get: http://localhost:8000/product.html?id=2])
+15:30:34.632 INFO - Done: [get: http://localhost:8000/product.html?id=2]
+15:30:34.791 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form input])
+15:30:34.807 INFO - Done: [find element: By.cssSelector: #add-to-cart-form input]
+15:30:34.810 INFO - Executing: [clear: 3 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input]])
+15:30:34.843 INFO - Done: [clear: 3 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input]]
+15:30:34.858 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form input])
+15:30:34.869 INFO - Done: [find element: By.cssSelector: #add-to-cart-form input]
+15:30:34.875 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input], [2]])
+15:30:34.948 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input], [2]]
+15:30:34.952 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form])
+15:30:34.967 INFO - Done: [find element: By.cssSelector: #add-to-cart-form]
+15:30:34.974 INFO - Executing: [submit: 4 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form]])
+15:30:34.988 INFO - Done: [submit: 4 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form]]
+15:30:34.992 INFO - Executing: [get: http://localhost:8000/product.html?id=13])
+15:30:35.088 INFO - Done: [get: http://localhost:8000/product.html?id=13]
+15:30:35.250 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form input])
+15:30:35.260 INFO - Done: [find element: By.cssSelector: #add-to-cart-form input]
+15:30:35.264 INFO - Executing: [clear: 5 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input]])
+15:30:35.294 INFO - Done: [clear: 5 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input]]
+15:30:35.299 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form input])
+15:30:35.310 INFO - Done: [find element: By.cssSelector: #add-to-cart-form input]
+15:30:35.313 INFO - Executing: [send keys: 5 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input], [3]])
+15:30:35.354 INFO - Done: [send keys: 5 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input], [3]]
+15:30:35.360 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form])
+15:30:35.371 INFO - Done: [find element: By.cssSelector: #add-to-cart-form]
+15:30:35.374 INFO - Executing: [submit: 6 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form]])
+15:30:35.388 INFO - Done: [submit: 6 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form]]
+15:30:35.392 INFO - Executing: [get: http://localhost:8000/product.html?id=6])
+15:30:35.490 INFO - Done: [get: http://localhost:8000/product.html?id=6]
+15:30:35.650 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form input])
+15:30:35.661 INFO - Done: [find element: By.cssSelector: #add-to-cart-form input]
+15:30:35.664 INFO - Executing: [clear: 7 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input]])
+15:30:35.693 INFO - Done: [clear: 7 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input]]
+15:30:35.698 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form input])
+15:30:35.708 INFO - Done: [find element: By.cssSelector: #add-to-cart-form input]
+15:30:35.712 INFO - Executing: [send keys: 7 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input], [1]])
+15:30:35.752 INFO - Done: [send keys: 7 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form input], [1]]
+15:30:35.759 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form])
+15:30:35.769 INFO - Done: [find element: By.cssSelector: #add-to-cart-form]
+15:30:35.773 INFO - Executing: [submit: 8 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form]])
+15:30:35.788 INFO - Done: [submit: 8 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #add-to-cart-form]]
+15:30:35.791 INFO - Executing: [get: http://localhost:8000/shopping-cart.html])
+15:30:35.896 INFO - Done: [get: http://localhost:8000/shopping-cart.html]
+15:30:36.056 INFO - Executing: [find elements: By.cssSelector: table tr])
+15:30:36.072 INFO - Done: [find elements: By.cssSelector: table tr]
+15:30:36.077 INFO - Executing: [get text: 10 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: table tr]])
+15:30:36.100 INFO - Done: [get text: 10 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: table tr]]
+15:30:36.105 INFO - Executing: [find element: By.cssSelector: .remove-item-button])
+15:30:36.119 INFO - Done: [find element: By.cssSelector: .remove-item-button]
+15:30:36.122 INFO - Executing: [click: 13 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: .remove-item-button]])
+15:30:36.208 INFO - Done: [click: 13 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: .remove-item-button]]
+15:30:36.213 INFO - Executing: [dismiss alert])
+15:30:36.230 INFO - Done: [dismiss alert]
+15:30:36.388 INFO - Executing: [find elements: By.cssSelector: table tr])
+15:30:36.411 INFO - Done: [find elements: By.cssSelector: table tr]
+15:30:36.419 INFO - Executing: [get text: 10 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: table tr]])
+15:30:36.438 INFO - Done: [get text: 10 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: table tr]]
+15:30:36.443 INFO - Executing: [find element: By.cssSelector: .add-quantity-button])
+15:30:36.457 INFO - Done: [find element: By.cssSelector: .add-quantity-button]
+15:30:36.461 INFO - Executing: [click: 14 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: .add-quantity-button]])
+15:30:36.513 INFO - Done: [click: 14 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: .add-quantity-button]]
+15:30:36.673 INFO - Executing: [find elements: By.cssSelector: table tr])
+15:30:36.683 INFO - Done: [find elements: By.cssSelector: table tr]
+15:30:36.689 INFO - Executing: [get text: 10 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: table tr]])
+15:30:36.705 INFO - Done: [get text: 10 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: table tr]]
+15:30:36.709 INFO - Executing: [find element: By.cssSelector: .remove-quantity-button])
+15:30:36.723 INFO - Done: [find element: By.cssSelector: .remove-quantity-button]
+15:30:36.726 INFO - Executing: [click: 15 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: .remove-quantity-button]])
+15:30:36.768 INFO - Done: [click: 15 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: .remove-quantity-button]]
+15:30:36.928 INFO - Executing: [find elements: By.cssSelector: table tr])
+15:30:36.938 INFO - Done: [find elements: By.cssSelector: table tr]
+15:30:36.943 INFO - Executing: [get text: 10 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: table tr]])
+15:30:36.958 INFO - Done: [get text: 10 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: table tr]]
+15:30:36.963 INFO - Executing: [find element: By.cssSelector: #remove-all-items-button])
+15:30:36.977 INFO - Done: [find element: By.cssSelector: #remove-all-items-button]
+15:30:36.980 INFO - Executing: [click: 16 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #remove-all-items-button]])
+15:30:37.041 INFO - Done: [click: 16 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: #remove-all-items-button]]
+15:30:37.049 INFO - Executing: [dismiss alert])
+15:30:37.061 INFO - Done: [dismiss alert]
+15:30:37.225 INFO - Executing: [find elements: By.cssSelector: table tr])
+15:30:37.250 INFO - Done: [find elements: By.cssSelector: table tr]
+15:30:37.257 INFO - Executing: [get text: 10 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: table tr]])
+15:30:37.272 INFO - Done: [get text: 10 [[ChromeDriver: chrome on MAC (64bbfe1d368a3a9c248478de4e18bcc4)] -> css selector: table tr]]
+15:30:37.286 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=4 Order, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+15:30:37.287 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=4 Order, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052) on port 5038
+Only local connections are allowed.
+15:30:38.698 INFO - Detected dialect: OSS
+15:30:38.700 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=4 Order, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+15:30:38.705 INFO - Executing: [get: http://localhost:8000/product.html?id=2])
+15:30:39.262 INFO - Done: [get: http://localhost:8000/product.html?id=2]
+15:30:39.416 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form input])
+15:30:39.437 INFO - Done: [find element: By.cssSelector: #add-to-cart-form input]
+15:30:39.441 INFO - Executing: [clear: 0 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: #add-to-cart-form input]])
+15:30:39.476 INFO - Done: [clear: 0 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: #add-to-cart-form input]]
+15:30:39.481 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form input])
+15:30:39.492 INFO - Done: [find element: By.cssSelector: #add-to-cart-form input]
+15:30:39.500 INFO - Executing: [send keys: 0 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: #add-to-cart-form input], [1]])
+15:30:39.579 INFO - Done: [send keys: 0 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: #add-to-cart-form input], [1]]
+15:30:39.583 INFO - Executing: [find element: By.cssSelector: #add-to-cart-form])
+15:30:39.601 INFO - Done: [find element: By.cssSelector: #add-to-cart-form]
+15:30:39.606 INFO - Executing: [submit: 1 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: #add-to-cart-form]])
+15:30:39.625 INFO - Done: [submit: 1 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: #add-to-cart-form]]
+15:30:39.634 INFO - Executing: [get: http://localhost:8000/order.html])
+15:30:39.773 INFO - Done: [get: http://localhost:8000/order.html]
+15:30:39.933 INFO - Executing: [find element: By.cssSelector: .shopping-cart > .count])
+15:30:39.953 INFO - Done: [find element: By.cssSelector: .shopping-cart > .count]
+15:30:39.959 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: .shopping-cart > .count]])
+15:30:39.982 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: .shopping-cart > .count]]
+15:30:39.988 INFO - Executing: [find element: By.cssSelector: .shopping-cart > .count])
+15:30:40.000 INFO - Done: [find element: By.cssSelector: .shopping-cart > .count]
+15:30:40.005 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: .shopping-cart > .count]])
+15:30:40.036 INFO - Done: [get text: 2 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: .shopping-cart > .count]]
+15:30:40.045 INFO - Executing: [find element: By.cssSelector: #order-form])
+15:30:40.347 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#order-form"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.14.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 22 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Macintosh.local', ip: 'fe80:0:0:0:14b6:d263:f9ba:ef3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64279}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052), userDataDir=/var/folders/y3/42mtwhpn4z1brvzj0yk8lnhw0000gn/T/.org.chromium.Chromium.TEh0FP}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4e2171ebdf90b66f6a05abbd11943df1
+*** Element info: {Using=css selector, value=#order-form}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:501)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+15:30:40.347 WARN - Exception: no such element: Unable to locate element: {"method":"css selector","selector":"#order-form"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.14.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 22 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Macintosh.local', ip: 'fe80:0:0:0:14b6:d263:f9ba:ef3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64279}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052), userDataDir=/var/folders/y3/42mtwhpn4z1brvzj0yk8lnhw0000gn/T/.org.chromium.Chromium.TEh0FP}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4e2171ebdf90b66f6a05abbd11943df1
+*** Element info: {Using=css selector, value=#order-form}
+15:30:40.550 INFO - Executing: [get current url])
+15:30:40.558 INFO - Done: [get current url]
+15:30:40.562 INFO - Executing: [find element: By.cssSelector: #first-name-error])
+15:30:40.841 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#first-name-error"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.14.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 14 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Macintosh.local', ip: 'fe80:0:0:0:14b6:d263:f9ba:ef3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64279}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052), userDataDir=/var/folders/y3/42mtwhpn4z1brvzj0yk8lnhw0000gn/T/.org.chromium.Chromium.TEh0FP}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4e2171ebdf90b66f6a05abbd11943df1
+*** Element info: {Using=css selector, value=#first-name-error}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:501)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+15:30:40.842 WARN - Exception: no such element: Unable to locate element: {"method":"css selector","selector":"#first-name-error"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.14.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 14 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Macintosh.local', ip: 'fe80:0:0:0:14b6:d263:f9ba:ef3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64279}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052), userDataDir=/var/folders/y3/42mtwhpn4z1brvzj0yk8lnhw0000gn/T/.org.chromium.Chromium.TEh0FP}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4e2171ebdf90b66f6a05abbd11943df1
+*** Element info: {Using=css selector, value=#first-name-error}
+15:30:40.887 INFO - Executing: [find element: By.cssSelector: #first-name])
+15:30:40.903 INFO - Done: [find element: By.cssSelector: #first-name]
+15:30:40.906 INFO - Executing: [clear: 3 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: #first-name]])
+15:30:40.935 INFO - Done: [clear: 3 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: #first-name]]
+15:30:40.939 INFO - Executing: [find element: By.cssSelector: #first-name])
+15:30:40.948 INFO - Done: [find element: By.cssSelector: #first-name]
+15:30:40.954 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: #first-name], [A]])
+15:30:41.020 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on MAC (4e2171ebdf90b66f6a05abbd11943df1)] -> css selector: #first-name], [A]]
+15:30:41.024 INFO - Executing: [find element: By.cssSelector: #first-name-error])
+15:30:41.280 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#first-name-error"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.14.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Macintosh.local', ip: 'fe80:0:0:0:14b6:d263:f9ba:ef3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64279}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052), userDataDir=/var/folders/y3/42mtwhpn4z1brvzj0yk8lnhw0000gn/T/.org.chromium.Chromium.TEh0FP}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4e2171ebdf90b66f6a05abbd11943df1
+*** Element info: {Using=css selector, value=#first-name-error}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:501)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+15:30:41.280 WARN - Exception: no such element: Unable to locate element: {"method":"css selector","selector":"#first-name-error"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.14.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Macintosh.local', ip: 'fe80:0:0:0:14b6:d263:f9ba:ef3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64279}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052), userDataDir=/var/folders/y3/42mtwhpn4z1brvzj0yk8lnhw0000gn/T/.org.chromium.Chromium.TEh0FP}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4e2171ebdf90b66f6a05abbd11943df1
+*** Element info: {Using=css selector, value=#first-name-error}
+15:30:41.323 INFO - Executing: [find element: By.cssSelector: #order-form])
+15:30:41.579 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#order-form"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.14.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Macintosh.local', ip: 'fe80:0:0:0:14b6:d263:f9ba:ef3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64279}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052), userDataDir=/var/folders/y3/42mtwhpn4z1brvzj0yk8lnhw0000gn/T/.org.chromium.Chromium.TEh0FP}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4e2171ebdf90b66f6a05abbd11943df1
+*** Element info: {Using=css selector, value=#order-form}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:501)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+15:30:41.579 WARN - Exception: no such element: Unable to locate element: {"method":"css selector","selector":"#order-form"}
+  (Session info: chrome=70.0.3538.77)
+  (Driver info: chromedriver=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052),platform=Mac OS X 10.14.0 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Macintosh.local', ip: 'fe80:0:0:0:14b6:d263:f9ba:ef3f%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64279}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.43.600229 (3fae4d0cda5334b4f533bede5a4787f7b832d052), userDataDir=/var/folders/y3/42mtwhpn4z1brvzj0yk8lnhw0000gn/T/.org.chromium.Chromium.TEh0FP}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=70.0.3538.77, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4e2171ebdf90b66f6a05abbd11943df1
+*** Element info: {Using=css selector, value=#order-form}
+15:30:41.769 INFO - Executing: [get current url])
+15:30:41.775 INFO - Done: [get current url]
