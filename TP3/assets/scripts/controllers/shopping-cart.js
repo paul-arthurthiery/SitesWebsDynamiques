@@ -117,7 +117,7 @@ const deleteProduct = (productId) => {
   if (!confirmed) return false;
   const currentAmount = parseInt($(`#${productId} td div:nth-child(1)`).text(), 10);
   const cart = JSON.parse(localStorage.getItem('panier'));
-  const newCart = cart.filter(value => value === productId);
+  const newCart = cart.filter(value => value !== productId.toString());
   localStorage.setItem('panier', JSON.stringify(newCart));
   $(`#${productId}`).remove();
   if ($('#table-body').children().length === 0) {
