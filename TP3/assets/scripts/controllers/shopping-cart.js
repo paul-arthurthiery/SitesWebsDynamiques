@@ -43,7 +43,7 @@ const createShoppingCart = async () => {
             <tr id="${product.id}">
               <td><button title="Supprimer" onClick="deleteProduct(${product.id})" class="remove-item-button"><i class="fa fa-times"></i></button></td>
               <td><a href="./product.html?id=${id}" class="name">${product.name}</a></td>
-              <td class="price">${cleanedPrice}$</td>
+              <td id="product-price">${cleanedPrice}$</td>
               <td>
                 <div class="row">
                   <div class="col">
