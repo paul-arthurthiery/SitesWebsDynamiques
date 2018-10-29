@@ -5,7 +5,7 @@ jQuery.validator.addMethod('expicb', (value) => {
 }, 'La date d’expiration de votre carte de crédit est invalide.');
 
 
-$('#orderform').validate({
+$('#order-form').validate({
   submitHandler(form) {
     localStorage.removeItem('panier');
     localStorage.setItem('firstname', $('#first-name').val());
