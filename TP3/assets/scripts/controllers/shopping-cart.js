@@ -1,4 +1,5 @@
 /* global getProducts $ localStorage */
+
 const createShoppingCart = async () => {
   const products = await getProducts();
   const idarray = [];
@@ -35,18 +36,18 @@ const createShoppingCart = async () => {
         if (product.id === parseInt(id, 10)) {
           price += Math.round(numOccurences * parseFloat(product.price) * 100) / 100;
           $('#table-body').append(`
-            <tr>
+            <tr id="${product.id}">
               <td><button title="Supprimer"><i class="fa fa-times"></i></button></td>
               <td><a href="./product.html?id=${id}" class="name">${product.name}</a></td>
               <td>${product.price}&thinsp;$</td>
               <td>
                 <div class="row">
                   <div class="col">
-                    <button title="Retirer" disabled=""><i class="fa fa-minus"></i></button>
+                    <button title="Retirer" onClick="removeProduct(${product.id})"><i class="fa fa-minus"></i></button>
                   </div>
                   <div class="col">${numOccurences}</div>
                   <div class="col">
-                    <button title="Ajouter"><i class="fa fa-plus"></i></button>
+                    <button title="Ajouter" onClick="addProduct(${product.id})"><i class="fa fa-plus"></i></button>
                   </div>
                 </div>
               </td>
@@ -68,3 +69,25 @@ const createShoppingCart = async () => {
 };
 
 createShoppingCart();
+
+const removeProduct = (productId) => {
+  const currentAmount = parseInt($(`#${productId} td div:nth-child(2)`).text(), 10);
+  const cart = JSON.parse(localStorage.getItem('panier'));
+  const productIndex = cart.indexOf(`${productId}`);
+  if (productIndex !== -1) {
+    cart.splice(productIndex, 1);
+    localStorage.setItem('panier', JSON.stringify(cart));
+    $(`#${productId} td div:nth-child(2)`).text(currentAmount - 1);
+    $('.count').text(parseInt($('.count').text(), 10) - 1);
+  }
+};
+
+const addProduct = (productId) => {
+  const currentAmount = parseInt($(`#${productId} td div:nth-child(2)`).text(), 10);
+  const cart = JSON.parse(localStorage.getItem('panier'));
+  console.log(cart);
+  cart.push(`${productId}`);
+  localStorage.setItem('panier', JSON.stringify(cart));
+  $(`#${productId} td div:nth-child(2)`).text(currentAmount + 1);
+  $('.count').text(parseInt($('.count').text(), 10) + 1);
+};
