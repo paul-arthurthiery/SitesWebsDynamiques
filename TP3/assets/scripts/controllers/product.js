@@ -73,12 +73,11 @@ const pageBuilder = async (id) => {
 
 const getId = () => {
   const sPageURL = decodeURIComponent(window.location.search.substring(1));
-  return sPageURL.match('(?<=id=)[0-9]*');
+  return sPageURL.match('(?<=id=)[0-9]*')[0];
 };
 
 
 $(document).ready(() => {
   const id = getId();
-  console.log(id);
   pageBuilder(id);
 });
