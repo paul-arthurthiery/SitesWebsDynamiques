@@ -1,7 +1,12 @@
 /* global jQuery localStorage $ */
 jQuery.validator.addMethod('expicb', (value) => {
-  const filter = new RegExp('(0[123456789]|10|11|12)([/])([1-2][0-9][0-9][0-9])');
-  return filter.test(value);
+  const filter = new RegExp('(0[123456789]|10|11|12)([/])([0-9][0-9])');
+  if (value.length==5){
+      return filter.test(value);
+  }else {
+      return false;
+  }
+
 }, "La date d'expiration de votre carte de crédit est invalide.");
 
 

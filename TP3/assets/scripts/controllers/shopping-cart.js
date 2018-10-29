@@ -25,7 +25,7 @@ const createShoppingCart = async () => {
 
         </tbody>
     </table>
-    <p class="shopping-cart-total" id="prixtotal"></p>
+    <p class="shopping-cart-total" id="total-amount"></p>
     <a class="btn pull-right" href="./order.html">Commander <i class="fa fa-angle-double-right"></i></a>
     <button class="btn" onClick="emptyCart()" id="remove-all-items-button"><i class="fa fa-trash-o"></i>&nbsp; Vider le panier</button>`);
   let price = 0;
@@ -43,19 +43,19 @@ const createShoppingCart = async () => {
             <tr id="${product.id}">
               <td><button title="Supprimer" onClick="deleteProduct(${product.id})" class="remove-item-button"><i class="fa fa-times"></i></button></td>
               <td><a href="./product.html?id=${id}" class="name">${product.name}</a></td>
-              <td>${cleanedPrice}&thinsp;$</td>
+              <td class="price">${cleanedPrice}$</td>
               <td>
                 <div class="row">
                   <div class="col">
                     <button title="Retirer" onClick="removeProduct(${product.id})" class="remove-quantity-button"><i class="fa fa-minus"></i></button>
                   </div>
-                  <div class="col">${numOccurences}</div>
+                  <div class="col" id="quantity" class="quantity">${numOccurences}</div>
                   <div class="col">
                     <button title="Ajouter" onClick="addProduct(${product.id})" class="add-quantity-button"><i class="fa fa-plus"></i></button>
                   </div>
                 </div>
               </td>
-              <td class=".price">${cleanedPriceTotal}$</td>
+              <td class="price">${cleanedPriceTotal}$</td>
             </tr>`);
         }
       });
@@ -68,7 +68,7 @@ const createShoppingCart = async () => {
     return aValue > bValue ? 1 : 0;
   });
   $('#table-body').append(sortedTable);
-  $('#prixtotal').html(`Total: <strong>${Math.round(price * 100) / 100}$</strong>`);
+  $('#total-amount').html(`Total: <strong>${Math.round(price * 100) / 100}$</strong>`);
   return true;
 };
 
