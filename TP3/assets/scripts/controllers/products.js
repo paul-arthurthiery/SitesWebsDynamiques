@@ -62,7 +62,7 @@ const refreshProducts = () => {
           <a href="./product.html?id=${product.id}" title="En savoir plus...">
             <h2>${product.name}</h2>
             <img alt="${product.name}" src="./assets/img/${product.image}">
-            <p class="price"><small>Prix</small> <span class="price">${product.price}</span>&thinsp;$</p>
+            <p class="price"><small>Prix</small> <span class="raw-price">${product.price}</span>&thinsp;$</p>
           </a>
         </div>`);
     });
@@ -85,7 +85,7 @@ const productsByCategory = (category) => {
         <a href="./product.html?id=${product.id}" title="En savoir plus...">
             <h2>${product.name}</h2>
             <img alt="${product.name}" src="./assets/img/${product.image}">
-            <p class="price"><small>Prix</small> ${product.price}&thinsp;$</p>
+            <p class="raw-price"><small>Prix</small> ${product.price}&thinsp;$</p>
         </a>
         </div>`);
     }
