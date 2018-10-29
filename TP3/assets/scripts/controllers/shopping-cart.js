@@ -37,7 +37,7 @@ const createShoppingCart = async () => {
           price += Math.round(numOccurences * parseFloat(product.price) * 100) / 100;
           $('#table-body').append(`
             <tr id="${product.id}">
-              <td><button title="Supprimer"><i class="fa fa-times"></i></button></td>
+              <td><button title="Supprimer" onClick="deleteProduct(${product.id})"><i class="fa fa-times"></i></button></td>
               <td><a href="./product.html?id=${id}" class="name">${product.name}</a></td>
               <td>${product.price}&thinsp;$</td>
               <td>
@@ -90,4 +90,18 @@ const addProduct = (productId) => {
   localStorage.setItem('panier', JSON.stringify(cart));
   $(`#${productId} td div:nth-child(2)`).text(currentAmount + 1);
   $('.count').text(parseInt($('.count').text(), 10) + 1);
+};
+
+const deleteProduct = (productId) => {
+  const currentAmount = parseInt($(`#${productId} td div:nth-child(2)`).text(), 10);
+  const cart = JSON.parse(localStorage.getItem('panier'));
+  const newCart = cart.filter(value => value === productId);
+  localStorage.setItem('panier', JSON.stringify(newCart));
+  $(`#${productId}`).remove();
+  if ($('#table-body').children().length === 0) {
+    $('article').empty();
+    $('article').append('<h1 id="panier">Panier</h1>');
+    createShoppingCart();
+  }
+  $('.count').text(parseInt($('.count').text(), 10) - currentAmount);
 };
