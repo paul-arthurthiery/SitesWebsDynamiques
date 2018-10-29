@@ -49,7 +49,7 @@ const createShoppingCart = async () => {
                   <div class="col">
                     <button title="Retirer" onClick="removeProduct(${product.id})" class="remove-quantity-button" ${numOccurences === 1 ? 'disabled' : ''}><i class="fa fa-minus"></i></button>
                   </div>
-                  <div class="col" id="quantity" class="quantity">${numOccurences}</div>
+                  <div class="col quantity">${numOccurences}</div>
                   <div class="col">
                     <button title="Ajouter" onClick="addProduct(${product.id})" class="add-quantity-button"><i class="fa fa-plus"></i></button>
                   </div>
@@ -88,7 +88,7 @@ const removeProduct = (productId) => {
   if (productIndex !== -1) {
     cart.splice(productIndex, 1);
     localStorage.setItem('panier', JSON.stringify(cart));
-    $(`#${productId} td div:nth-child(2)`).text(currentAmount - 1);
+    $('.quantity').text(currentAmount - 1);
     if (currentAmount - 1 === 1) $(`#${productId} button:eq(1)`).attr('disabled', true);
     $('.count').text(cart.length);
     if (cart.length === 0) $('.count').css('display', 'none');
@@ -103,7 +103,7 @@ const addProduct = (productId) => {
   const cart = JSON.parse(localStorage.getItem('panier'));
   cart.push(`${productId}`);
   localStorage.setItem('panier', JSON.stringify(cart));
-  $(`#${productId} td div:nth-child(2)`).text(currentAmount + 1);
+  $('.quantity').text(currentAmount + 1);
   if (currentAmount + 1 > 1) $(`#${productId} button:eq(1)`).removeAttr('disabled');
   $('.count').text(parseInt($('.count').text(), 10) + 1);
   const productToAdd = products.filter(product => product.id === productId)[0];
