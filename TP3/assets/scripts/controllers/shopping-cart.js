@@ -37,11 +37,13 @@ const createShoppingCart = async () => {
       products.forEach((product) => {
         if (product.id === parseInt(id, 10)) {
           price += Math.round(numOccurences * parseFloat(product.price) * 100) / 100;
+          const cleanedPrice = product.price.toString().replace('.', ',');
+          const cleanedPriceTotal = (Math.round(numOccurences * parseFloat(product.price) * 100) / 100).toString().replace('.', ',');
           $('#table-body').append(`
             <tr id="${product.id}">
               <td><button title="Supprimer" onClick="deleteProduct(${product.id})" class="remove-item-button"><i class="fa fa-times"></i></button></td>
               <td><a href="./product.html?id=${id}" class="name">${product.name}</a></td>
-              <td>${product.price}&thinsp;$</td>
+              <td>${cleanedPrice}&thinsp;$</td>
               <td>
                 <div class="row">
                   <div class="col">
@@ -53,7 +55,7 @@ const createShoppingCart = async () => {
                   </div>
                 </div>
               </td>
-              <td class=".price">${Math.round(numOccurences * parseFloat(product.price) * 100) / 100}&thinsp;$</td>
+              <td class=".price">${cleanedPriceTotal}$</td>
             </tr>`);
         }
       });
