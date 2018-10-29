@@ -1,7 +1,9 @@
 /* global getProducts $ localStorage */
 
+let products;
+
 const createShoppingCart = async () => {
-  const products = await getProducts();
+  products = await getProducts();
   const idarray = [];
   const panier = JSON.parse(localStorage.getItem('panier'));
   if (!panier || panier.length === 0) {
@@ -64,11 +66,18 @@ const createShoppingCart = async () => {
     return aValue > bValue ? 1 : 0;
   });
   $('#table-body').append(sortedTable);
-  $('#prixtotal').html(`Total: <strong>${price}$</strong>`);
+  $('#prixtotal').html(`Total: <strong>${Math.round(price * 100) / 100}$</strong>`);
   return true;
 };
 
 createShoppingCart();
+
+const refreshPrice = (product, amountOfProduct, previousAmount) => {
+  if ($(`#${product.id}`)) {
+    $(`#${product.id} td:nth-child(5)`).html(`${Math.round(amountOfProduct * parseFloat(product.price) * 100) / 100}&thinsp;$`);
+  }
+  $('.shopping-cart-total').html(`Total: <strong>${Math.round((parseFloat($('.shopping-cart-total strong').text()) + (amountOfProduct - previousAmount) * product.price) * 100) / 100}$</strong>`);
+};
 
 const removeProduct = (productId) => {
   const currentAmount = parseInt($(`#${productId} td div:nth-child(2)`).text(), 10);
@@ -80,16 +89,19 @@ const removeProduct = (productId) => {
     $(`#${productId} td div:nth-child(2)`).text(currentAmount - 1);
     $('.count').text(parseInt($('.count').text(), 10) - 1);
   }
+  const productToRemove = products.filter(product => product.id === productId)[0];
+  refreshPrice(productToRemove, currentAmount - 1, currentAmount);
 };
 
 const addProduct = (productId) => {
   const currentAmount = parseInt($(`#${productId} td div:nth-child(2)`).text(), 10);
   const cart = JSON.parse(localStorage.getItem('panier'));
-  console.log(cart);
   cart.push(`${productId}`);
   localStorage.setItem('panier', JSON.stringify(cart));
   $(`#${productId} td div:nth-child(2)`).text(currentAmount + 1);
   $('.count').text(parseInt($('.count').text(), 10) + 1);
+  const productToAdd = products.filter(product => product.id === productId)[0];
+  refreshPrice(productToAdd, currentAmount + 1, currentAmount);
 };
 
 const deleteProduct = (productId) => {
@@ -104,4 +116,6 @@ const deleteProduct = (productId) => {
     createShoppingCart();
   }
   $('.count').text(parseInt($('.count').text(), 10) - currentAmount);
+  const productToDelete = products.filter(product => product.id === productId)[0];
+  refreshPrice(productToDelete, 0, currentAmount);
 };

@@ -9,6 +9,22 @@ const featureBuilder = (product) => {
   return listli;
 };
 
+const addToCart = (e, id) => {
+  e.preventDefault();
+  let panier = JSON.parse(localStorage.getItem('panier'));
+  const quantity = parseInt($('#product-quantity').val(), 10);
+  if (!panier || panier.length === 0) {
+    panier = [];
+  }
+  for (let i = 0; i < quantity; i += 1) {
+    panier.push(id);
+  }
+  localStorage.setItem('panier', JSON.stringify(panier));
+  $('span.count').css('display', 'block');
+  $('span.count').text(panier.length);
+  $(`<span id="dialog">Added ${$('h1').text()} to cart</span>`).insertAfter('article');
+  setTimeout(() => $('#dialog').remove(), 5000);
+};
 
 const pageBuilder = async (id) => {
   $('main').empty();
@@ -54,21 +70,7 @@ const pageBuilder = async (id) => {
       $('main').append(' <article> <h1>Page non trouvée !</h1> </article>');
     }
   });
-  $('#formadd').submit((e) => {
-    e.preventDefault();
-    let panier = JSON.parse(localStorage.getItem('panier'));
-    const quantity = parseInt($('#product-quantity').val(), 10);
-    if (!panier || panier.length === 0) {
-      panier = [];
-    }
-    for (let i = 0; i < quantity; i += 1) {
-      panier.push(id);
-    }
-    localStorage.setItem('panier', JSON.stringify(panier));
-    $('span.count').text(panier.length);
-    $(`<span id="dialog">Added ${$('h1').text()} to cart</span>`).insertAfter('article');
-    setTimeout(() => $('#dialog').remove(), 5000);
-  });
+  $('#formadd').submit(e => addToCart(e, id));
 };
 
 const getId = () => {
