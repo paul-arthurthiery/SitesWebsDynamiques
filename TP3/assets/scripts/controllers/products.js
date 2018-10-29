@@ -54,14 +54,19 @@ const refreshProducts = () => {
   getProducts().then((productsJson) => {
     $('#products-list').empty();
     products = productsJson;
-    products.forEach(product => $('#products-list').append(`
-    <div class="product">
-      <a href="./product.html?id=${product.id}" title="En savoir plus...">
-        <h2>${product.name}</h2>
-        <img alt="${product.name}" src="./assets/img/${product.image}">
-        <p class="price"><small>Prix</small> <span class="raw-price">${product.price}</span>&thinsp;$</p>
-      </a>
-    </div>`));
+    let productCounter = 0;
+    products.forEach((product) => {
+      productCounter += 1;
+      $('#products-list').append(`
+        <div class="product">
+          <a href="./product.html?id=${product.id}" title="En savoir plus...">
+            <h2>${product.name}</h2>
+            <img alt="${product.name}" src="./assets/img/${product.image}">
+            <p class="price"><small>Prix</small> <span class="price">${product.price}</span>&thinsp;$</p>
+          </a>
+        </div>`);
+    });
+    $('#products-count').text(`${productCounter} produits`);
     if (firstLoad) {
       firstLoad = false;
       sortWithCriteria('price');
@@ -72,10 +77,9 @@ const refreshProducts = () => {
 const productsByCategory = (category) => {
   $('#products-list').empty();
   let productCounter = 0;
+  if (category === 'all') return refreshProducts();
   products.forEach((product) => {
-    if (category === 'all') {
-      refreshProducts();
-    } else if (product.category === category) {
+    if (product.category === category) {
       productCounter += 1;
       $('#products-list').append(`<div class="product">
         <a href="./product.html?id=${product.id}" title="En savoir plus...">
@@ -87,6 +91,7 @@ const productsByCategory = (category) => {
     }
   });
   $('#products-count').text(`${productCounter} produits`);
+  return true;
 };
 
 $('#product-categories').children().click((e) => {

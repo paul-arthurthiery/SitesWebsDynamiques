@@ -7,7 +7,7 @@ const createShoppingCart = async () => {
   const idarray = [];
   const panier = JSON.parse(localStorage.getItem('panier'));
   if (!panier || panier.length === 0) {
-    $('article').append('<p>Aucun produit dans votre panier</p>');
+    $('article').append('<p>Aucun produit dans le panier.</p>');
     return false;
   }
   $('article').append(`
@@ -27,7 +27,7 @@ const createShoppingCart = async () => {
     </table>
     <p class="shopping-cart-total" id="prixtotal"></p>
     <a class="btn pull-right" href="./order.html">Commander <i class="fa fa-angle-double-right"></i></a>
-    <button class="btn" onClick="emptyCart()" id="#remove-all-items-button"><i class="fa fa-trash-o"></i>&nbsp; Vider le panier</button>`);
+    <button class="btn" onClick="emptyCart()" id="remove-all-items-button"><i class="fa fa-trash-o"></i>&nbsp; Vider le panier</button>`);
   let price = 0;
   panier.forEach((id) => {
     const productOccurence = $.grep(idarray, elem => elem === id).length; // idarray.reduce((acc, curr) => curr===id ? acc+=1:acc, 0)
@@ -39,17 +39,17 @@ const createShoppingCart = async () => {
           price += Math.round(numOccurences * parseFloat(product.price) * 100) / 100;
           $('#table-body').append(`
             <tr id="${product.id}">
-              <td><button title="Supprimer" onClick="deleteProduct(${product.id})"><i class="fa fa-times"></i></button></td>
+              <td><button title="Supprimer" onClick="deleteProduct(${product.id})" class="remove-item-button"><i class="fa fa-times"></i></button></td>
               <td><a href="./product.html?id=${id}" class="name">${product.name}</a></td>
               <td>${product.price}&thinsp;$</td>
               <td>
                 <div class="row">
                   <div class="col">
-                    <button title="Retirer" onClick="removeProduct(${product.id})"><i class="fa fa-minus"></i></button>
+                    <button title="Retirer" onClick="removeProduct(${product.id})" class="remove-quantity-button"><i class="fa fa-minus"></i></button>
                   </div>
                   <div class="col">${numOccurences}</div>
                   <div class="col">
-                    <button title="Ajouter" onClick="addProduct(${product.id})"><i class="fa fa-plus"></i></button>
+                    <button title="Ajouter" onClick="addProduct(${product.id})" class="add-quantity-button"><i class="fa fa-plus"></i></button>
                   </div>
                 </div>
               </td>
