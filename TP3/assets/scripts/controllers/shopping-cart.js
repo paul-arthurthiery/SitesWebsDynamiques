@@ -78,8 +78,7 @@ const refreshPrice = (product, amountOfProduct, previousAmount) => {
   if ($(`#${product.id}`)) {
     $(`#${product.id} td:nth-child(5)`).html(`${(Math.round(amountOfProduct * parseFloat(product.price) * 100) / 100).toString().replace('.', ',')}$`);
   }
-  const cleanedPriceTotal = (Math.round((parseFloat($('.shopping-cart-total strong').text()) + (amountOfProduct - previousAmount) * product.price) * 100) / 100).toString().replace('.', ',');
-  console.log(cleanedPriceTotal);
+  const cleanedPriceTotal = (Math.round((parseFloat($('.shopping-cart-total strong').text().replace(',', '.')) + (amountOfProduct - previousAmount) * product.price) * 100) / 100).toString().replace('.', ',');
   $('.shopping-cart-total').html(`Total: <strong>${cleanedPriceTotal}$</strong>`);
 };
 
