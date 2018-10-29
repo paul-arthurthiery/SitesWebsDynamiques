@@ -34,6 +34,7 @@ const pageBuilder = async (id) => {
     products.forEach((product) => {
       if (product.id === parseInt(id, 10)) {
         i += 1;
+        const cleanedPrice = product.price.toString().replace('.', ',');
         $('main').append(`
           <article>
             <h1 id="product-name">${product.name}</h1>
@@ -60,7 +61,7 @@ const pageBuilder = async (id) => {
                     <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
                   </button>
                 </form>
-                <p>Prix: <strong id="product-price">${product.price}&thinsp;$</strong></p>
+                <p>Prix: <strong id="product-price">${cleanedPrice}$</strong></p>
               </div>
             </div>
           </article>
