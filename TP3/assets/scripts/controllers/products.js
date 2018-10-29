@@ -102,6 +102,7 @@ $('#product-categories').children().click((e) => {
   const selected = $('#product-categories').children();
   selected.removeClass('selected');
   $(e.target).addClass('selected');
+  sortWithCriteria($('#product-criteria .selected').data('criteria'));
 });
 
 $('#product-criteria').children().click((e) => {
