@@ -221,7 +221,7 @@ header nav .shopping-cart .count {
   border-radius: 16px;
 }
 header nav .shopping-cart .count.visible {
-  display: inline;
+  display: block;
 }
 main {
   display: flex;
