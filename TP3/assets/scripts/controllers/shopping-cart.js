@@ -53,7 +53,7 @@ const createShoppingCart = async () => {
                   </div>
                 </div>
               </td>
-              <td>${Math.round(numOccurences * parseFloat(product.price) * 100) / 100}&thinsp;$</td>
+              <td class=".price">${Math.round(numOccurences * parseFloat(product.price) * 100) / 100}&thinsp;$</td>
             </tr>`);
         }
       });

@@ -44,11 +44,11 @@ const pageBuilder = async (id) => {
               <div class="col">
                 <section>
                   <h2>Description</h2>
-                  <p>${product.description}</p>
+                  <p id="product-desc">${product.description}</p>
                 </section>
                 <section>
                   <h2>Caractéristiques</h2>
-                  <ul>
+                  <ul id="product-features">
                   ${featureBuilder(product)}
                   </ul>
                 </section>

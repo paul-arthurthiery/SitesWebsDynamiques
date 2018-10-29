@@ -60,13 +60,13 @@ const refreshProducts = () => {
       $('#products-list').append(`
         <div class="product">
           <a href="./product.html?id=${product.id}" title="En savoir plus...">
-            <h2>${product.name}</h2>
-            <img alt="${product.name}" src="./assets/img/${product.image}">
-            <p class="price"><small>Prix</small> <span class="raw-price">${product.price}</span>&thinsp;$</p>
+            <h2 id="product-name">${product.name}</h2>
+            <img id="product-image" alt="${product.name}" src="./assets/img/${product.image}">
+            <p id="product-price" class="price"><small>Prix</small> <span class="raw-price">${product.price}</span>$</p>
           </a>
         </div>`);
     });
-    $('#products-count').text(`${productCounter} produits`);
+    $('#products-count').text(productCounter+" produits");
     if (firstLoad) {
       firstLoad = false;
       sortWithCriteria('price');
@@ -85,12 +85,12 @@ const productsByCategory = (category) => {
         <a href="./product.html?id=${product.id}" title="En savoir plus...">
             <h2>${product.name}</h2>
             <img alt="${product.name}" src="./assets/img/${product.image}">
-            <p class="raw-price"><small>Prix</small> ${product.price}&thinsp;$</p>
+            <p class="raw-price"><small>Prix</small> ${product.price}$</p>
         </a>
         </div>`);
     }
   });
-  $('#products-count').text(`${productCounter} produits`);
+  $('#products-count').text(productCounter+" produits");
   return true;
 };
 

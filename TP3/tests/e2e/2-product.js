@@ -20,7 +20,7 @@ function validateShoppingCartQuantity(client, expectedQuantity) {
       "Le nombre de produits dans le panier ne doit pas être visible lorsque le panier est vide.");
   } else {
     client.assert.visible(shoppingCartConfig.elements.count,
-      "Le nombre de produits dans le panier doit pas être visible.");
+      "Le nombre de produits dans le panier doit être visible.");
     client.assert.containsText(shoppingCartConfig.elements.count, expectedQuantity,
       "Le nombre de produits dans le panier doit être de '" + expectedQuantity + "'.");
   }
