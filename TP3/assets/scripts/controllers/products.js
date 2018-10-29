@@ -2,8 +2,6 @@
 
 
 let products;
-let firstLoad = true;
-
 
 const sortWithCriteria = (criteria) => {
   let sortKey;
@@ -68,10 +66,7 @@ const refreshProducts = () => {
         </div>`);
     });
     $('#products-count').text(`${productCounter} produits`);
-    if (firstLoad) {
-      firstLoad = false;
-      sortWithCriteria('price');
-    }
+    sortWithCriteria($('#product-criteria .selected').data('criteria'));
   });
 };
 
@@ -93,16 +88,16 @@ const productsByCategory = (category) => {
     }
   });
   $('#products-count').text(`${productCounter} produits`);
+  sortWithCriteria($('#product-criteria .selected').data('criteria'));
   return true;
 };
 
-$('#product-categories').children().click((e) => {
+$('#product-categories').children().click(async (e) => {
   const category = $(e.target).data('category');
-  productsByCategory(category);
+  await productsByCategory(category);
   const selected = $('#product-categories').children();
   selected.removeClass('selected');
   $(e.target).addClass('selected');
-  sortWithCriteria($('#product-criteria .selected').data('criteria'));
 });
 
 $('#product-criteria').children().click((e) => {
