@@ -47,7 +47,7 @@ const createShoppingCart = async () => {
               <td>
                 <div class="row">
                   <div class="col">
-                    <button title="Retirer" onClick="removeProduct(${product.id})" class="remove-quantity-button"><i class="fa fa-minus"></i></button>
+                    <button title="Retirer" onClick="removeProduct(${product.id})" class="remove-quantity-button" ${numOccurences === 1 ? 'disabled' : ''}><i class="fa fa-minus"></i></button>
                   </div>
                   <div class="col">${numOccurences}</div>
                   <div class="col">
@@ -89,6 +89,7 @@ const removeProduct = (productId) => {
     cart.splice(productIndex, 1);
     localStorage.setItem('panier', JSON.stringify(cart));
     $(`#${productId} td div:nth-child(2)`).text(currentAmount - 1);
+    if (currentAmount - 1 === 1) $(`#${productId} button:eq(1)`).attr('disabled', true);
     $('.count').text(cart.length);
     if (cart.length === 0) $('.count').css('display', 'none');
     if ($('.count').text() === 0) $('.count').css('display', 'none');
@@ -103,6 +104,7 @@ const addProduct = (productId) => {
   cart.push(`${productId}`);
   localStorage.setItem('panier', JSON.stringify(cart));
   $(`#${productId} td div:nth-child(2)`).text(currentAmount + 1);
+  if (currentAmount + 1 > 1) $(`#${productId} button:eq(1)`).removeAttr('disabled');
   $('.count').text(parseInt($('.count').text(), 10) + 1);
   const productToAdd = products.filter(product => product.id === productId)[0];
   refreshPrice(productToAdd, currentAmount + 1, currentAmount);
@@ -111,7 +113,7 @@ const addProduct = (productId) => {
 const deleteProduct = (productId) => {
   const confirmed = window.confirm('Voulez-vous supprimer ce produit du panier ?');
   if (!confirmed) return false;
-  const currentAmount = parseInt($(`#${productId} td div:nth-child(2)`).text(), 10);
+  const currentAmount = parseInt($(`#${productId} td div:nth-child(1)`).text(), 10);
   const cart = JSON.parse(localStorage.getItem('panier'));
   const newCart = cart.filter(value => value === productId);
   localStorage.setItem('panier', JSON.stringify(newCart));
