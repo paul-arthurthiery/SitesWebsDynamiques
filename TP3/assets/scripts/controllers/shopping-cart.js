@@ -1,3 +1,4 @@
+
 const createShoppingCart = () => {
     getProducts().then((productsJson) => {
         $('#table-body').empty();
@@ -6,12 +7,15 @@ const createShoppingCart = () => {
         panier = JSON.parse(localStorage.getItem("panier"));
         if (!panier || panier.length === 0) {
             $("main").empty();
-            $("main").append(' <h1>Panier</h1> <p>Aucun produit dans votre panier</p>')
+            $("main").append(' <h1>Panier</h1> ' +
+                '<p>Aucun produit dans votre panier</p>')
         } else {
+            let price = 0
             panier.forEach(id => {
                 var numoccur = $.grep(idarray, function (elem) {
                     return elem === id;
                 }).length;
+
                 if (numoccur === 0) {
                     idarray.push(id)
 
@@ -20,7 +24,8 @@ const createShoppingCart = () => {
                     }).length;
                     products.forEach(product => {
 
-                        if (product.id === id) {
+                        if (product.id === parseInt(id)) {
+                            price = price + Math.round(numOccurences * parseFloat(product.price) * 100) / 100
                             console.log(numOccurences * parseFloat(product.price))
                             $('#table-body').append(`
     <tr>
@@ -49,6 +54,8 @@ const createShoppingCart = () => {
                 }
 
             })
+            $('#prixtotal').empty();
+            $('#prixtotal').append("Total: <strong>" + price + "$</strong>")
             ;
         }
 

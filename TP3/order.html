@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <title>OnlineShop - Commande</title>
   <script type="text/javascript" src="./assets/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./assets/scripts/models/productsmodel.js" defer></script>
+  <script type="text/javascript" src="assets/scripts/controllers/global.js" defer></script>
+  <script type="text/javascript" src="assets/scripts/controllers/order.js" defer></script>
+  <script type="text/javascript" src="./assets/js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="./assets/js/additional-methods.min.js"></script>
+  <script type="text/javascript" src="./assets/js/messages_fr.js"></script>
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
@@ -36,20 +42,20 @@
   <main>
     <article>
       <h1>Commande</h1>
-      <form action="./confirmation.html" method="post">
+      <form action="./confirmation.html" method="post" id="orderform">
         <section>
           <h2>Contact</h2>
           <div class="row">
             <div class="col">
               <div class="form-group">
                 <label for="first-name">Prénom</label>
-                <input class="form-control" type="text" id="first-name" name="first-name" placeholder="Prénom" required>
+                <input class="form-control" type="text" minlength="2" id="first-name" name="first-name" placeholder="Prénom" required>
               </div>
             </div>
             <div class="col">
               <div class="form-group">
                 <label for="last-name">Nom</label>
-                <input class="form-control" type="text" id="last-name" name="last-name" placeholder="Nom" required>
+                <input class="form-control" type="text" minlength="2" id="last-name" name="last-name" placeholder="Nom" required>
               </div>
             </div>
           </div>
@@ -73,14 +79,14 @@
           <div class="row">
             <div class="col">
               <div class="form-group">
-                <label for="credit-card">Numéro de carte de crédit</label>
-                <input class="form-control" type="text" id="credit-card" name="credit-card" placeholder="•••• •••• •••• ••••" required>
+                <label for="credit_card">Numéro de carte de crédit</label>
+                <input class="form-control" type="text" id="credit_card" name="credit_card" placeholder="•••• •••• •••• ••••" required>
               </div>
             </div>
             <div class="col">
               <div class="form-group">
-                <label for="credit-card-expiry">Expiration (mm/aa)</label>
-                <input class="form-control" type="text" id="credit-card-expiry" name="credit-card-expiry" placeholder="mm/aa" required>
+                <label for="credit_card_expiry">Expiration (mm/aa)</label>
+                <input class="form-control" type="text" id="credit_card_expiry" name="credit_card_expiry" placeholder="mm/aa" required>
               </div>
             </div>
           </div>
