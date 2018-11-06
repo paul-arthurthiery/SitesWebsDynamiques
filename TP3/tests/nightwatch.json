@@ -14,7 +14,7 @@
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "./tests/bin/chromedriver.exe"
+      "webdriver.chrome.driver" : "./tests/bin/chromedriver"
     }
   },
 
