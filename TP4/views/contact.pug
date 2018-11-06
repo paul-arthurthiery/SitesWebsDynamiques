@@ -1,29 +1,5 @@
-doctype html
-head
-  meta(charset='UTF-8')
-  title OnlineShop - Contact
-  link(rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
-  link(rel='stylesheet' type='text/css' href='./assets/css/style.css')
-header
-  .header-container
-    .logo
-      a(href='./index.html')
-        img(alt='logo' src='./assets/img/logo.svg' title='Accueil')
-    nav
-      ul
-        li
-          a(href='./index.html') Accueil
-        li
-          a(href='./products.html') Produits
-        li.active
-          a(href='./contact.html') Contact
-        li
-          a.shopping-cart(href='./shopping-cart.html' title='Panier')
-            span.fa-stack.fa-lg
-              i.fa.fa-circle.fa-stack-2x.fa-inverse
-              i.fa.fa-shopping-cart.fa-stack-1x
-            span.count 3
-main
+
+block main
   article
     h1 Contact
     p
@@ -47,9 +23,6 @@ main
         i.fa.fa-envelope.fa-5x
         br
         a(href='mailto:onlieshop@polymtl.ca') onlineshop@polymtl.ca
-footer
-  p Par Antoine B&eacute;land et Konstantinos Lambrou-Latreille
-script(type='text/javascript' src='./assets/js/jquery-3.2.1.min.js')
-script(type='text/javascript' src='./assets/scripts/utils.js')
-script(type='text/javascript' src='./assets/scripts/shopping-cart.service.js')
-script(type='text/javascript' src='./assets/scripts/shopping-cart.controller.js')
+block scripts
+  script(type='text/javascript' src='./assets/scripts/shopping-cart.service.js')
+  script(type='text/javascript' src='./assets/scripts/shopping-cart.controller.js')
