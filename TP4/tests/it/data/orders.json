@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "firstName": "Antoine",
+    "lastName": "Béland",
+    "email": "antoine.beland@polymtl.ca",
+    "phone": "514-340-4711",
+    "products": [
+      {
+        "id": 1,
+        "quantity": 2
+      },
+      {
+        "id": 2,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "firstName": "Konstantinos",
+    "lastName": "Lambrou-Latreille",
+    "email": "konstantinos.lambrou-latreille@polymtl.ca",
+    "phone": "514-340-4711",
+    "products": [
+      {
+        "id": 3,
+        "quantity": 5
+      },
+      {
+        "id": 4,
+        "quantity": 2
+      }
+    ]
+  }
+]

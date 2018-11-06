@@ -1,0 +1,35 @@
+{
+  "name": "online-shop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "test": "mocha -c --timeout 15000 ./tests/it",
+    "e2e": "nightwatch --config ./tests/nightwatch.json"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "express-session": "^1.15.5",
+    "mongoose": "^4.11.8",
+    "morgan": "~1.8.1",
+    "path": "^0.12.7",
+    "pug": "~2.0.0-beta11",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "chai": "^4.1.1",
+    "chai-http": "^3.0.0",
+    "events": "^1.1.1",
+    "mocha": "^3.5.0",
+    "nightwatch": "^0.9.16",
+    "nightwatch-custom-commands-assertions": "^1.1.0",
+    "nodemon": "^1.11.0",
+    "random-number": "0.0.9",
+    "request": "^2.81.0",
+    "util": "^0.10.3"
+  }
+}

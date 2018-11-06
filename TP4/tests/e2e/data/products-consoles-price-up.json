@@ -1,0 +1,17 @@
+[
+  {
+    "id": 9,
+    "name": "Console PS3",
+    "price": 349.99,
+    "image": "ps3.png",
+    "category": "consoles",
+    "description": "La PlayStation 3 (abrégé officiellement PS3) est une console de jeux vidéo de septième génération commercialisée par Sony. Elle est sortie le 11 novembre 2006 au Japon, le 17 novembre 2006 en Amérique du Nord et le 23 mars 2007 en Europe. Elle succède à la PlayStation 2 et concurrence la Xbox 360, et indirectement la Wii. (<a href='https://fr.wikipedia.org/wiki/PlayStation_3' target='_blank'>Wikipédia</a>)",
+    "features": [
+      "Processeur Cell cadencé à 3.2 Ghz",
+      "Processeur graphique Nvidia à 550 Mhz",
+      "256 Mo de mémoire principale XDR à 3.2 Ghz / 256 Mo de mémoire vidéo GDDR3 à 700 Mhz",
+      "Lecteur Blu-Ray (54 Go maximum)",
+      "Disque dur détachable (2 pouces et demi)"
+    ]
+  }
+]

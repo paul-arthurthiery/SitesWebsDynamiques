@@ -1,0 +1,42 @@
+{
+  "src_folders" : ["./tests/e2e"],
+  "output_folder" : "./tests/reports",
+  "custom_commands_path": [
+    "./node_modules/nightwatch-custom-commands-assertions/js/commands",
+    "./tests/commands"
+  ],
+  "custom_assertions_path": [
+    "./node_modules/nightwatch-custom-commands-assertions/js/assertions"
+  ],
+  "globals_path": "./tests/e2e/global.js",
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "./tests/bin/selenium-server-standalone-3.4.0.jar",
+    "log_path" : "",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "./tests/bin/chromedriver"
+    }
+  },
+
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://localhost",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "end_session_on_fail": false,
+      "skip_testcases_on_fail": false,
+      "exclude" : [
+        "./tests/e2e/global.js",
+        "./tests/e2e/utils.js"
+      ],
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "marionette": true
+      }
+    }
+  }
+}
