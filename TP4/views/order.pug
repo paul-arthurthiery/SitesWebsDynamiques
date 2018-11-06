@@ -1,0 +1,75 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title OnlineShop - Commande
+  link(rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' type='text/css' href='./assets/css/style.css')
+header
+  .header-container
+    .logo
+      a(href='./index.html')
+        img(alt='logo' src='./assets/img/logo.svg' title='Accueil')
+    nav
+      ul
+        li
+          a(href='./index.html') Accueil
+        li
+          a(href='./products.html') Produits
+        li
+          a(href='./contact.html') Contact
+        li
+          a.shopping-cart(href='./shopping-cart.html' title='Panier')
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x.fa-inverse
+              i.fa.fa-shopping-cart.fa-stack-1x
+            span.count 3
+main
+  article
+    h1 Commande
+    form#order-form(action='./confirmation.html' method='post')
+      section
+        h2 Contact
+        .row
+          .col
+            .form-group
+              label(for='first-name') Pr&eacute;nom
+              input#first-name.form-control(type='text' name='first-name' placeholder='Prénom' minlength='2' required='')
+          .col
+            .form-group
+              label(for='last-name') Nom
+              input#last-name.form-control(type='text' name='last-name' placeholder='Nom' minlength='2' required='')
+        .row
+          .col
+            .form-group
+              label(for='email') Adresse courriel
+              input#email.form-control(type='email' name='email' placeholder='Adresse courriel' required='')
+          .col
+            .form-group
+              label(for='phone') T&eacute;l&eacute;phone
+              input#phone.form-control(type='tel' name='phone' placeholder='###-###-####' required='')
+      section
+        h2 Paiement
+        .row
+          .col
+            .form-group
+              label(for='credit-card') Num&eacute;ro de carte de cr&eacute;dit
+              input#credit-card.form-control(type='text' name='credit-card' placeholder='•••• •••• •••• ••••' required='')
+          .col
+            .form-group
+              label(for='credit-card-expiry') Expiration (mm/aa)
+              input#credit-card-expiry.form-control(type='text' name='credit-card-expiry' placeholder='mm/aa' required='')
+      button.btn.pull-right(type='submit')
+        | Payer 
+        i.fa.fa-angle-double-right
+footer
+  p Par Antoine B&eacute;land et Konstantinos Lambrou-Latreille
+script(type='text/javascript' src='./assets/js/jquery-3.2.1.min.js')
+script(type='text/javascript' src='./assets/js/jquery.validate.min.js')
+script(type='text/javascript' src='./assets/js/additional-methods.min.js')
+script(type='text/javascript' src='./assets/js/messages_fr.js')
+script(type='text/javascript' src='./assets/scripts/utils.js')
+script(type='text/javascript' src='./assets/scripts/products.service.js')
+script(type='text/javascript' src='./assets/scripts/shopping-cart.service.js')
+script(type='text/javascript' src='./assets/scripts/orders.service.js')
+script(type='text/javascript' src='./assets/scripts/shopping-cart.controller.js')
+script(type='text/javascript' src='./assets/scripts/order.controller.js')

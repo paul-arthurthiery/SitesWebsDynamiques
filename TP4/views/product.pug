@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title OnlineShop - Produit
+  link(rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' type='text/css' href='./assets/css/style.css')
+header
+  .header-container
+    .logo
+      a(href='./index.html')
+        img(alt='logo' src='./assets/img/logo.svg' title='Accueil')
+    nav
+      ul
+        li
+          a(href='./index.html') Accueil
+        li.active
+          a(href='./products.html') Produits
+        li
+          a(href='./contact.html') Contact
+        li
+          a.shopping-cart(href='./shopping-cart.html' title='Panier')
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x.fa-inverse
+              i.fa.fa-shopping-cart.fa-stack-1x
+            span.count 3
+main
+  article
+    h1#product-name Produit
+    .row
+      .col
+        img#product-image(alt='product' src='#')
+      .col
+        section
+          h2 Description
+          p#product-desc
+        section
+          h2 Caract&eacute;ristiques
+          ul#product-features
+        hr
+        form#add-to-cart-form.pull-right
+          label(for='product-quantity') Quantit&eacute;:
+          input#product-quantity.form-control(type='number' value='1' min='1')
+          button.btn(title='Ajouter au panier' type='submit')
+            i.fa.fa-cart-plus
+            | &nbsp; Ajouter
+        p
+          | Prix: 
+          strong#product-price
+    #dialog.dialog
+      | Le produit a &eacute;t&eacute; ajout&eacute; au panier.
+footer
+  p Par Antoine B&eacute;land et Konstantinos Lambrou-Latreille
+script(type='text/javascript' src='./assets/js/jquery-3.2.1.min.js')
+script(type='text/javascript' src='./assets/scripts/utils.js')
+script(type='text/javascript' src='./assets/scripts/products.service.js')
+script(type='text/javascript' src='./assets/scripts/shopping-cart.service.js')
+script(type='text/javascript' src='./assets/scripts/shopping-cart.controller.js')
+script(type='text/javascript' src='./assets/scripts/product.controller.js')
