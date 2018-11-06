@@ -1,7 +1,32 @@
 doctype html
-html
+html(lang='fr')
   head
-    title= title
-    link(rel='stylesheet', href='/assets/css/default.css')
+    meta(charset='UTF-8')
+    title OnlineShop - Accueil
+    script(type='text/javascript', src='./assets/js/jquery-3.2.1.min.js')
+    script(type='text/javascript', src='assets/scripts/controllers/global.js', defer='')
+    link(rel='stylesheet', type='text/css', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css')
+    link(rel='stylesheet', type='text/css', href='./assets/css/style.css')
   body
-    block content
+    header
+      .header-container
+        .logo
+          a(href='./index.html')
+            img(alt='logo', src='./assets/img/logo.svg', title='Accueil')
+        nav
+          ul
+            li.active
+              a(href='./index.html') Accueil
+            li
+              a(href='./products.html') Produits
+            li
+              a(href='./contact.html') Contact
+            li
+              a.shopping-cart(href='./shopping-cart.html', title='Panier')
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x.fa-inverse
+                  i.fa.fa-shopping-cart.fa-stack-1x
+                span.count 3
+    main
+    footer
+      p Paul-Arthur Thiéry 1969108 | Louis-efflam Le Vély 1969154
