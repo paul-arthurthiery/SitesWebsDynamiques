@@ -19,7 +19,7 @@ router.get('/contact', (req, res) => {
 });
 
 router.get('/panier', (req, res) => {
-  res.render('panier');
+  res.render('shopping-cart');
 });
 
 router.get('/commande', (req, res) => {
