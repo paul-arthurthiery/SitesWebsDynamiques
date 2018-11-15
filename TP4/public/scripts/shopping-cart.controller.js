@@ -47,7 +47,7 @@ var onlineShop = onlineShop || {};
 
   // Initializes the "add to cart" form.
   $("#add-to-cart-form").submit(e => {
-    event.preventDefault();
+    e.preventDefault();
     const productId = +$(e.target).attr("data-product-id");
     shoppingCartService.addItem(productId, +$(e.target).find("input").val()).done(() => {
       const dialog = $("#dialog");
@@ -67,10 +67,10 @@ var onlineShop = onlineShop || {};
     // Updates the quantity for a specific item and update the view.
     function updateQuantity(quantity) {
       rowElement.find(".remove-quantity-button").prop("disabled", quantity <= 1);
-      shoppingCartService.updateItemQuantity(productId, quantity);
-
-      _updateCount();
-      _updateTotalAmount();
+      shoppingCartService.updateItemQuantity(productId, quantity).done(() => {
+		_updateCount();
+		_updateTotalAmount();
+	  });
       rowElement.find(".quantity").text(quantity);
       shoppingCartService.getItem(productId).done(item => {
         rowElement.find(".price").html(utils.formatPrice(item.product["price"] * quantity));
@@ -106,9 +106,10 @@ var onlineShop = onlineShop || {};
   // Initializes the "remove all items" button.
   $("#remove-all-items-button").click(() => {
     if (confirm("Voulez-vous supprimer tous les produits du panier?")) {
-      shoppingCartService.removeAllItems();
-      _renderEmptyView();
-      _updateCount();
+      shoppingCartService.removeAllItems().done(() => {
+		_renderEmptyView();
+		_updateCount();   
+	  });
     }
   });
 
