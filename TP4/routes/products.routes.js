@@ -1,5 +1,4 @@
 const router = require('express').Router();
-
 const products = require('../controllers/products.controller.js');
 
 // Retrieve all products
