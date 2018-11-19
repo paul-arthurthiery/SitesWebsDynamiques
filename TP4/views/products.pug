@@ -1,26 +1,27 @@
 extends layout.pug
 
 block main
-  section.sidebar(aria-label='Filtres')
-    section
-      h2 Cat&eacute;gories
-      #product-categories.btn-group.vertical
-        button(data-category='cameras') Appareils photo
-        button(data-category='consoles') Consoles
-        button(data-category='screens') &Eacute;crans
-        button(data-category='computers') Ordinateurs
-        button(data-category='all') Tous les produits
-    section
-      h2 Classement
-      #product-criteria.btn-group.vertical
-        button(data-criteria='price-asc') Prix (bas-haut)
-        button(data-criteria='price-dsc') Prix (haut-bas)
-        button(data-criteria='alpha-asc') Nom (A-Z)
-        button(data-criteria='alpha-dsc') Nom (Z-A)
-  article
-    span#products-count.right-header 13 produits
-    h1 Produits
-    #products-list.products
-      .loading
+  main
+    section.sidebar(aria-label='Filtres')
+      section
+        h2 Cat&eacute;gories
+        #product-categories.btn-group.vertical
+          button(data-category='cameras') Appareils photo
+          button(data-category='consoles') Consoles
+          button(data-category='screens') &Eacute;crans
+          button(data-category='computers') Ordinateurs
+          button(data-category='all') Tous les produits
+      section
+        h2 Classement
+        #product-criteria.btn-group.vertical
+          button(data-criteria='price-asc') Prix (bas-haut)
+          button(data-criteria='price-dsc') Prix (haut-bas)
+          button(data-criteria='alpha-asc') Nom (A-Z)
+          button(data-criteria='alpha-dsc') Nom (Z-A)
+    article
+      span#products-count.right-header 13 produits
+      h1 Produits
+      #products-list.products
+        .loading
 block scripts
   script(type='text/javascript' src='/assets/scripts/products.controller.js')

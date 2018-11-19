@@ -1,7 +1,7 @@
+const validator = require('validator');
 const {
   Product,
 } = require('../lib/db');
-const validator = require('validator');
 
 const categories = ['cameras', 'computers', 'consoles', 'screens'];
 
@@ -68,14 +68,25 @@ exports.findOne = (req, res) => {
 
 // Create new Product
 exports.create = (req, res) => {
-  if (!(validator.isInt(`${req.body.id}`) &&
-      req.body.name.length > 0 &&
+  if (!(validator.isInt(`${req.body.id}`, {
+    gt: 0,
+  }) &&
+      validator.isLength(req.body.name, {
+        min: 1,
+        max: undefined,
+      }) &&
       validator.isFloat(`${req.body.price}`, {
         min: 0.0,
       }) &&
-      req.body.image.length > 0 &&
+      validator.isLength(req.body.image, {
+        min: 1,
+        max: undefined,
+      }) &&
       categories.includes(req.body.category) &&
-      req.body.description.length > 0 &&
+      validator.isLength(req.body.description, {
+        min: 1,
+        max: undefined,
+      }) &&
       !req.body.features.includes(''))) {
     res.status(400).send({
       message: `Error creating your product, check your parameters: ${JSON.stringify(req.body)}`,

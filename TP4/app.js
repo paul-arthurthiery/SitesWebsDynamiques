@@ -10,6 +10,7 @@ require('./lib/db');
 const index = require('./routes/index');
 const productsRouter = require('./routes/products.routes');
 const cartRouter = require('./routes/cart.routes');
+const ordersRouter = require('./routes/order.routes');
 
 const app = express();
 
@@ -43,6 +44,7 @@ app.use(session({
 app.use('/', index);
 app.use(productsRouter);
 app.use(cartRouter);
+app.use(ordersRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
