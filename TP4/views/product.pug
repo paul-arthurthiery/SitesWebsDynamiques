@@ -5,14 +5,19 @@ block main
     h1#product-name Produit
     .row
       .col
-        img#product-image(alt='product' src='#')
+        img#product-image(
+          alt='product'
+          src=`/assets/img/${product.image}`
+          )
       .col
         section
           h2 Description
-          p#product-desc
+          p#product-desc=product.description
         section
           h2 Caract&eacute;ristiques
           ul#product-features
+            each feature in product.features
+              li=feature
         hr
         form#add-to-cart-form.pull-right
           label(for='product-quantity') Quantit&eacute;:
@@ -21,7 +26,7 @@ block main
             i.fa.fa-cart-plus
             | &nbsp; Ajouter
         p
-          | Prix: 
+          = `Prix: ${product.price.toFixed(2).replace(".", ",") + " $"}` 
           strong#product-price
     #dialog.dialog
       | Le produit a &eacute;t&eacute; ajout&eacute; au panier.

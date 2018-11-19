@@ -45,7 +45,7 @@ exports.findAll = (req, res) => {
     })
     .catch((err) => {
       res.status(400).send({
-        message: err.message || 'Some error occurred while find your products',
+        message: err.message || 'Some error occurred while finding your products',
       });
     });
 };

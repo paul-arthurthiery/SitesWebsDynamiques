@@ -1,7 +1,6 @@
 extends layout.pug
 
 block main
-  main
     section.sidebar(aria-label='Filtres')
       section
         h2 Cat&eacute;gories
@@ -10,11 +9,11 @@ block main
           button(data-category='consoles') Consoles
           button(data-category='screens') &Eacute;crans
           button(data-category='computers') Ordinateurs
-          button(data-category='all') Tous les produits
+          button.selected(data-category='all') Tous les produits
       section
         h2 Classement
         #product-criteria.btn-group.vertical
-          button(data-criteria='price-asc') Prix (bas-haut)
+          button.selected(data-criteria='price-asc') Prix (bas-haut)
           button(data-criteria='price-dsc') Prix (haut-bas)
           button(data-criteria='alpha-asc') Nom (A-Z)
           button(data-criteria='alpha-dsc') Nom (Z-A)
@@ -22,6 +21,21 @@ block main
       span#products-count.right-header 13 produits
       h1 Produits
       #products-list.products
-        .loading
+        each product in products
+          .product(data-product-id=product.id)
+            a(
+              href=`./produits/${product.id}`
+              title="En savoir plus..."
+              )
+              h2=product.name
+              img(
+                alt="product"
+                src=`/assets/img/${product.image}`
+                )
+              p.price
+                small Prix
+                =` ${product.price.toFixed(2).replace(".", ",") + " $"}`
+                
+                               
 block scripts
   script(type='text/javascript' src='/assets/scripts/products.controller.js')

@@ -9,23 +9,23 @@ html(lang='fr')
     script(type='text/javascript' src='/assets/scripts/shopping-cart.service.js')
     script(type='text/javascript' src='/assets/scripts/shopping-cart.controller.js')
     link(rel='stylesheet', type='text/css', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css')
-    link(rel='stylesheet', type='text/css', href='./assets/css/style.css')
+    link(rel='stylesheet', type='text/css', href='/assets/css/style.css')
   body
     header
       .header-container
         .logo
-          a(href='./')
-            img(alt='logo', src='./assets/img/logo.svg', title='Accueil')
+          a(href='/')
+            img(alt='logo', src='/assets/img/logo.svg', title='Accueil')
         nav
           ul
             li.active
-              a(href='./') Accueil
+              a(href='/') Accueil
             li
-              a(href='./produits') Produits
+              a(href='/produits') Produits
             li
-              a(href='./contact') Contact
+              a(href='/contact') Contact
             li
-              a.shopping-cart(href='./panier', title='Panier')
+              a.shopping-cart(href='/panier', title='Panier')
                 span.fa-stack.fa-lg
                   i.fa.fa-circle.fa-stack-2x.fa-inverse
                   i.fa.fa-shopping-cart.fa-stack-1x
