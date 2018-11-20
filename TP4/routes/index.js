@@ -16,7 +16,6 @@ const countProducts = (req) => {
 };
 
 router.get(['/', '/accueil'], (req, res) => {
-  console.log(countProducts(req));
   res.render('index', {
     itemsCount: countProducts(req),
   });

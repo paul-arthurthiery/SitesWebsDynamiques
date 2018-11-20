@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="4"
-            failures="6"
+<testsuites errors="0"
+            failures="2"
             tests="6">
 
   <testsuite name="3-shopping-cart"
-    errors="4" failures="6" hostname="" id="" package="3-shopping-cart" skipped="0"
-    tests="6" time="9.340" timestamp="Tue, 20 Nov 2018 03:00:02 GMT">
+    errors="0" failures="2" hostname="" id="" package="3-shopping-cart" skipped="0"
+    tests="6" time="10.40" timestamp="Tue, 20 Nov 2018 04:01:15 GMT">
   
-    <testcase name="Aucun produit dans le panier" classname="3-shopping-cart" time="3.408" assertions="3">
+    <testcase name="Aucun produit dans le panier" classname="3-shopping-cart" time="2.322" assertions="3">
 
     
 
@@ -17,7 +17,7 @@
     
     </testcase>
   
-    <testcase name="Un ou plusieurs produits dans le panier" classname="3-shopping-cart" time="2.917" assertions="11">
+    <testcase name="Un ou plusieurs produits dans le panier" classname="3-shopping-cart" time="3.658" assertions="14">
 
     
 
@@ -37,13 +37,19 @@
 
     
 
-      <failure message="Le total doit être &#39;4249,94$&#39;.">    at validateTotalAmount (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:116:17)
+    
+
+    
+
+    
+
+      <failure message="Le total doit être &#39;2799,94$&#39;.">    at validateTotalAmount (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:116:17)
     at Object.Un ou plusieurs produits dans le panier (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:196:5)</failure>
 
     
     </testcase>
   
-    <testcase name="Suppression d&#39;un item dans le panier" classname="3-shopping-cart" time="1.269" assertions="5">
+    <testcase name="Suppression d&#39;un item dans le panier" classname="3-shopping-cart" time="1.587" assertions="13">
 
     
 
@@ -51,35 +57,80 @@
 
     
 
-      <failure message="Failed [ok]: (Les items se trouvant dans le panier d&#39;achats via l&#39;API sont corrects. )">    at F.&lt;anonymous&gt; (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:135:21)
-    at Object.&lt;anonymous&gt; (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/commands/reqGet.js:33:18)</failure>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
     </testcase>
   
-    <testcase name="Augmentation de la quantite associee a un item dans le panier" classname="3-shopping-cart" time="0.6460" assertions="2">
+    <testcase name="Augmentation de la quantite associee a un item dans le panier" classname="3-shopping-cart" time="0.7480" assertions="7">
 
-      <failure message="Failed [ok]: (Les items se trouvant dans le panier d&#39;achats via l&#39;API sont corrects. )">    at F.&lt;anonymous&gt; (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:135:21)
-    at Object.&lt;anonymous&gt; (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/commands/reqGet.js:33:18)</failure>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
     </testcase>
   
-    <testcase name="Diminution de la quantite associee a un item dans le panier" classname="3-shopping-cart" time="0.6340" assertions="2">
+    <testcase name="Diminution de la quantite associee a un item dans le panier" classname="3-shopping-cart" time="0.8500" assertions="7">
 
-      <failure message="Failed [ok]: (Les items se trouvant dans le panier d&#39;achats via l&#39;API sont corrects. )">    at F.&lt;anonymous&gt; (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:135:21)
-    at Object.&lt;anonymous&gt; (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/commands/reqGet.js:33:18)</failure>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
     </testcase>
   
-    <testcase name="Suppression de tous les produits dans le panier" classname="3-shopping-cart" time="0.4660" assertions="3">
+    <testcase name="Suppression de tous les produits dans le panier" classname="3-shopping-cart" time="1.235" assertions="10">
 
     
 
-      <failure message="Le nombre de produits dans le panier doit être de &#39;5&#39;.">    at validateShoppingCartTable (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:99:17)
-    at Object.&lt;anonymous&gt; (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:255:7)
-    at endReadableNT (_stream_readable.js:1081:12)</failure>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
     </testcase>
@@ -99,50 +150,6 @@
     at IncomingMessage.emit (events.js:187:15)
     at endReadableNT (_stream_readable.js:1081:12)
     at process._tickCallback (internal/process/next_tick.js:63:19)
-ERROR: Unable to locate element: &#34;.remove-item-button&#34; using: css selector
-    at pressRemoveItemButton (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:200:21)
-    at Object.Suppression d&#39;un item dans le panier (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:205:5)
-    at Module.call (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/module.js:62:34)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/testcase.js:70:29
-    at _fulfilled (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:834:54)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:863:30
-    at Promise.promise.promiseDispatch (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:796:13)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:556:49
-    at runSingle (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:137:13)
-    at flush (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:125:13)
-ERROR: Unable to locate element: &#34;.remove-item-button&#34; using: css selector
-    at pressRemoveItemButton (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:200:21)
-    at Object.Suppression d&#39;un item dans le panier (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:214:5)
-    at Module.call (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/module.js:62:34)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/testcase.js:70:29
-    at _fulfilled (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:834:54)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:863:30
-    at Promise.promise.promiseDispatch (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:796:13)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:556:49
-    at runSingle (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:137:13)
-    at flush (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:125:13)
-ERROR: Unable to locate element: &#34;.add-quantity-button&#34; using: css selector
-    at Object.Augmentation de la quantite associee a un item dans le panier (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:226:12)
-    at Module.call (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/module.js:62:34)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/testcase.js:70:29
-    at _fulfilled (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:834:54)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:863:30
-    at Promise.promise.promiseDispatch (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:796:13)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:556:49
-    at runSingle (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:137:13)
-    at flush (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:125:13)
-    at process._tickCallback (internal/process/next_tick.js:61:11)
-ERROR: Unable to locate element: &#34;.remove-quantity-button&#34; using: css selector
-    at Object.Diminution de la quantite associee a un item dans le panier (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:236:12)
-    at Module.call (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/module.js:62:34)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/testcase.js:70:29
-    at _fulfilled (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:834:54)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:863:30
-    at Promise.promise.promiseDispatch (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:796:13)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:556:49
-    at runSingle (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:137:13)
-    at flush (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:125:13)
-    at process._tickCallback (internal/process/next_tick.js:61:11)
 ERROR: Unable to locate element: &#34;#first-name&#34; using: css selector
     at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/4-order.js:119:16
     at Array.forEach (&lt;anonymous&gt;)

@@ -1,3 +1,4 @@
+/*eslint-disable*/
 var onlineShop = onlineShop || {};
 
 /**
@@ -21,16 +22,17 @@ onlineShop.shoppingCartService = (($, productsService) => {
    */
   self.addItem = (productId, quantity) => {
     return _getItemsFromAPI().then(items => {
-        const itemFound = items.find(item => item.productId === productId);
+      const itemFound = items.find(item => item.productId === productId);
       if (!itemFound) {
-          alert('lasqualemaggle')
-
-          promise = undefined;
+        promise = undefined;
         return $.ajax({
           url: "/api/shopping-cart",
           type: "POST",
           contentType: "application/json",
-          data: JSON.stringify({ productId: productId, quantity: quantity })
+          data: JSON.stringify({
+            productId: productId,
+            quantity: quantity
+          })
         });
       } else {
         return self.updateItemQuantity(productId, itemFound.quantity + quantity);
@@ -124,7 +126,9 @@ onlineShop.shoppingCartService = (($, productsService) => {
       url: "/api/shopping-cart/" + productId,
       type: "PUT",
       contentType: "application/json",
-      data: JSON.stringify({ quantity: quantity })
+      data: JSON.stringify({
+        quantity: quantity
+      })
     });
   };
 

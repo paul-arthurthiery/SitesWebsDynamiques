@@ -5,21 +5,21 @@
 
   <testsuite name="1-products"
     errors="1" failures="3" hostname="" id="" package="1-products" skipped="0"
-    tests="4" time="24.93" timestamp="Tue, 20 Nov 2018 02:59:17 GMT">
+    tests="4" time="10.53" timestamp="Tue, 20 Nov 2018 04:00:45 GMT">
   
-    <testcase name="Page des produits" classname="1-products" time="6.511" assertions="2">
+    <testcase name="Page des produits" classname="1-products" time="5.574" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Liste des produits pour les valeurs par defauts" classname="1-products" time="2.097" assertions="1">  <failure message="L&#39;indicateur du nombre de produits doit indiquer &#39;10 produits&#39;.">    at endReadableNT (_stream_readable.js:1081:12)</failure>
+    <testcase name="Liste des produits pour les valeurs par defauts" classname="1-products" time="2.100" assertions="1">  <failure message="L&#39;indicateur du nombre de produits doit indiquer &#39;10 produits&#39;.">    at endReadableNT (_stream_readable.js:1081:12)</failure>
 
     
     </testcase>
   
-    <testcase name="Categories des produits" classname="1-products" time="6.730" assertions="8">
+    <testcase name="Categories des produits" classname="1-products" time="0.4850" assertions="8">
 
     
 
@@ -40,7 +40,7 @@
     
     </testcase>
   
-    <testcase name="Classement des produits" classname="1-products" time="9.589" assertions="7">
+    <testcase name="Classement des produits" classname="1-products" time="2.374" assertions="7">
 
     
 
@@ -72,50 +72,6 @@
     at IncomingMessage.emit (events.js:187:15)
     at endReadableNT (_stream_readable.js:1081:12)
     at process._tickCallback (internal/process/next_tick.js:63:19)
-ERROR: Unable to locate element: &#34;.remove-item-button&#34; using: css selector
-    at pressRemoveItemButton (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:200:21)
-    at Object.Suppression d&#39;un item dans le panier (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:205:5)
-    at Module.call (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/module.js:62:34)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/testcase.js:70:29
-    at _fulfilled (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:834:54)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:863:30
-    at Promise.promise.promiseDispatch (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:796:13)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:556:49
-    at runSingle (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:137:13)
-    at flush (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:125:13)
-ERROR: Unable to locate element: &#34;.remove-item-button&#34; using: css selector
-    at pressRemoveItemButton (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:200:21)
-    at Object.Suppression d&#39;un item dans le panier (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:214:5)
-    at Module.call (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/module.js:62:34)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/testcase.js:70:29
-    at _fulfilled (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:834:54)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:863:30
-    at Promise.promise.promiseDispatch (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:796:13)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:556:49
-    at runSingle (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:137:13)
-    at flush (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:125:13)
-ERROR: Unable to locate element: &#34;.add-quantity-button&#34; using: css selector
-    at Object.Augmentation de la quantite associee a un item dans le panier (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:226:12)
-    at Module.call (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/module.js:62:34)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/testcase.js:70:29
-    at _fulfilled (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:834:54)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:863:30
-    at Promise.promise.promiseDispatch (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:796:13)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:556:49
-    at runSingle (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:137:13)
-    at flush (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:125:13)
-    at process._tickCallback (internal/process/next_tick.js:61:11)
-ERROR: Unable to locate element: &#34;.remove-quantity-button&#34; using: css selector
-    at Object.Diminution de la quantite associee a un item dans le panier (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/3-shopping-cart.js:236:12)
-    at Module.call (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/module.js:62:34)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/nightwatch/lib/runner/testcase.js:70:29
-    at _fulfilled (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:834:54)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:863:30
-    at Promise.promise.promiseDispatch (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:796:13)
-    at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:556:49
-    at runSingle (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:137:13)
-    at flush (/Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/node_modules/q/q.js:125:13)
-    at process._tickCallback (internal/process/next_tick.js:61:11)
 ERROR: Unable to locate element: &#34;#first-name&#34; using: css selector
     at /Users/Paul-Arthur/Documents/Poly Montréal/Sites Webs Dynamiques et Transactionnels/SitesWebsDynamiques/TP4/tests/e2e/4-order.js:119:16
     at Array.forEach (&lt;anonymous&gt;)

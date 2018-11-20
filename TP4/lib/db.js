@@ -37,6 +37,6 @@ exports.Product = mongoose.model('Product', Product);
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost:27017/onlineShop', {
+mongoose.connect('mongodb://default:default1@ds157503.mlab.com:57503/onlineshop2', {
   useMongoClient: true,
 });
