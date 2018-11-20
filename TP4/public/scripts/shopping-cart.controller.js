@@ -1,3 +1,4 @@
+/*eslint-disable*/
 var onlineShop = onlineShop || {};
 
 /**
@@ -47,6 +48,7 @@ var onlineShop = onlineShop || {};
 
   // Initializes the "add to cart" form.
   $("#add-to-cart-form").submit(e => {
+    console.log('test');
     e.preventDefault();
     const productId = +$(e.target).attr("data-product-id");
     shoppingCartService.addItem(productId, +$(e.target).find("input").val()).done(() => {
@@ -60,7 +62,7 @@ var onlineShop = onlineShop || {};
   });
 
   // Initializes the shopping cart table.
-  $(".shopping-cart-table > tbody >  tr").each(function() {
+  $(".shopping-cart-table > tbody >  tr").each(function () {
     const rowElement = $(this);
     const productId = +rowElement.attr("data-product-id");
 
@@ -68,9 +70,9 @@ var onlineShop = onlineShop || {};
     function updateQuantity(quantity) {
       rowElement.find(".remove-quantity-button").prop("disabled", quantity <= 1);
       shoppingCartService.updateItemQuantity(productId, quantity).done(() => {
-		_updateCount();
-		_updateTotalAmount();
-	  });
+        _updateCount();
+        _updateTotalAmount();
+      });
       rowElement.find(".quantity").text(quantity);
       shoppingCartService.getItem(productId).done(item => {
         rowElement.find(".price").html(utils.formatPrice(item.product["price"] * quantity));
@@ -107,9 +109,9 @@ var onlineShop = onlineShop || {};
   $("#remove-all-items-button").click(() => {
     if (confirm("Voulez-vous supprimer tous les produits du panier?")) {
       shoppingCartService.removeAllItems().done(() => {
-		_renderEmptyView();
-		_updateCount();   
-	  });
+        _renderEmptyView();
+        _updateCount();
+      });
     }
   });
 

@@ -1,38 +1,37 @@
 doctype html
 html(lang='fr')
-    head
-        meta(charset='UTF-8')
-        title OnlineShop - Accueil
-        script(type='text/javascript' src='/assets/js/jquery-3.2.1.min.js')
-        script(defer, type='text/javascript' src='/assets/scripts/utils.js')
-        script(defer, type='text/javascript' src='/assets/scripts/products.controller.js')
-        script(defer, type='text/javascript' src='/assets/scripts/products.service.js')
-        script(defer, type='text/javascript' src='/assets/scripts/shopping-cart.service.js')
-        script(defer, type='text/javascript' src='/assets/scripts/shopping-cart.controller.js')
-        link(rel='stylesheet', type='text/css', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css')
-        link(rel='stylesheet', type='text/css', href='/assets/css/style.css')
-    body
-        header
-            .header-container
-                .logo
-                    a(href='/')
-                        img(alt='logo', src='/assets/img/logo.svg', title='Accueil')
-                nav
-                    ul
-                        li.active
-                            a(href='/') Accueil
-                        li
-                            a(href='/produits') Produits
-                        li
-                            a(href='/contact') Contact
-                        li
-                            a.shopping-cart(href='/panier', title='Panier')
-                                span.fa-stack.fa-lg
-                                    i.fa.fa-circle.fa-stack-2x.fa-inverse
-                                    i.fa.fa-shopping-cart.fa-stack-1x
-                                span.count 3
-        main
-            block main
-    footer
-        p Paul-Arthur Thiéry 1969108 | Louis-efflam Le Vély 1969154
+  head
+    meta(charset='UTF-8')
+    title OnlineShop - Accueil
+    script(defer, type='text/javascript' src='/assets/js/jquery-3.2.1.min.js')
+    script(defer, type='text/javascript' src='/assets/scripts/utils.js')
+    script(defer, type='text/javascript' src='/assets/scripts/products.service.js')
+    script(defer, type='text/javascript' src='/assets/scripts/shopping-cart.service.js')
+    script(defer, type='text/javascript' src='/assets/scripts/shopping-cart.controller.js')
+    link(rel='stylesheet', type='text/css', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css')
+    link(rel='stylesheet', type='text/css', href='/assets/css/style.css')
+  body
+    header
+      .header-container
+        .logo
+          a(href='/')
+            img(alt='logo', src='/assets/img/logo.svg', title='Accueil')
+        nav
+          ul
+            li.active
+              a(href='/') Accueil
+            li
+              a(href='/produits') Produits
+            li
+              a(href='/contact') Contact
+            li
+              a.shopping-cart(href='/panier', title='Panier')
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x.fa-inverse
+                  i.fa.fa-shopping-cart.fa-stack-1x
+                span(class="count" class={visible: itemsCount > 0} id="shopping-cart-quantity")= itemsCount
+    main
+      block main
+  footer
+    p Paul-Arthur Thiéry 1969108 | Louis-efflam Le Vély 1969154
 block scripts

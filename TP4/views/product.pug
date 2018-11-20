@@ -2,7 +2,7 @@ extends layout.pug
 
 block main
   article
-    h1#product-name Produit
+    h1#product-name=product.name
     .row
       .col
         img#product-image(
@@ -12,7 +12,7 @@ block main
       .col
         section
           h2 Description
-          p#product-desc=product.description
+          p#product-desc !{product.description}
         section
           h2 Caract&eacute;ristiques
           ul#product-features
