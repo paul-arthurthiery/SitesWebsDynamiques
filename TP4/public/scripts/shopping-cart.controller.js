@@ -48,7 +48,6 @@ var onlineShop = onlineShop || {};
 
   // Initializes the "add to cart" form.
   $("#add-to-cart-form").submit(e => {
-    console.log('test');
     e.preventDefault();
     const productId = +$(e.target).attr("data-product-id");
     shoppingCartService.addItem(productId, +$(e.target).find("input").val()).done(() => {

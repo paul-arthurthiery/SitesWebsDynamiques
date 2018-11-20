@@ -4,15 +4,37 @@ block main
   article
     h1 Panier
     #shopping-cart-container
-      table.table.shopping-cart-table
-        thead
-          tr
-            th
-            th Produit
-            th Prix unitaire
-            th Quantit&eacute;
-            th Prix
-        tbody
+      if cart.length > 0
+        -let total = 0
+        table.table.shopping-cart-table
+          thead
+            tr
+              th
+              th Produit
+              th Prix unitaire
+              th Quantit&eacute;
+              th Prix
+          tbody
+          each product in cart
+            tr(data-product-id=product.id)
+              td
+                button.remove-item-button
+                  i.fa.fa-times
+              td
+                a(href=`/products/${product.productId}`)=product.name
+              td=product.price.toFixed(2).replace(".", ",") + "$"
+              td
+                if product.quantity > 1
+                  button.remove-quantity-button
+                    i.fa.fa-minus
+                else
+                  button.remove-quantity-button(disabled)
+                    i.fa.fa-minus
+                span.quantity=product.quantity
+                button.add-quantity-button
+                  i.fa.fa-plus
+              td.price=(product.price*product.quantity).toFixed(2).replace(".", ",") + "$"
+              -total += product.price*product.quantity
       p.shopping-cart-total
         | Total: 
         strong#total-amount

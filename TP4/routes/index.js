@@ -16,8 +16,8 @@ const countProducts = (req) => {
 };
 
 router.get(['/', '/accueil'], (req, res) => {
+  console.log(countProducts(req));
   res.render('index', {
-    title: 'OnlineShop - Accueil',
     itemsCount: countProducts(req),
   });
 });
@@ -26,7 +26,6 @@ router.get('/produits', (req, res) => {
     .then((products) => {
       products.sort((a, b) => a.price - b.price);
       res.render('products', {
-        title: 'OnlineShop - Produits',
         products,
         itemsCount: countProducts(req),
       });
@@ -38,7 +37,6 @@ router.get('/produits/:id', (req, res) => {
     id: req.params.id,
   }).then((product) => {
     res.render('product', {
-      title: 'OnlineShop - Produit',
       product,
       itemsCount: countProducts(req),
     });
@@ -47,28 +45,36 @@ router.get('/produits/:id', (req, res) => {
 
 router.get('/contact', (req, res) => {
   res.render('contact', {
-    title: 'OnlineShop - Contact',
     itemsCount: countProducts(req),
   });
 });
 
-router.get('/panier', (req, res) => {
+router.get('/panier', async (req, res) => {
+  let cart = [];
+  if (req.session.cart) {
+    cart = await Promise.all(req.session.cart.map(async (entry) => {
+      const newEntry = await Product.findOne({
+        id: entry.productId,
+      });
+      newEntry.quantity = entry.quantity;
+      return newEntry;
+    }));
+  }
   res.render('shopping-cart', {
     title: 'OnlineShop - Panier',
     itemsCount: countProducts(req),
+    cart,
   });
 });
 
 router.get('/commande', (req, res) => {
   res.render('order', {
-    title: 'OnlineShop - Commande',
     itemsCount: countProducts(req),
   });
 });
 
 router.get('/confirmation', (req, res) => {
   res.render('confirmation', {
-    title: 'OnlineShop - Confirmation',
     itemsCount: countProducts(req),
   });
 });
