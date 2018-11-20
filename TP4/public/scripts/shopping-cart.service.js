@@ -21,9 +21,11 @@ onlineShop.shoppingCartService = (($, productsService) => {
    */
   self.addItem = (productId, quantity) => {
     return _getItemsFromAPI().then(items => {
-      const itemFound = items.find(item => item.productId === productId);
+        const itemFound = items.find(item => item.productId === productId);
       if (!itemFound) {
-        promise = undefined;
+          alert('lasqualemaggle')
+
+          promise = undefined;
         return $.ajax({
           url: "/api/shopping-cart",
           type: "POST",

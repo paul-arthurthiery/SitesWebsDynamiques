@@ -55,7 +55,6 @@ var onlineShop = onlineShop || {};
       const dialog = $("#dialog");
       dialog.fadeIn();
       setTimeout(() => dialog.fadeOut(), 5000);
-
       _updateCount();
       shoppingCartService.getItemQuantity(productId).done(quantity => $("#shopping-cart-quantity").text(quantity));
     });
