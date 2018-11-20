@@ -1,0 +1,31 @@
+[
+  {
+    "id": 8,
+    "name": "Moniteur 19\"",
+    "price": 149.99,
+    "image": "monitor.png",
+    "category": "screens",
+    "description": "Moniteur LCD de 19 pouces pouvant être branché via VGA, HDMI et DVI. Cet écran est facilement ajustable dans plusieurs positions, afin de maximiser le confort de l’utilisateur.",
+    "features": [
+      "Écran de 19\"",
+      "Entrées VGA, HDMI et DVI",
+      "Ajustable dans plusieurs positions",
+      "Écran mat limitant les reflets",
+      "Garantie 2 ans"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Téléviseur 50\"",
+    "price": 899.99,
+    "image": "tv.png",
+    "category": "screens",
+    "description": "Téléviseur de 50\" possédant une résolution de 1080p. Ce téléviseur est parfait pour visionner vos séries préférées. De plus, cette télévision possède trois prises HDMI et un support natif pour la technologie <em>Chromecast</em>.",
+    "features": [
+      "Résolution de 1920 x 1080",
+      "Rapport d'image de 16:9",
+      "Trois ports HDMI",
+      "Intègre la technologie <em>Chromecast</em>"
+    ]
+  }
+]

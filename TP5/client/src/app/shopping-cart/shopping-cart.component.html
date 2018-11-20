@@ -1,0 +1,88 @@
+<article>
+  <h1>Panier</h1>
+  <table class="table shopping-cart-table">
+    <thead>
+    <tr>
+      <th></th>
+      <th>Produit</th>
+      <th>Prix unitaire</th>
+      <th>Quantité</th>
+      <th>Prix</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <button class="remove-item-button" title="Supprimer">
+            <i class="fa fa-times"></i>
+          </button>
+        </td>
+        <td>
+          <a routerLink="/produits/11">Console Wii</a>
+        </td>
+        <td>199,99&thinsp;$</td>
+        <td>
+          <div class="row">
+            <div class="col">
+              <button class="remove-quantity-button" title="Retirer" disabled><i class="fa fa-minus"></i></button>
+            </div>
+            <div class="col quantity">1</div>
+            <div class="col">
+              <button class="add-quantity-button" title="Ajouter"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </td>
+        <td class="price">199,99&thinsp;$</td>
+      </tr>
+      <tr>
+        <td>
+          <button class="remove-item-button" title="Supprimer">
+            <i class="fa fa-times"></i>
+          </button>
+        </td>
+        <td>
+          <a routerLink="/produits/13">Manette Xbox 360</a>
+        </td>
+        <td>29,99&thinsp;$</td>
+        <td>
+          <div class="row">
+            <div class="col">
+              <button class="remove-quantity-button" title="Retirer"><i class="fa fa-minus"></i></button>
+            </div>
+            <div class="col quantity">2</div>
+            <div class="col">
+              <button class="add-quantity-button" title="Ajouter"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </td>
+        <td class="price">59,98&thinsp;$</td>
+      </tr>
+      <tr>
+        <td>
+          <button class="remove-item-button" title="Supprimer">
+            <i class="fa fa-times"></i>
+          </button>
+        </td>
+        <td>
+          <a routerLink="/produits/11">Moniteur 19"</a>
+        </td>
+        <td>149,99&thinsp;$</td>
+        <td>
+          <div class="row">
+            <div class="col">
+              <button class="remove-quantity-button" title="Retirer"><i class="fa fa-minus"></i></button>
+            </div>
+            <div class="col quantity">3</div>
+            <div class="col">
+              <button class="add-quantity-button" title="Ajouter"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </td>
+        <td class="price">449,97&thinsp;$<</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="shopping-cart-total">Total: <strong id="total-amount">704,94&thinsp;$</strong></p>
+  <a class="btn pull-right" routerLink="/commande">Commander <i class="fa fa-angle-double-right"></i></a>
+  <button class="btn" id="remove-all-items-button"><i class="fa fa-trash-o"></i>&nbsp; Vider le panier</button>
+</article>

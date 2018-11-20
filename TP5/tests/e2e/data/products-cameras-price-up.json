@@ -1,0 +1,47 @@
+[
+  {
+    "id": 4,
+    "name": "Canon PowerShot SD1300",
+    "price": 299.99,
+    "image": "camera-3.png",
+    "category": "cameras",
+    "description": "Tout est une question de puissance du contraste. Des couleurs qui défient les conventions. Des courbes douces et élégantes qui fusionnent l'art et la technologie en un appareil photo conçu pour être source d'inspiration. L'appareil photo PowerShot SD1300 IS Digital ELPH capte votre monde tout autant qu'il exprime votre originalité au moyen d'innovations audacieuses, dont un remarquable rendement par faible luminosité. Tout semble correct. Prenez-le en main… et tout semble effectivement bien. (<a href='http://canon.ca/inetCA/fr/products?m=gp&pid=3521#_010' target='_blank'>Canon Canada</a>)",
+    "features": [
+      "Fonction AUTO intelligente qui choisit les réglages appropriés parmi 18 situations de prise de vues prédéfinies.",
+      "Résolution de 12,1 mégapixels simplifiant l'impression d'images grand format nettes et détaillées.",
+      "Écran ACL clair et lumineux aux couleurs pures de 2,7 po pour prendre et visionner les images.",
+      "Couleurs nettes et stylisées convenant à toute personnalité.",
+      "Prise de vues en mode faible éclairage dans des conditions de faible luminosité."
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Nikon D7000",
+    "price": 549.99,
+    "image": "camera-2.png",
+    "category": "cameras",
+    "description": "Le Nikon D7000 est un appareil photographique reflex numérique, présenté par Nikon le 15 septembre 2010. Il remplace le D90 comme reflex de milieu de gamme. (<a href='https://fr.wikipedia.org/wiki/Nikon_D7000' target='_blank'>Wikipédia</a>)",
+    "features": [
+      "Capteur CMOS 16,2 mégapixels au format Nikon DX",
+      "Processeur d'images Nikon EXPEED 2",
+      "Vidéo full HD (1920x1080)",
+      "Mise au point autofocus 39 points avec quatre modes zone AF, dont le suivi 3D",
+      "Sensibilité ISO du capteur allant de 100 à 25600 ISO (position Hi2)"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Canon EOS 5D Mark II",
+    "price": 2999.99,
+    "image": "camera-1.png",
+    "category": "cameras",
+    "description": "Le Canon EOS 5D Mark II est un appareil photographique reflex numérique à objectif interchangeable équipé d'un capteur 24×36 de 21 mégapixels, annoncé le 17 septembre 2008 et retiré du catalogue Canon japonais à la fin décembre 2012 puis du catalogue français à la mi-mars 2013. Il permet, pour la première fois sur ce type d'appareil, de filmer en vidéo HD 1080p (1920×1080 pixels). Canon a reçu, pour ce boîtier, le prix TIPA (Technical Image Press Association) du meilleur reflex « expert » en 2009. (<a href='https://fr.wikipedia.org/wiki/Canon_EOS_5D_Mark_II' target='_blank'>Wikipédia</a>)",
+    "features": [
+      "Reflex numérique en alliage de magnésium à objectifs interchangeables de monture EF",
+      "Capteur CMOS avec matrice de Bayer (RVB) de 35,8 × 23,9 mm (format 24×36)",
+      "Processeur d'images DIGIC 4",
+      "21 millions de pixels. L'information de couleur est codée sur 14 bits",
+      "Ratio image 3:2"
+    ]
+  }
+]

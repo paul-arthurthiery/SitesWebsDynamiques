@@ -1,0 +1,41 @@
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <a routerLink="/accueil">
+        <img alt="logo" src="./assets/img/logo.svg" title="Accueil">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li routerLinkActive="active">
+          <a routerLink="/accueil">Accueil</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/produits">Produits</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/contact">Contact</a>
+        </li>
+        <li>
+          <a class="shopping-cart" routerLink="/panier" title="Panier">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-shopping-cart fa-stack-1x"></i>
+              </span>
+            <span class="count">6</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <p>Par
+    <span *ngFor="let author of authors; let i = index">
+      {{ author }}<span *ngIf="i < authors.length - 2">, </span><span *ngIf="i === authors.length - 2"> et </span>
+    </span>
+  </p>
+</footer>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Apple TV",
+    "price": 249.99,
+    "image": "apple-tv.png",
+    "category": "computers",
+    "description": "L'Apple TV est un appareil conçu par Apple qui permet la communication sans fil entre un ordinateur et un téléviseur. Il est disponible depuis fin mars 2007 dans sa première version.L'appareil ressemble alors par sa forme à un Mac mini, bien qu'il ne fasse que la moitié de sa hauteur. Il communique par réseau sans fil ou Ethernet, avec un appareil iOS ou avec un ordinateur (sous Mac OS X ou sous Windows) par le biais du logiciel iTunes, permettant ainsi de diffuser le contenu vidéo et audio sur le téléviseur, via éventuellement un amplificateur audio-vidéo. (<a href='https://fr.wikipedia.org/wiki/Apple_TV' target='_blank'>Wikipédia</a>)",
+    "features": [
+      "Processeur Apple A8",
+      "Mémoire vide de 2Go",
+      "Stockage de 32 ou 64 Go en mémoire flash",
+      "Connectivités: USB Type-C, HDMI, récepteur infrarouge",
+      "Réseau: Wi-Fi (802.11a/b/g/n/ac), 10/100 Ethernet, Bluetooth, AirPlay"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Portable professionnel",
+    "price": 599.99,
+    "image": "laptop-2.png",
+    "category": "computers",
+    "description": "Portable professionnel idéal pour le travail à la maison ou dans une petite entreprise. L’ordinateur dispose d’un grand nombre de ports (HDMI, VGA, USB, Ethernet, etc.) ce qui facilite le branchement de différents périphériques. Le portable est équipé d’un processeur i5 de troisième génération, de 8 Go de RAM et d’un disque dur SSD de 256 Go.",
+    "features": [
+      "Processus i5 de troisième génération",
+      "8 Go de RAM",
+      "Disque SSD de 256 Go",
+      "Ports HDMI, VGA, USB, Ethernet et Firewire",
+      "Construction robuste"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Portable",
+    "price": 699.99,
+    "image": "laptop-1.png",
+    "category": "computers",
+    "description": "Portable idéal pour un étudiant ou un joueur occasionnel. L'ordinateur dispose de plusieurs ports (HDMI, USB, Ethernet, etc.) pouvant accueillir plusieurs périphériques. Le portable est équipé d'un processus i5 de troisième génération, de 8 Go de mémoire et d'un disque dur SSD de 256 Go. De plus, ce portable est équipé d'une carte graphique NVIDIA GeForce GTX 660M.",
+    "features": [
+      "Processus i5 de troisième génération",
+      "8 Go de RAM",
+      "Disque SSD de 256 Go",
+      "Ports HDMI, USB et Ethernet",
+      "Carte graphique NVIDIA GeForce GTX 660M"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "iMac 27\"",
+    "price": 2299.99,
+    "image": "mac.png",
+    "category": "computers",
+    "description": "L'iMac est la gamme d’ordinateurs tout-en-un grand public d’Apple depuis 1998. Les premiers modèles, à écran cathodique, ont relancé la marque Apple à la fin des années 1990. Six générations de cet ordinateur de bureau ont été commercialisées en quatorze ans, du premier modèle coloré aux formes rondes au tout-en-un à écran plat 16:9 (27 pouces) aujourd'hui en vente. Les appareils sont animés par les systèmes d'exploitations d'Apple : Mac OS 9 pour les premières générations, puis macOS. (<a href='https://fr.wikipedia.org/wiki/IMac' target='_blank'>Wikipédia</a>)",
+    "features": [
+      "Processeur quadricœur Intel Core i5 à 3,2 GHz (jusqu’à 3,6 GHz avec Turbo Boost)",
+      "8 Go (2 x 4 Go) de mémoire DDR3 à 1 867 MHz",
+      "Disque dur de 1 To à 7 200 tr/min",
+      "Processeur graphique AMD Radeon R9 M380 avec 2 Go de mémoire GDDR5",
+      "Caméra FaceTime HD"
+    ]
+  }
+]
