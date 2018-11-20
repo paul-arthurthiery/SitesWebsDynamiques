@@ -19,7 +19,7 @@ block main
             each feature in product.features
               li=feature
         hr
-        form#add-to-cart-form.pull-right
+        form#add-to-cart-form.pull-right(data-product-id=product.id)
           label(for='product-quantity') Quantit&eacute;:
           input#product-quantity.form-control(type='number' value='1' min='1')
           button.btn(title='Ajouter au panier' type='submit')
