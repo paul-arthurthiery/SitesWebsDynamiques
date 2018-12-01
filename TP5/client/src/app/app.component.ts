@@ -9,10 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  // TODO: Modifier le nom des auteurs pour vos noms
   readonly authors = [
-    'Antoine Béland',
-    'Konstantinos Lambrou-Latreille'
+    'Paul-Arthur Thiéry',
+    'Louis-Efflam Le Vély'
   ];
 
   // TODO: À compléter
