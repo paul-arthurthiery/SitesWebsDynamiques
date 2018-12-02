@@ -20,6 +20,8 @@ export class ProductComponent implements OnInit {
   public product;
   public loading: boolean;
   public quantity: string = "1";
+  public showDialog: boolean = false;
+
   constructor(private route: ActivatedRoute, public productsService: ProductsService) { }
 
   /**
@@ -41,8 +43,14 @@ export class ProductComponent implements OnInit {
 
   public addToCart = () => {
     let panier: string[] = JSON.parse(localStorage.getItem('panier'));
-    for(let i=0; i<parseInt(this.quantity, 10); i++) { panier.push(this.product.id.toString()) }
+    for(let i=0; i<parseInt(this.quantity, 10); i++) {
+      panier.push(this.product.id.toString())
+    }
     localStorage.setItem('panier', JSON.stringify(panier));
+    this.showDialog = true;
+    setTimeout(() => {
+      this.showDialog = false;
+    }, 5000);
   }
 
   public updateQuantity = (event) => {
