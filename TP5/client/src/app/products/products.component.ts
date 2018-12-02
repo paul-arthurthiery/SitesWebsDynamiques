@@ -55,8 +55,13 @@ export class ProductsComponent {
 
   ngOnInit() {
     this.loading = true;
-    this.productsService.getProducts(this.selectedCriteria, this.selectedCategory).then((products) => {
+    this.productsService.getProducts(this.selectedCriteria, this.selectedCategory)
+    .then((products) => {
       this.products = products;
+      this.loading = false;
+    })
+    .catch((error) => {
+      console.log(error);
       this.loading = false;
     })
   }

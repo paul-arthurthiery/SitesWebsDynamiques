@@ -1,38 +1,34 @@
-<article>
-  <h1 id="product-name">Manette Xbox 360</h1>
+<article *ngIf="!loading">
+  <h1 id="product-name">{{product.name}}</h1>
   <div class="row">
     <div class="col">
-      <img id="product-image" alt="Manette Xbox 360" src="./assets/img/xbox-controller.png">
+      <img id="product-image" alt="{{product.name}}" src="./assets/img/{{product.image}}">
     </div>
     <div class="col">
       <section>
         <h2>Description</h2>
         <p id="product-desc">
-          Manette pouvant être branchée à une console Xbox 360 et un PC. Cette manette vous permettra de jouer à vos jeux vidéo préférés.
-          De plus, cette manette est sans fil et comporte un port pour casque d'écoute.
+          {{product.description}}
         </p>
       </section>
       <section>
         <h2>Caractéristiques</h2>
         <ul id="product-features">
-          <li>Manette sans fil 2.4GHz avec adapteur USB</li>
-          <li>Compacte et ergonomique</li>
-          <li>Port pour casque d'écoute pour Xbox Live</li>
+          <li *ngFor="let feature of product.features">{{feature}}</li>
         </ul>
       </section>
       <hr>
       <form class="pull-right" id="add-to-cart-form">
         <label for="product-quantity">Quantité:</label>
-        <input class="form-control" id="product-quantity" name="product-quantity"
-               type="number" value="1" min="1" required>&nbsp;
-        <button class="btn" title="Ajouter au panier" type="submit">
+        <input class="form-control" id="product-quantity" name="product-quantity" type="number" [(value)]="quantity" min="1" required (change)="updateQuantity($event)">&nbsp;
+        <button class="btn" title="Ajouter au panier" type="submit" (click)="addToCart()">
           <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
         </button>
       </form>
-      <p>Prix: <strong id="product-price">29,99&thinsp;$</strong></p>
+      <p>Prix: <strong id="product-price">{{product.price}}&thinsp;$</strong></p>
     </div>
   </div>
-  <div class="dialog" id="dialog" *ngIf="false">
+  <div class="dialog" id="dialog" *ngIf="showDialog">
     Le produit a été ajouté au panier.
   </div>
 </article>

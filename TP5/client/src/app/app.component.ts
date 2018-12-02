@@ -14,5 +14,5 @@ export class AppComponent {
     'Louis-Efflam Le Vély'
   ];
 
-  // TODO: À compléter
+
 }
