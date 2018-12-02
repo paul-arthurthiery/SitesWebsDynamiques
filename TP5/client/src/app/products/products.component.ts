@@ -10,34 +10,70 @@ import { ProductsService } from '../products.service';
 })
 export class ProductsComponent {
 
-  public criteria = 'price-asc';
-  public category = 'all';
+  public selectedCriteria = 'price-asc';
+  public criterias = [{
+      name: 'Prix (bas-haut)',
+      key: 'price-asc',
+    },
+    {
+      name: 'Prix (haut-bas)',
+      key: 'price-dsc',
+    },
+    {
+      name: 'Nom (A-Z)',
+      key: 'alpha-asc',
+    },
+    {
+      name: 'Nom (Z-A)',
+      key: 'alpha-dsc',
+  }]
+  public selectedCategory = 'all';
+  public categories = [{
+      name: 'Appareils photo',
+      key: 'cameras',
+    },
+    {
+      name: 'Consoles',
+      key: 'consoles',
+    },
+    {
+      name: 'Écrans',
+      key: 'screens',
+    },
+    {
+      name: 'Ordinateurs',
+      key: 'computers',
+    },
+    {
+      name: 'Tous les produits',
+      key: 'all'
+  }]
   public products;
   public loading;
 
-  constructor(public productsService: ProductsService){
+  constructor(public productsService: ProductsService){}
 
-    const refreshProducts = async () => {
-      this.products = await this.productsService.getProducts(this.criteria, this.category);
-    }
-
-    const getCategory = async (category: string) => {
-      this.category = category;
-      refreshProducts();
-    };
-
-    const getCriteria = async (criteria: string) => {
-      this.criteria = criteria;
-      refreshProducts();
-    }
-  }
-
-  ngOnInit() { 
+  ngOnInit() {
     this.loading = true;
-    this.productsService.getProducts(this.criteria, this.category).then((products) => {
+    this.productsService.getProducts(this.selectedCriteria, this.selectedCategory).then((products) => {
       this.products = products;
       this.loading = false;
     })
   }
+
+  public refreshProducts = async () => {
+    this.products = await this.productsService.getProducts(this.selectedCriteria, this.selectedCategory);
+  }
+
+  public getCategory = (event) => {
+    this.selectedCategory = event.target.value;
+    this.refreshProducts();
+  };
+
+  public getCriteria = (event) => {
+    this.selectedCriteria = event.target.value;
+    this.refreshProducts();
+  }
+
 
 }
