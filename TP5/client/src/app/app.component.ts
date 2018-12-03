@@ -14,5 +14,8 @@ export class AppComponent {
     'Louis-Efflam Le Vély'
   ];
 
+  public getCount = () => {
+    return JSON.parse(localStorage.getItem("panier")).length;
+  }
 
 }
