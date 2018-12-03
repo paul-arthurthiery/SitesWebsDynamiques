@@ -25,7 +25,7 @@
           <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
         </button>
       </form>
-      <p>Prix: <strong id="product-price">{{product.price}}&thinsp;$</strong></p>
+      <p>Prix: <strong id="product-price">{{ product.price | price }}&thinsp;$</strong></p>
     </div>
   </div>
   <div class="dialog" id="dialog" *ngIf="showDialog">

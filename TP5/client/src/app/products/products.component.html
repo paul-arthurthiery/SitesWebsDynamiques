@@ -21,7 +21,7 @@
         <a routerLink="/produits/{{currProduct.id}}" title="En savoir plus...">
           <h2>{{currProduct.name}}</h2>
           <img alt="{{currProduct.name}}" src="./assets/img/{{currProduct.image}}">
-          <p><small>Prix</small> {{currProduct.price}}&thinsp;$</p>
+          <p><small>Prix</small> {{ currProduct.price | price }}&thinsp;$</p>
         </a>
       </div>
     </div>
