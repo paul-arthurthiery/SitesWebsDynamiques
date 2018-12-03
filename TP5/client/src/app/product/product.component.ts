@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductsService } from '../products.service'
+import { ProductsService, Product } from '../products.service'
 
 /**
  * Defines the component responsible to manage the product page.
@@ -17,7 +17,7 @@ export class ProductComponent implements OnInit {
    * @param route                   The active route.
    */
 
-  public product;
+  public product: Product;
   public loading: boolean;
   public quantity: string = "1";
   public showDialog: boolean = false;
@@ -29,7 +29,7 @@ export class ProductComponent implements OnInit {
    */
   ngOnInit() {
     this.loading = true;
-    const productId = this.route.snapshot.paramMap.get('id');
+    const productId: string = this.route.snapshot.paramMap.get('id');
     this.productsService.getProduct(parseInt(productId, 10))
     .then((product) => {
       this.product = product;

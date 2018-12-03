@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { ProductsService } from '../products.service';
+import { ProductsService, Product } from '../products.service';
 
 /**
  * Defines the component responsible to manage the display of the products page.
@@ -10,8 +10,8 @@ import { ProductsService } from '../products.service';
 })
 export class ProductsComponent {
 
-  public selectedCriteria = 'price-asc';
-  public criterias = [{
+  public selectedCriteria: string = 'price-asc';
+  public criterias: {name: string, key: string}[] = [{
       name: 'Prix (bas-haut)',
       key: 'price-asc',
     },
@@ -27,8 +27,8 @@ export class ProductsComponent {
       name: 'Nom (Z-A)',
       key: 'alpha-dsc',
   }]
-  public selectedCategory = 'all';
-  public categories = [{
+  public selectedCategory: string = 'all';
+  public categories: {name: string, key:string}[] = [{
       name: 'Appareils photo',
       key: 'cameras',
     },
@@ -48,8 +48,8 @@ export class ProductsComponent {
       name: 'Tous les produits',
       key: 'all'
   }]
-  public products;
-  public loading;
+  public products: Product[];
+  public loading: boolean;
 
   constructor(public productsService: ProductsService){}
 
