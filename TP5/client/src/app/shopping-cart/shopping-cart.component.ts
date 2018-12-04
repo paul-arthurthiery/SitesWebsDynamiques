@@ -31,7 +31,6 @@ export class ShoppingCartComponent {
       })
       Promise.all(promiseArray)
       .then((items) => {
-        console.log(items);
         items.forEach((item, index) => {
           items[index]["quantity"] = this.cart[index].quantity;
           this.total += item.price*item["quantity"];

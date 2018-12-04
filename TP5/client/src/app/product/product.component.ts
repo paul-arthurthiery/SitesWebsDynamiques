@@ -64,7 +64,6 @@ export class ProductComponent implements OnInit {
   public addToCart = async () => {
     try{
       let numberQuantity: number = parseInt(this.quantity, 10);
-      console.log(this.cart);
       if(this.cart.length > 0){
         await this.shoppingCartService.updateQuantity(
           this.product.id,

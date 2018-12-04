@@ -8,14 +8,14 @@
           <div class="form-group">
             <label for="first-name">Prénom</label>
             <input class="form-control" type="text" id="first-name" name="first-name"
-                   placeholder="Prénom" minlength="2" required>
+                   placeholder="Prénom" minlength="2" [(ngModel)]="firstName" required>
           </div>
         </div>
         <div class="col">
           <div class="form-group">
             <label for="last-name">Nom</label>
             <input class="form-control" type="text" id="last-name" name="last-name"
-                   placeholder="Nom" minlength="2" required>
+                   placeholder="Nom" minlength="2" [(ngModel)]="lastName" required>
           </div>
         </div>
       </div>
@@ -24,14 +24,14 @@
           <div class="form-group">
             <label for="email">Adresse courriel</label>
             <input class="form-control" type="email" id="email" name="email"
-                   placeholder="Adresse courriel" required>
+                   placeholder="Adresse courriel" [(ngModel)]="email" required>
           </div>
         </div>
         <div class="col">
           <div class="form-group">
             <label for="phone">Téléphone</label>
             <input class="form-control" type="tel" id="phone" name="phone"
-                   placeholder="###-###-####" required>
+                   placeholder="###-###-####" [(ngModel)]="phone" required>
           </div>
         </div>
       </div>
