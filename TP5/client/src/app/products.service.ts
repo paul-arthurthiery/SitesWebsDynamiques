@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Config } from './config';
 
 /**
@@ -47,11 +47,15 @@ export class ProductsService {
    * @return {Promise<Product[]>}   The category of the product. The default value is "all".
    */
   getProducts(sortingCriteria?: string, category?: string): Promise<Product[]> {
-    let url = `${Config.apiUrl}/products?criteria=${sortingCriteria}`;
+    const url = `${Config.apiUrl}/products`;
+    let params = new HttpParams();
     if (category && category !== 'all') {
-      url += `&category=${category}`;
+      params = params.append('category', category);
     }
-    return this.http.get(url)
+    if (sortingCriteria) {
+      params = params.append('criteria', sortingCriteria);
+    }
+    return this.http.get(url, {params: params})
       .toPromise()
       .then(products => products as Product[])
       .catch(ProductsService.handleError);

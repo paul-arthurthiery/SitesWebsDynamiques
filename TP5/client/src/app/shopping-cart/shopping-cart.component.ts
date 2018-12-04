@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ProductsService, Product } from "../products.service"
+import { ProductsService, Product } from "../products.service";
+import { ShoppingCartService } from "../shopping-cart.service";
 
 /**
  * Defines the component responsible to manage the shopping cart page.
@@ -12,76 +13,88 @@ export class ShoppingCartComponent {
 
   public items: Product[];
   public loading: boolean;
-  public cart: string[];
+  public cart: Array<{productId: number, quantity: number}>;
   public quantityArray: number[] = [];
   public total: number = 0;
 
-  constructor(public productsService: ProductsService) {
-    this.cart = JSON.parse(localStorage.getItem("panier"));
-    this.cart.sort();
-    this.cart.forEach((product, index) => {
-      if(this.quantityArray[parseInt(product, 10)] > 0){
-        this.quantityArray[parseInt(product, 10)]++;
-        this.cart[index] = "0";
-      } else {
-        this.quantityArray[parseInt(product, 10)] = 1;
-      }
-    });
-    this.quantityArray = this.quantityArray.filter((quantity) => quantity > 0);
-    this.cart = this.cart.filter((id) => id !== "0");
+  constructor(public productsService: ProductsService, public shoppingCartService: ShoppingCartService) {
   }
 
   ngOnInit() {
     this.loading = true;
-    let promiseArray: Promise<Product>[] = [];
-    this.cart.forEach((product) => {
-      promiseArray.push(this.productsService.getProduct(parseInt(product, 10)));
-    })
-    Promise.all(promiseArray)
-    .then((items) => {
-      items.forEach((item, index) => {
-        items[index]["quantity"] = this.quantityArray[index];
-        this.total += item.price*item["quantity"];
-      });
+    this.shoppingCartService.getCart()
+    .then((cart) => {
+      this.cart = cart;
+      let promiseArray: Promise<Product>[] = [];
+      this.cart.forEach((product) => {
+        promiseArray.push(this.productsService.getProduct(product.productId));
+      })
+      Promise.all(promiseArray)
+      .then((items) => {
+        console.log(items);
+        items.forEach((item, index) => {
+          items[index]["quantity"] = this.cart[index].quantity;
+          this.total += item.price*item["quantity"];
+        });
 
-      this.items = items;
-      this.loading = false;
-    })
-    .catch((err) => {
-      console.log(err);
-      this.loading = false;
+        this.items = items;
+        this.loading = false;
+      })
+      .catch((err) => {
+        console.log(err);
+        this.loading = false;
+      })
     })
   }
 
-  public add = (id: number) => {
+  public add = async (id: number) => {
     let indexToAdd = this.items.findIndex((item) => item.id === id)
     this.items[indexToAdd]['quantity']++;
+    this.total += this.items[indexToAdd].price;
 
-    let storageCart: string[] = JSON.parse(localStorage.getItem("panier"));
-    storageCart.push(id.toString())
-    localStorage.setItem("panier", JSON.stringify(storageCart));
+    try{
+      await this.shoppingCartService.updateQuantity(id, this.items[indexToAdd]['quantity']);
+    } catch(err){
+      console.log(err);
+      this.items[indexToAdd]['quantity']--;
+      this.total -= this.items[indexToAdd].price;
+    }
   }
 
-  public remove = (id: number) => {
+  public remove = async (id: number) => {
     let indexToDel = this.items.findIndex((item) => item.id === id)
     this.items[indexToDel]['quantity']--;
+    this.total -= this.items[indexToDel].price;
 
-    let storageCart: string[] = JSON.parse(localStorage.getItem("panier"));
-    indexToDel = storageCart.findIndex((item) => item === id.toString()) ;
-    storageCart.splice(indexToDel, 1);
-    localStorage.setItem("panier", JSON.stringify(storageCart));
+    try{
+      await this.shoppingCartService.updateQuantity(id, this.items[indexToDel]['quantity']);
+    } catch(err){
+      this.items[indexToDel]['quantity']++;
+      console.log(err);
+      this.total += this.items[indexToDel].price;
+    }
   }
 
-  public delete = (id: number) => {
-    this.items = this.items.filter((item) => item.id !== id)
-    let storageCart: string[] = JSON.parse(localStorage.getItem("panier"));
-    storageCart.filter((product) => product !== id.toString())
-    localStorage.setItem("panier", JSON.stringify(storageCart));
+  public delete = async (id: number) => {
+    try{
+      await this.shoppingCartService.deleteProduct(id);
+      this.items = this.items.filter((item) => item.id !== id)
+      this.items.forEach((item, index) => {
+        this.total += item.price*item["quantity"];
+      });
+    }catch(err){
+      console.log(err)
+    }
   }
 
-  public deleteAll = () => {
-    this.items = [];
-    localStorage.setItem("panier", "[]");
+  public deleteAll = async () => {
+    try{
+      await this.shoppingCartService.deleteAllProducts();
+      this.items = [];
+      this.total = 0;
+    } catch(err) {
+      console.log(err);
+    }
   }
 
 }
