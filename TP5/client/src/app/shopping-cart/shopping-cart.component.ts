@@ -48,12 +48,13 @@ export class ShoppingCartComponent {
   }
 
   public add = async (id: number) => {
-    let indexToAdd = this.items.findIndex((item) => item.id === id)
+    const indexToAdd = this.items.findIndex((item) => item.id === id);
+    const previousQuantity = this.items[indexToAdd]['quantity'];
     this.items[indexToAdd]['quantity']++;
     this.total += this.items[indexToAdd].price;
 
     try{
-      await this.shoppingCartService.updateQuantity(id, this.items[indexToAdd]['quantity']);
+      await this.shoppingCartService.updateQuantity(id, this.items[indexToAdd]['quantity'], previousQuantity);
     } catch(err){
       console.log(err);
       this.items[indexToAdd]['quantity']--;
@@ -62,12 +63,13 @@ export class ShoppingCartComponent {
   }
 
   public remove = async (id: number) => {
-    let indexToDel = this.items.findIndex((item) => item.id === id)
+    const indexToDel = this.items.findIndex((item) => item.id === id);
+    const previousQuantity = this.items[indexToDel]['quantity'];
     this.items[indexToDel]['quantity']--;
     this.total -= this.items[indexToDel].price;
 
     try{
-      await this.shoppingCartService.updateQuantity(id, this.items[indexToDel]['quantity']);
+      await this.shoppingCartService.updateQuantity(id, this.items[indexToDel]['quantity'], previousQuantity);
     } catch(err){
       this.items[indexToDel]['quantity']++;
       console.log(err);
@@ -77,7 +79,8 @@ export class ShoppingCartComponent {
 
   public delete = async (id: number) => {
     try{
-      await this.shoppingCartService.deleteProduct(id);
+      const itemToDel = this.items.find((item) => item.id === id);
+      await this.shoppingCartService.deleteProduct(id, 0, itemToDel["quantity"]);
       this.items = this.items.filter((item) => item.id !== id)
       this.items.forEach((item, index) => {
         this.total += item.price*item["quantity"];

@@ -23,7 +23,7 @@ export class AppComponent {
   constructor(public shoppingCartService: ShoppingCartService) {
     this.addToCount = this.shoppingCartService.getAddToCount();
     this.addToCount.subscribe({
-      next: (quantity) => this.count = quantity
+      next: (quantity) => this.count += quantity
     })
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService, Product } from '../products.service'
 import { ShoppingCartService } from '../shopping-cart.service'
@@ -64,10 +64,12 @@ export class ProductComponent implements OnInit {
   public addToCart = async () => {
     try{
       let numberQuantity: number = parseInt(this.quantity, 10);
+      console.log(this.cart);
       if(this.cart.length > 0){
         await this.shoppingCartService.updateQuantity(
           this.product.id,
-          this.cart[0].quantity + numberQuantity
+          this.cart[0].quantity+numberQuantity,
+          this.cart[0].quantity
         )
       } else {
         await this.shoppingCartService.addItem(this.product.id, numberQuantity);

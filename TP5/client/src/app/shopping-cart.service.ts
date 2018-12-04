@@ -56,13 +56,13 @@ export class ShoppingCartService {
     .catch(ShoppingCartService.handleError)
   }
 
-  public updateQuantity = (productId: number, quantity: number): Promise<void> => {
+  public updateQuantity = (productId: number, quantity: number, previousQuantity: number): Promise<void> => {
     let url: string = `${this.shoppingCartUrl}/${productId}`;
     return this.http.put(url, JSON.stringify({
       quantity
     }), this.options)
     .toPromise()
-    .then(() => this.addToCount.next(quantity))
+    .then(() => this.addToCount.next(quantity-previousQuantity))
     .catch((err) => {
       if(err.status === 404) {
         err.message = "Product not in cart";
@@ -74,10 +74,11 @@ export class ShoppingCartService {
     })
   }
 
-  public deleteProduct = (productId: number): Promise<void> => {
+  public deleteProduct = (productId: number, quantity: number, previousQuantity: number): Promise<void> => {
     let url: string = `${this.shoppingCartUrl}/${productId}`;
     return this.http.delete(url, this.options)
     .toPromise()
+    .then(() => this.addToCount.next(quantity-previousQuantity))
     .catch(ShoppingCartService.handleError)
   }
 
@@ -85,6 +86,7 @@ export class ShoppingCartService {
     let url: string = this.shoppingCartUrl;
     return this.http.delete(url, this.options)
     .toPromise()
+    .then(() => this.addToCount.next(0))
     .then((stuff) => null);
   }
 
