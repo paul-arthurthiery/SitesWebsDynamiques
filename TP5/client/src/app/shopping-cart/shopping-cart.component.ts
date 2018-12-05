@@ -77,10 +77,13 @@ export class ShoppingCartComponent {
   }
 
   public delete = async (id: number) => {
+    if(confirm("Deleting product")){
     try{
       const itemToDel = this.items.find((item) => item.id === id);
       await this.shoppingCartService.deleteProduct(id, 0, itemToDel["quantity"]);
       this.items = this.items.filter((item) => item.id !== id)
+      console.log(this.items)
+      this.total = 0;
       this.items.forEach((item, index) => {
         this.total += item.price*item["quantity"];
       });
@@ -88,15 +91,22 @@ export class ShoppingCartComponent {
       console.log(err)
     }
   }
+  }
 
   public deleteAll = async () => {
+    if(confirm("Deleting all products")){
     try{
-      await this.shoppingCartService.deleteAllProducts();
+      let cartsize:number = 0;
+      this.items.forEach((product) => {
+        cartsize += product["quantity"]
+      })
+      await this.shoppingCartService.deleteAllProducts(cartsize);
       this.items = [];
       this.total = 0;
     } catch(err) {
       console.log(err);
     }
   }
+}
 
 }

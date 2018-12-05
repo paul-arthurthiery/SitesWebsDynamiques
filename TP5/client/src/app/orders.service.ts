@@ -10,7 +10,7 @@ export class Order {
   lastName: string;
   email: string;
   phone: string;
-  products: Array<{productId: number, quantity: number}>;
+  products: Array<{id: number, quantity: number}>;
 }
 
 @Injectable({

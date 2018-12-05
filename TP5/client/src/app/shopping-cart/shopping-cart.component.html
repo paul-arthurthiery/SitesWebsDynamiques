@@ -21,7 +21,7 @@
         <td>
           <a routerLink="/produits/{{item}}">{{item.name}}</a>
         </td>
-        <td>{{item.price}}&thinsp;$</td>
+        <td>{{item.price | price}}&thinsp;$</td>
         <td>
           <div class="row">
             <div class="col">

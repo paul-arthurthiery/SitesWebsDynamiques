@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService, Product } from '../products.service'
 import { ShoppingCartService } from '../shopping-cart.service'
+import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 
 /**
  * Defines the component responsible to manage the product page.
@@ -20,9 +21,10 @@ export class ProductComponent implements OnInit {
 
   public product: Product;
   public loading: boolean;
-  public quantity: string = "1";
+  public quantity: number = 1;
   public showDialog: boolean = false;
   public cart: Array<{productId: number, quantity: number}>;
+  public notFound: boolean;
 
   constructor(private route: ActivatedRoute, public productsService: ProductsService, public shoppingCartService: ShoppingCartService) { }
 
@@ -44,18 +46,19 @@ export class ProductComponent implements OnInit {
     const productId: string = this.route.snapshot.paramMap.get('id');
     this.productsService.getProduct(parseInt(productId, 10))
     .then((product) => {
+      if(product === null) throw new Error('Not a correct product');
       this.product = product;
       this.refreshCart()
       .then(() => {
         this.loading = false;
       })
       .catch((error) => {
-        console.log(error);
-        this.loading = false;
+        throw error;
       });
     })
     .catch((error) => {
       console.log(error);
+      this.notFound = true;
       this.loading = false;
     });
 
@@ -63,15 +66,14 @@ export class ProductComponent implements OnInit {
 
   public addToCart = async () => {
     try{
-      let numberQuantity: number = parseInt(this.quantity, 10);
       if(this.cart.length > 0){
         await this.shoppingCartService.updateQuantity(
           this.product.id,
-          this.cart[0].quantity+numberQuantity,
+          this.cart[0].quantity+this.quantity,
           this.cart[0].quantity
         )
       } else {
-        await this.shoppingCartService.addItem(this.product.id, numberQuantity);
+        await this.shoppingCartService.addItem(this.product.id, this.quantity);
       }
       await this.refreshCart();
       this.showDialog = true;
@@ -84,7 +86,4 @@ export class ProductComponent implements OnInit {
 
   }
 
-  public updateQuantity = (event) => {
-    this.quantity = event.target.value;
-  }
 }

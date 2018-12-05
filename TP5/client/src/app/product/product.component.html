@@ -1,34 +1,38 @@
-<article *ngIf="!loading">
-  <h1 id="product-name">{{product.name}}</h1>
-  <div class="row">
-    <div class="col">
-      <img id="product-image" alt="{{product.name}}" src="./assets/img/{{product.image}}">
-    </div>
-    <div class="col">
-      <section>
-        <h2>Description</h2>
-        <p id="product-desc" [innerHTML]="product.description">
+<article>
+  <div *ngIf="!loading && !notFound">
+    <h1 id="product-name">{{product.name}}</h1>
+    <div class="row">
+      <div class="col">
+        <img id="product-image" alt="{{product.name}}" src="./assets/img/{{product.image}}">
+      </div>
+      <div class="col">
+        <section>
+          <h2>Description</h2>
+          <p id="product-desc" [innerHTML]="product.description">
 
-        </p>
-      </section>
-      <section>
-        <h2>Caractéristiques</h2>
-        <ul id="product-features">
-          <li *ngFor="let feature of product.features">{{feature}}</li>
-        </ul>
-      </section>
-      <hr>
-      <form class="pull-right" id="add-to-cart-form">
-        <label for="product-quantity">Quantité:</label>
-        <input class="form-control" id="product-quantity" name="product-quantity" type="number" [(value)]="quantity" min="1" required (change)="updateQuantity($event)">&nbsp;
-        <button class="btn" title="Ajouter au panier" type="submit" (click)="addToCart()">
-          <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
-        </button>
-      </form>
-      <p>Prix: <strong id="product-price">{{ product.price | price }}&thinsp;$</strong></p>
+          </p>
+        </section>
+        <section>
+          <h2>Caractéristiques</h2>
+          <ul id="product-features">
+            <li *ngFor="let feature of product.features">{{feature}}</li>
+          </ul>
+        </section>
+        <hr>
+        <form class="pull-right" id="add-to-cart-form" (submit)="addToCart()">
+          <label for="product-quantity">Quantité:</label>
+          <input class="form-control" id="product-quantity" name="product-quantity" type="number" [(ngModel)]="quantity" min="1" required>&nbsp;
+          <button class="btn" title="Ajouter au panier" type="submit">
+            <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
+          </button>
+        </form>
+        <p>Prix: <strong id="product-price">{{ product.price | price }}&thinsp;$</strong></p>
+      </div>
+    </div>
+    <div class="dialog" id="dialog" [hidden]="!showDialog">
+      Le produit a été ajouté au panier.
     </div>
   </div>
-  <div class="dialog" id="dialog" *ngIf="showDialog">
-    Le produit a été ajouté au panier.
-  </div>
+  <page-not-found *ngIf="!loading && notFound">
+  </page-not-found>
 </article>

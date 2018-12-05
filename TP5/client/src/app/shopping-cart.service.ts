@@ -82,11 +82,11 @@ export class ShoppingCartService {
     .catch(ShoppingCartService.handleError)
   }
 
-  public deleteAllProducts = (): Promise<void> => {
+  public deleteAllProducts = (cartSize: number): Promise<void> => {
     let url: string = this.shoppingCartUrl;
     return this.http.delete(url, this.options)
     .toPromise()
-    .then(() => this.addToCount.next(0))
+    .then(() => this.addToCount.next(-cartSize))
     .then((stuff) => null);
   }
 

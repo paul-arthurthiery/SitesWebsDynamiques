@@ -59,20 +59,30 @@ export class OrderComponent implements OnInit {
     if (!this.orderForm.valid()) {
       return;
     }
-    const id = await this.ordersService.getNewId();
-    const products = await this.shoppingCartService.getCart();
-    this.order = {
-      id,
-      firstName: this.firstName,
-      lastName: this.lastName,
-      email: this.email,
-      phone: this.phone,
-      products,
-    }
-    const result = await this.ordersService.sendOrder(this.order);
-    if(result){
-      this.router.navigate(['/confirmation']);
-    }
+    try{
+      const id = await this.ordersService.getNewId();
+      const products = await this.shoppingCartService.getCart();
+      const productsToSend = products.map((product) => {
+        return {id: product.productId,quantity: product.quantity}
+      })
+      this.order = {
+        id,
+        firstName: this.firstName,
+        lastName: this.lastName,
+        email: this.email,
+        phone: this.phone,
+        products: productsToSend,
+      }
+      const result = await this.ordersService.sendOrder(this.order);
+      if(result){
+        let cartsize = 0;
+        products.forEach((product) => cartsize += product.quantity)
+        this.shoppingCartService.deleteAllProducts(cartsize);
+        this.router.navigate(['/confirmation']);
+      }
 
+    } catch(err){
+      console.log(err)
+    }
   }
 }
