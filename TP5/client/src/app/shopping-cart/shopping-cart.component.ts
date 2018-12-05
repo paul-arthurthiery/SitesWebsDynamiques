@@ -47,8 +47,8 @@ export class ShoppingCartComponent {
   }
 
   public add = async (id: number) => {
-    const indexToAdd = this.items.findIndex((item) => item.id === id);
-    const previousQuantity = this.items[indexToAdd]['quantity'];
+    const indexToAdd: number = this.items.findIndex((item) => item.id === id);
+    const previousQuantity: number = this.items[indexToAdd]['quantity'];
     this.items[indexToAdd]['quantity']++;
     this.total += this.items[indexToAdd].price;
 
@@ -62,8 +62,8 @@ export class ShoppingCartComponent {
   }
 
   public remove = async (id: number) => {
-    const indexToDel = this.items.findIndex((item) => item.id === id);
-    const previousQuantity = this.items[indexToDel]['quantity'];
+    const indexToDel: number = this.items.findIndex((item) => item.id === id);
+    const previousQuantity: number = this.items[indexToDel]['quantity'];
     this.items[indexToDel]['quantity']--;
     this.total -= this.items[indexToDel].price;
 

@@ -60,9 +60,9 @@ export class OrderComponent implements OnInit {
       return;
     }
     try{
-      const id = await this.ordersService.getNewId();
-      const products = await this.shoppingCartService.getCart();
-      const productsToSend = products.map((product) => {
+      const id: number = await this.ordersService.getNewId();
+      const products: {productId: number, quantity: number}[] = await this.shoppingCartService.getCart();
+      const productsToSend: {id: number, quantity: number}[] = products.map((product) => {
         return {id: product.productId,quantity: product.quantity}
       })
       this.order = {
@@ -73,7 +73,7 @@ export class OrderComponent implements OnInit {
         phone: this.phone,
         products: productsToSend,
       }
-      const result = await this.ordersService.sendOrder(this.order);
+      const result: boolean = await this.ordersService.sendOrder(this.order);
       if(result){
         let cartsize = 0;
         products.forEach((product) => cartsize += product.quantity)
